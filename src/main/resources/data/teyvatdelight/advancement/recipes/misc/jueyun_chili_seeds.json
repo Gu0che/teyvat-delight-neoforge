@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_jueyun_chili": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:jueyun_chili"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teyvatdelight:jueyun_chili_seeds"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_jueyun_chili"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teyvatdelight:jueyun_chili_seeds"
+    ]
+  }
+}

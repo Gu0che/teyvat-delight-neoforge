@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_magical_meat_sauce_pasta": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:magical_meat_sauce_pasta"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_magical_meat_sauce_pasta.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_magical_meat_sauce_pasta.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:magical_meat_sauce_pasta",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_magical_meat_sauce_pasta"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "default": "model:0"
+  },
+  "modelConfigs": [
+    {
+      "baseScale": 1.0,
+      "_comment": "Head is an empty group; offsetY centers its face in the icon.",
+      "offsetY": 6.5,
+      "modelMainPartFieldAliases": [
+        "com.guoche.teyvatdelight.client.katheryne.KatheryneModel;head"
+      ],
+      "modelPartsFields": [],
+      "renderingFullModel": false,
+      "modelPartsRotationReset": true,
+      "layersAllowed": false
+    }
+  ]
+}

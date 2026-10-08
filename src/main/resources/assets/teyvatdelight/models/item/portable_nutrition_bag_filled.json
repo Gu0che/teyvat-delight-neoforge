@@ -1,0 +1,4 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": { "layer0": "teyvatdelight:item/portable_nutrition_bag_filled" }
+}

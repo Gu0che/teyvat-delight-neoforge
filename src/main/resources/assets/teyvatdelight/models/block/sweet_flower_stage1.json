@@ -1,0 +1,6 @@
+{
+  "parent": "teyvatdelight:block/template_lowered_crop_cross",
+  "textures": {
+    "cross": "teyvatdelight:block/sweet_flower_stage1"
+  }
+}

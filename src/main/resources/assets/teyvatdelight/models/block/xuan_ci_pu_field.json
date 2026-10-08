@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "teyvatdelight:block/xuan_ci_pu_field_side",
+    "bottom": "teyvatdelight:block/xuan_ci_pu_field_side",
+    "side": "teyvatdelight:block/xuan_ci_pu_field_side",
+    "top": "teyvatdelight:block/xuan_ci_pu_field_top"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "teyvatdelight:mora_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "teyvatdelight:mora"
+  }
+}

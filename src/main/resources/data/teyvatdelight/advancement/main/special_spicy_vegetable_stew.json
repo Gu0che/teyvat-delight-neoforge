@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_spicy_vegetable_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:spicy_vegetable_stew"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_spicy_vegetable_stew.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_spicy_vegetable_stew.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:spicy_vegetable_stew",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_spicy_vegetable_stew"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

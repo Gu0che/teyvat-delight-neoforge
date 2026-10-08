@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:birch_forest"
+  ],
+  "features": "teyvatdelight:patch_wild_raspberry_common",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "teyvatdelight:patch_wild_sweet_flower",
+  "step": "vegetal_decoration"
+}

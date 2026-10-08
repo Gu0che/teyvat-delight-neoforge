@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "teyvatdelight:pepper"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:stick"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:fried_radish_balls"
+  }
+}

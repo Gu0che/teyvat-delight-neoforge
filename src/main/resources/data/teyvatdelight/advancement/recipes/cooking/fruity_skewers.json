@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_any_ingredient": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:chicken",
+              "farmersdelight:chicken_cuts",
+              "minecraft:brown_mushroom",
+              "minecraft:red_mushroom",
+              "teyvatdelight:calla_lily"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teyvatdelight:cooking/fruity_skewers"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_any_ingredient"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teyvatdelight:cooking/fruity_skewers"
+    ]
+  }
+}

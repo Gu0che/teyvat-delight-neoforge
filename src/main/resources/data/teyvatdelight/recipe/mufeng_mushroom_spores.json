@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "teyvatdelight:mufeng_mushroom"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:mufeng_mushroom_spores"
+  }
+}

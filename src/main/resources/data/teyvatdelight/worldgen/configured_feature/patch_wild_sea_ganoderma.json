@@ -1,0 +1,13 @@
+{
+  "type": "teyvatdelight:wild_crop_patch",
+  "config": {
+    "state": {
+      "Name": "teyvatdelight:wild_sea_ganoderma"
+    },
+    "min_count": 1,
+    "max_count": 4,
+    "xz_spread": 3,
+    "tries": 96,
+    "y_spread": 3
+  }
+}

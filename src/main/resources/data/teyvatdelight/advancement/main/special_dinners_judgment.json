@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_dinners_judgment": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:dinners_judgment"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_dinners_judgment.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_dinners_judgment.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:dinners_judgment",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_dinners_judgment"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

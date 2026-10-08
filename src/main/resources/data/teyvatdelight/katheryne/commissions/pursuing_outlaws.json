@@ -1,0 +1,24 @@
+{
+  "order": 80,
+  "title": "commission.teyvatdelight.pursuing_outlaws.title",
+  "description": "commission.teyvatdelight.pursuing_outlaws.description",
+  "weight": 1,
+  "targets": [
+    {
+      "type": "kill",
+      "source": "minecraft:pillager",
+      "drawCount": 1,
+      "count": 3,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  "completionRules": []
+}

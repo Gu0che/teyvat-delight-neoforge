@@ -1,0 +1,34 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_fruity_skewers": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:fruity_skewers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.watch_out_for_the_cold.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:fruity_skewers"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.watch_out_for_the_cold.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_fruity_skewers"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

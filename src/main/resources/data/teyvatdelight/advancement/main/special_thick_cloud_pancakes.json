@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_thick_cloud_pancakes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:thick_cloud_pancakes"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_thick_cloud_pancakes.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_thick_cloud_pancakes.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:thick_cloud_pancakes",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_thick_cloud_pancakes"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,39 @@
+{
+  // 复制并改名后启用。文件名决定委托的资源 ID。
+  "enabled": false,
+  "order": 100,
+  // 标题和介绍直接写文字；也可填写资源包语言键。留空自动显示目标摘要。
+  "title": "下一段旅途",
+  "description": "成功领取前一道委托奖励后，立即派发这道重要委托。",
+  // 图标物品 ID；留空使用目标物品或生物。
+  "icon": "",
+  // 委托之间的抽取权重，数值越大越容易抽中。
+  "weight": 1,
+  // false 表示每位玩家只能成功完成一次，过期或被替换后仍可重接。
+  "repeatable": false,
+  // 重要任务未领奖前置顶、永久保留，不占普通任务上限或每日普通任务数量。
+  "important": true,
+  // true：条件满足立即派发。已接的同一道紧急委托不会重复派发。
+  // 若普通任务满额，会替换最旧的普通未达标任务；不替换重要、待领奖或其他紧急任务。
+  // repeatable=true 时领奖后可立即再次派发；需要一次性任务就填 false。
+  "urgent": true,
+  // commission：id 是前一道委托文件的资源 ID，不是标题。请先启用 example_item 或改为你的前置委托 ID。
+  // 条件只影响接取；已经接到的任务不会因条件改变被撤回。
+  "conditions": [{"type":"commission","id":"teyvatdelight:example_item"}],
+  // 领奖后授予的进度 ID，例如 ["minecraft:story/root"]。提交材料不触发。
+  "completionAdvancements": [],
+  // "" 继承全局奖励；{} 为无奖励；也可写 "example:my_reward" 或 {"items":[{"item":"minecraft:diamond","count":2}],"random":[]}。
+  "reward": "",
+  // 所有目标都需达标。物品一次交齐，提交后按钮变为“领取”，再次点击才发奖。
+  "targets": [
+    {
+      "type": "item",
+      "source": "minecraft:apple",
+      // 抽几次；与每次需要的个数分开。
+      "drawCount": 1,
+      "count": 3,
+      // 多次抽取是否允许抽到相同候选；与 repeatable 无关。
+      "repeat": false
+    }
+  ]
+}

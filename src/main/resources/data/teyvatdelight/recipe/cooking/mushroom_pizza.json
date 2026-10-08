@@ -1,0 +1,28 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "farmersdelight:cabbage"
+    },
+    {
+      "item": "teyvatdelight:cheese"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:heavy_weighted_pressure_plate"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:mushroom_pizza"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_supreme_wisdom_life": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:supreme_wisdom_life"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_supreme_wisdom_life.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_supreme_wisdom_life.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:supreme_wisdom_life",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_supreme_wisdom_life"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

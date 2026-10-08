@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teyvatdelight:item/harbor_fish_burger"
+  }
+}

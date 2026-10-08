@@ -1,0 +1,28 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "minecraft:chicken"
+    },
+    {
+      "item": "teyvatdelight:sweet_flower"
+    },
+    {
+      "item": "teyvatdelight:sweet_flower"
+    },
+    {
+      "item": "teyvatdelight:valberry"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:dinners_judgment"
+  }
+}

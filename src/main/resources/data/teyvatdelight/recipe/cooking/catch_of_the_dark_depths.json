@@ -1,0 +1,25 @@
+{
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  100,
+    "experience":  0.35,
+    "ingredients":  [
+                        {
+                            "tag":  "c:foods/safe_raw_fish"
+                        },
+                        {
+                            "item":  "teyvatdelight:mint"
+                        },
+                        {
+                            "item":  "teyvatdelight:yunyan_lieye"
+                        }
+                    ],
+    "container":  {
+                      "count":  1,
+                      "id":  "minecraft:bowl"
+                  },
+    "recipe_book_tab":  "meals",
+    "result":  {
+                   "count":  1,
+                   "id":  "teyvatdelight:catch_of_the_dark_depths"
+               }
+}

@@ -1,0 +1,28 @@
+{
+  "parent": "teyvatdelight:main/welcome_adventurers_guild",
+  "criteria": {
+    "complete": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.measure_world.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.measure_world.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:slow_falling_advancement_icon"
+    },
+    "frame": "task",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "complete"
+    ]
+  ]
+}

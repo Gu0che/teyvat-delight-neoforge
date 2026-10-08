@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botanypots"
+    }
+  ],
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "teyvatdelight:windwheel_aster_crop"
+      ]
+    }
+  ],
+  "type": "botanypots:block_derived_crop",
+  "block": "teyvatdelight:windwheel_aster_crop",
+  "input": {
+    "item": "teyvatdelight:windwheel_aster_seeds"
+  },
+  "soil": {
+    "item": "teyvatdelight:ni_ci_zhi_field"
+  }
+}

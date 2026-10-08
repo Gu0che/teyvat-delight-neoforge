@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "teyvatdelight:natural_shipo",
+    "teyvatdelight:buried_shipo_fragment",
+    "teyvatdelight:repairing_shipo",
+    "teyvatdelight:intact_shipo",
+    "teyvatdelight:natural_yeboshi",
+    "teyvatdelight:natural_deepslate_yeboshi",
+    "teyvatdelight:buried_yeboshi_fragment",
+    "teyvatdelight:repairing_yeboshi",
+    "teyvatdelight:intact_yeboshi",
+    "teyvatdelight:natural_jinghuagusui",
+    "teyvatdelight:buried_jinghuagusui_fragment",
+    "teyvatdelight:repairing_jinghuagusui",
+    "teyvatdelight:intact_jinghuagusui"
+  ]
+}

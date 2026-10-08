@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "teyvatdelight:crab_roe"
+    },
+    {
+      "item": "farmersdelight:ham"
+    },
+    {
+      "item": "teyvatdelight:cream"
+    },
+    {
+      "tag": "c:foods/cabbage"
+    },
+    {
+      "item": "teyvatdelight:windwheel_aster"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:flower_pot"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:nutritious_meal_593"
+  }
+}

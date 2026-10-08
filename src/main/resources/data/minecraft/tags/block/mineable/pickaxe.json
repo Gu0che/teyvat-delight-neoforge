@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "teyvatdelight:chu_ci_zhu_field",
+    "teyvatdelight:xuan_ci_pu_field",
+    "teyvatdelight:primogem_block",
+    "teyvatdelight:mora_block",
+    "teyvatdelight:katheryne_figurine",
+    "#teyvatdelight:teyvat_mineral_blocks"
+  ]
+}

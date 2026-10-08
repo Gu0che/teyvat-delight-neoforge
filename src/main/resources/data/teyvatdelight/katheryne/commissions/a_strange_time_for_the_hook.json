@@ -1,0 +1,24 @@
+{
+  "order": 110,
+  "title": "commission.teyvatdelight.a_strange_time_for_the_hook.title",
+  "description": "commission.teyvatdelight.a_strange_time_for_the_hook.description",
+  "weight": 1,
+  "targets": [
+    {
+      "type": "event",
+      "source": "teyvatdelight:successful_fishing",
+      "drawCount": 1,
+      "count": 5,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "minecraft:fishing_rod",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  "completionRules": []
+}

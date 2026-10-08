@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "teyvatdelight:mint"
+    },
+    {
+      "item": "teyvatdelight:shrimp_meat"
+    },
+    {
+      "item": "teyvatdelight:shrimp_meat"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "teyvatdelight:raspberry"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:heavy_weighted_pressure_plate"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:shrimp_potato_cup"
+  }
+}

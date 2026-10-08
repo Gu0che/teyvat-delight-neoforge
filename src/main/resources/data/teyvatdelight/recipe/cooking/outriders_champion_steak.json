@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "item": "teyvatdelight:small_lamp_grass"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:paper"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:outriders_champion_steak"
+  }
+}

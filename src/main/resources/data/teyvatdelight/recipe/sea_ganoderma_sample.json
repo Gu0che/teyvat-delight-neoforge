@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "teyvatdelight:sea_ganoderma"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:sea_ganoderma_sample"
+  }
+}

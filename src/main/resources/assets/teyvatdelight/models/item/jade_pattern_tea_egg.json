@@ -1,0 +1,6 @@
+{
+    "parent":  "minecraft:item/generated",
+    "textures":  {
+                     "layer0":  "teyvatdelight:item/jade_pattern_tea_egg"
+                 }
+}

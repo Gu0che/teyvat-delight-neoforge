@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:river"
+  ],
+  "features": "teyvatdelight:patch_wild_snapdragon_common",
+  "step": "vegetal_decoration"
+}

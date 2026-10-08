@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_hearty_revelry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:hearty_revelry"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_hearty_revelry.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_hearty_revelry.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:hearty_revelry",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_hearty_revelry"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

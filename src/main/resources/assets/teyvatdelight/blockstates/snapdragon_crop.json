@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "teyvatdelight:block/snapdragon_stage0"
+    },
+    "age=1": {
+      "model": "teyvatdelight:block/snapdragon_stage1"
+    },
+    "age=2": {
+      "model": "teyvatdelight:block/snapdragon_stage2"
+    },
+    "age=3": {
+      "model": "teyvatdelight:block/snapdragon_stage3"
+    },
+    "age=4": {
+      "model": "teyvatdelight:block/snapdragon_stage3"
+    },
+    "age=5": {
+      "model": "teyvatdelight:block/snapdragon_stage3"
+    },
+    "age=6": {
+      "model": "teyvatdelight:block/snapdragon_stage3"
+    },
+    "age=7": {
+      "model": "teyvatdelight:block/snapdragon_stage3"
+    }
+  }
+}

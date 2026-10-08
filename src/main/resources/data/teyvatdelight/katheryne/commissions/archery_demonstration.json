@@ -1,0 +1,24 @@
+{
+  "order": 140,
+  "title": "commission.teyvatdelight.archery_demonstration.title",
+  "description": "commission.teyvatdelight.archery_demonstration.description",
+  "weight": 1,
+  "targets": [
+    {
+      "type": "event",
+      "source": "teyvatdelight:bow_longshot",
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "minecraft:bow",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  "completionRules": []
+}

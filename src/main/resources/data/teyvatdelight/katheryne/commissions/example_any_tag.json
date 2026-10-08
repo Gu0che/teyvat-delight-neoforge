@@ -1,0 +1,31 @@
+// 任选标签委托：提交总计 3 个原木。不同种类可以混合凑数。
+// 复制并改名，将 enabled 改为 true 后使用；不要修改已有委托的文件名来改标题。
+{
+  "enabled": false,
+  "order": 100,
+  "title": "木材采购",
+  "description": "请带来三个原木，种类不限，可以混合。",
+  "icon": "minecraft:oak_log",
+  "weight": 1,
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  // 空字符串继承全局奖励；也可写奖励文件 ID，如 "teyvatdelight:commission"。
+  "reward": "",
+  "targets": [
+    {
+      "type": "item",
+      // any：提交范围内任意物品；random：接取时随机选定物品，之后只接受选中的物品。
+      "selection": "any",
+      // 必须是物品标签，不是方块标签；也支持 include/exclude 对象或 {"pool":"你的命名空间:池名"}。
+      "source": "#minecraft:logs",
+      // any 不抽取目标，drawCount 固定为 1、repeat 固定为 false。
+      "drawCount": 1,
+      // 这个目标需要提交的合计数量，不是每种物品各交这么多。
+      "count": 3,
+      "repeat": false
+    }
+  ]
+}

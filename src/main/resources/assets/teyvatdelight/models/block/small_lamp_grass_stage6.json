@@ -1,0 +1,7 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "teyvatdelight:block/template_lowered_crop_cross",
+  "textures": {
+    "cross": "teyvatdelight:block/small_lamp_grass_stage6"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "MMM",
+    "MMM",
+    "MMM"
+  ],
+  "key": {
+    "M": {
+      "item": "teyvatdelight:mora"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:mora_block"
+  }
+}

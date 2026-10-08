@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_fish_flavored_toast": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:fish_flavored_toast"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_fish_flavored_toast.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_fish_flavored_toast.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:fish_flavored_toast",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_fish_flavored_toast"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

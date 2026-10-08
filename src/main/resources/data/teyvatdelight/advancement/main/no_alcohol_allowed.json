@@ -1,0 +1,34 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_definitely_not_bar_food": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:definitely_not_bar_food"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.no_alcohol_allowed.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:definitely_not_bar_food"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.no_alcohol_allowed.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_definitely_not_bar_food"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

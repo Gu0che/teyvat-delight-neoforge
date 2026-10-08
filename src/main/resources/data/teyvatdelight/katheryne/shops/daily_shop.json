@@ -1,0 +1,106 @@
+{
+  "title": "gui.teyvatdelight.katheryne.daily_shop",
+  "order": 20,
+  "refreshTime": -1,
+  "offers": [
+    {
+      "id": "gold",
+      "name": "",
+      "enabled": true,
+      "type": "random",
+      "source": {
+        "pool": "teyvatdelight:gold_equipment"
+      },
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false,
+      "enchantEquipment": true,
+      "cost": [
+        {
+          "item": "teyvatdelight:primogem",
+          "count": 1
+        }
+      ],
+      "dailyLimit": 1
+    },
+    {
+      "id": "iron",
+      "name": "",
+      "enabled": true,
+      "type": "random",
+      "source": {
+        "pool": "teyvatdelight:iron_equipment"
+      },
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false,
+      "enchantEquipment": true,
+      "cost": [
+        {
+          "item": "teyvatdelight:primogem",
+          "count": 2
+        }
+      ],
+      "dailyLimit": 1
+    },
+    {
+      "id": "diamond",
+      "name": "",
+      "enabled": true,
+      "type": "random",
+      "source": {
+        "pool": "teyvatdelight:diamond_equipment"
+      },
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false,
+      "enchantEquipment": true,
+      "cost": [
+        {
+          "item": "teyvatdelight:primogem",
+          "count": 8
+        }
+      ],
+      "dailyLimit": 1
+    },
+    {
+      "id": "ingredient_sale",
+      "name": "gui.teyvatdelight.katheryne.ingredient_sale",
+      "enabled": true,
+      "type": "random",
+      "source": {
+        "pool": "teyvatdelight:merchant_ingredients"
+      },
+      "drawCount": 3,
+      "count": 1,
+      "repeat": false,
+      "enchantEquipment": false,
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 5
+        }
+      ],
+      "dailyLimit": 1
+    },
+    {
+      "id": "specialty_sale",
+      "name": "gui.teyvatdelight.katheryne.specialty_sale",
+      "enabled": true,
+      "type": "random",
+      "source": "#teyvatdelight:teyvat_specialties",
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false,
+      "enchantEquipment": false,
+      "cost": [
+        {
+          "item": "teyvatdelight:primogem",
+          "count": 1
+        }
+      ],
+      "dailyLimit": 1
+    }
+  ],
+  "enabled": true
+}

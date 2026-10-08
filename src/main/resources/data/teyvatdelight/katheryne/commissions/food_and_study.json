@@ -1,0 +1,24 @@
+{
+  "order": 130,
+  "title": "commission.teyvatdelight.food_and_study.title",
+  "description": "commission.teyvatdelight.food_and_study.description",
+  "weight": 2,
+  "targets": [
+    {
+      "type": "item",
+      "source": "#teyvatdelight:teyvat_food_items",
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  "completionRules": []
+}

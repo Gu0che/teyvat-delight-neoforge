@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "teyvatdelight:block/chenyu_tea_brew" },
+    "facing=east": { "model": "teyvatdelight:block/chenyu_tea_brew", "y": 90 },
+    "facing=south": { "model": "teyvatdelight:block/chenyu_tea_brew", "y": 180 },
+    "facing=west": { "model": "teyvatdelight:block/chenyu_tea_brew", "y": 270 }
+  }
+}

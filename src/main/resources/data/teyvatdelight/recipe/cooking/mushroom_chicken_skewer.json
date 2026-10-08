@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:foods/raw_chicken"
+    },
+    {
+      "tag": "c:mushrooms"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:stick"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:mushroom_chicken_skewer"
+  }
+}

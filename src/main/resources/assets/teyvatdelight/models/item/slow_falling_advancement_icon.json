@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teyvatdelight:item/slow_falling_advancement_icon"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "order": 160,
+  "title": "commission.teyvatdelight.firework_trial.title",
+  "description": "commission.teyvatdelight.firework_trial.description",
+  "weight": 1,
+  "targets": [
+    {
+      "type": "event",
+      "source": "teyvatdelight:launch_firework",
+      "drawCount": 1,
+      "count": 3,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "minecraft:firework_rocket",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  "completionRules": []
+}

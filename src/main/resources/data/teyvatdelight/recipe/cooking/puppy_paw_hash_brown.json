@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "teyvatdelight:pinecone"
+    },
+    {
+      "item": "teyvatdelight:pinecone"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "teyvatdelight:jam"
+    },
+    {
+      "item": "teyvatdelight:wolfhook"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:paper"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:puppy_paw_hash_brown"
+  }
+}

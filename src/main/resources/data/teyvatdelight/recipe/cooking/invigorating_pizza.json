@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "farmersdelight:cabbage"
+    },
+    {
+      "item": "teyvatdelight:cheese"
+    },
+    {
+      "item": "teyvatdelight:dandelion_seeds"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:heavy_weighted_pressure_plate"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:invigorating_pizza"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "farmersdelight:add_features_by_filter",
+  "allowed_biomes": [
+    "minecraft:river",
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp"
+  ],
+  "features": "teyvatdelight:patch_wild_horsetail",
+  "step": "vegetal_decoration"
+}

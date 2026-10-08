@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:soul_sand_valley",
+    "minecraft:crimson_forest"
+  ],
+  "features": "teyvatdelight:patch_wild_dendrobium",
+  "step": "vegetal_decoration"
+}

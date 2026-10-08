@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:forest",
+    "minecraft:beach"
+  ],
+  "features": "teyvatdelight:patch_wild_snapdragon",
+  "step": "vegetal_decoration"
+}

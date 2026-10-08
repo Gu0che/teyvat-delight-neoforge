@@ -1,0 +1,11 @@
+{
+  "type": "teyvatdelight:wild_crop_patch",
+  "config": {
+    "state": {
+      "Name": "teyvatdelight:wild_wolfhook"
+    },
+    "min_count": 1,
+    "max_count": 4,
+    "xz_spread": 3
+  }
+}

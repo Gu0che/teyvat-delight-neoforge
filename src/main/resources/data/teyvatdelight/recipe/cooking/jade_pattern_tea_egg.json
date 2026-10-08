@@ -1,0 +1,22 @@
+{
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  100,
+    "experience":  0.35,
+    "ingredients":  [
+                        {
+                            "tag":  "c:eggs"
+                        },
+                        {
+                            "item":  "teyvatdelight:chenyu_tea"
+                        }
+                    ],
+    "container":  {
+                      "count":  1,
+                      "id":  "minecraft:bowl"
+                  },
+    "recipe_book_tab":  "meals",
+    "result":  {
+                   "count":  1,
+                   "id":  "teyvatdelight:jade_pattern_tea_egg"
+               }
+}

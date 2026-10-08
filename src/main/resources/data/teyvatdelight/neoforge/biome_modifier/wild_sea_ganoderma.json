@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:ocean",
+    "minecraft:lukewarm_ocean"
+  ],
+  "features": "teyvatdelight:patch_wild_sea_ganoderma",
+  "step": "vegetal_decoration"
+}

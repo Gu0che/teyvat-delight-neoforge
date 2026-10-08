@@ -1,0 +1,13 @@
+{
+  "enabled": false,
+  "order": 10,
+  "match": {
+    "specialties": ["teyvatdelight:small_lamp_grass"],
+    "methods": ["right_click"],
+    "mature": true,
+    "player": true
+  },
+  "changes": [
+    {"source": "base", "operation": "add", "output": "minecraft:emerald", "count": 1, "chance": 0.1}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botanypots"
+    }
+  ],
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "teyvatdelight:snapdragon_crop"
+      ]
+    }
+  ],
+  "type": "botanypots:block_derived_crop",
+  "block": "teyvatdelight:snapdragon_crop",
+  "input": {
+    "item": "teyvatdelight:snapdragon_seeds"
+  },
+  "soil": {
+    "item": "teyvatdelight:chu_ci_zhu_field"
+  }
+}

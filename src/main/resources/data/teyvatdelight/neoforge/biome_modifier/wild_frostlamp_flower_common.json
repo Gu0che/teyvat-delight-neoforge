@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:frozen_river",
+    "minecraft:snowy_beach"
+  ],
+  "features": "teyvatdelight:patch_wild_frostlamp_flower_common",
+  "step": "vegetal_decoration"
+}

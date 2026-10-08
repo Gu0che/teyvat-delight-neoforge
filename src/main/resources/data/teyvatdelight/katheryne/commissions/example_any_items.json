@@ -1,0 +1,31 @@
+// 备选物品委托：苹果或面包都可以，合计提交 3 个；例如 1 个苹果加 2 个面包。
+{
+  "enabled": false,
+  "order": 100,
+  "title": "补充口粮",
+  "description": "苹果或面包都行，带来三个就好。",
+  "icon": "",
+  "weight": 1,
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  // 例如奖励 2 个绿宝石：{"items":[{"item":"minecraft:emerald","count":2}],"random":[]}。
+  "reward": "",
+  "targets": [
+    {
+      "type": "item",
+      "selection": "any",
+      "source": {
+        // 候选列表可混合具体物品 ID 和 #物品标签；any 模式不使用抽取权重。
+        "include": ["minecraft:apple", "minecraft:bread"],
+        // 排除列表。例如 ["minecraft:bread"] 会让此目标只接受苹果。
+        "exclude": []
+      },
+      "drawCount": 1,
+      "count": 3,
+      "repeat": false
+    }
+  ]
+}

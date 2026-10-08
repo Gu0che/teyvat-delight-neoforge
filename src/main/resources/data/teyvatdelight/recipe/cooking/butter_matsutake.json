@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "teyvatdelight:matsutake"
+    },
+    {
+      "item": "teyvatdelight:matsutake"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "teyvatdelight:pinecone"
+    },
+    {
+      "item": "teyvatdelight:pinecone"
+    },
+    {
+      "item": "teyvatdelight:butter"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:heavy_weighted_pressure_plate"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:butter_matsutake"
+  }
+}

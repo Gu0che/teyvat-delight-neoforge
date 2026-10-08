@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_nutritious_meal_593": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:nutritious_meal_593"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_nutritious_meal_593.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_nutritious_meal_593.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:nutritious_meal_593",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_nutritious_meal_593"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

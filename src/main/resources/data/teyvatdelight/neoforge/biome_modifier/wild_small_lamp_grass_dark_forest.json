@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "minecraft:dark_forest",
+  "features": "teyvatdelight:patch_wild_small_lamp_grass_common",
+  "step": "vegetal_decoration"
+}

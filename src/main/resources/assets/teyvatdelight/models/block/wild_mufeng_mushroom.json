@@ -1,0 +1,6 @@
+{
+  "parent": "teyvatdelight:block/template_wild_crop_cross",
+  "textures": {
+    "cross": "teyvatdelight:block/mufeng_mushroom_stage7"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "teyvatdelight:mora",
+          "weight": 75,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 2.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 25
+        }
+      ]
+    },
+    {
+      "name": "teyvatdelight:primogem",
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "teyvatdelight:primogem",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "add": false,
+              "count": 1.0
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 90
+        }
+      ]
+    }
+  ]
+}

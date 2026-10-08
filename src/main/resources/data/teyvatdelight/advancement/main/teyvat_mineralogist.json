@@ -1,0 +1,60 @@
+{
+  "parent": "teyvatdelight:main/got_teyvat_mineral",
+  "criteria": {
+    "shipo": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:shipo"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "yeboshi": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:yeboshi"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "jinghuagusui": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:jinghuagusui"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.teyvat_mineralogist.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:yeboshi"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.teyvat_mineralogist.title"
+    }
+  },
+  "requirements": [
+    [
+      "shipo"
+    ],
+    [
+      "yeboshi"
+    ],
+    [
+      "jinghuagusui"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

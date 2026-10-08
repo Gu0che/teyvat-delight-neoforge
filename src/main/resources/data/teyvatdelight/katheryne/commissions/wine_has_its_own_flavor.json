@@ -1,0 +1,24 @@
+{
+  "order": 180,
+  "title": "commission.teyvatdelight.wine_has_its_own_flavor.title",
+  "description": "commission.teyvatdelight.wine_has_its_own_flavor.description",
+  "weight": 1,
+  "targets": [
+    {
+      "type": "item",
+      "source": "teyvatdelight:dandelion_seeds",
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  "completionRules": []
+}

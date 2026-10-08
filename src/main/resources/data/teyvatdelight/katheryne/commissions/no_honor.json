@@ -1,0 +1,23 @@
+{
+  "order": 50,
+  "title": "commission.teyvatdelight.pillagers.title",
+  "description": "commission.teyvatdelight.pillagers.description",
+  "weight": 1,
+  "targets": [
+    {
+      "type": "kill",
+      "source": "minecraft:pillager",
+      "drawCount": 1,
+      "count": 3,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": []
+}

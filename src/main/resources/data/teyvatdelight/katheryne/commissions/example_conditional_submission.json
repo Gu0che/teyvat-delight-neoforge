@@ -1,0 +1,31 @@
+{
+  // 改文件名并设为 true 即可启用。文件名是每位玩家完成记录的身份，请勿随意改名。
+  "enabled": false,
+  "order": 1000,
+  "title": "寻找一把特别的剑",
+  "description": "提交一把铁剑；若剑被命名为藏锋，则完成专项故事。",
+  "icon": "minecraft:iron_sword",
+  "weight": 1,
+  "targets": [
+    {"type": "item", "source": "minecraft:iron_sword", "count": 1, "drawCount": 1, "repeat": false}
+  ],
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  // 无条件在成功领取奖励时授予的进度。空数组不授予额外进度。
+  "completionAdvancements": [],
+  "completionRules": [
+    {
+      // 只检查实际扣除的物品，不检查未提交的背包物品。
+      // item 填物品 ID；name 留空接受任何名称，否则必须是相同文字的自定义名称。
+      "submittedItem": {"item": "minecraft:iron_sword", "name": "藏锋"},
+      // 填完整进度 ID。提交时记住结果，领取奖励时才授予。
+      "advancements": ["teyvatdelight:main/searching_for_sword"],
+      // true：这位玩家成功领取后不再派发本委托；其他玩家不受影响。
+      // false：不改变 repeatable 的重复完成规则。
+      "stopRepeating": true
+    }
+  ]
+}

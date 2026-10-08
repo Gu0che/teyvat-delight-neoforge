@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "teyvatdelight:small_lamp_grass"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:small_lamp_grass_seeds"
+  }
+}

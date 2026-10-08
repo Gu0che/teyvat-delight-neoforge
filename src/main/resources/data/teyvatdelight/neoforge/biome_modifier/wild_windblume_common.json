@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:meadow"
+  ],
+  "features": "teyvatdelight:patch_wild_windblume_common",
+  "step": "vegetal_decoration"
+}

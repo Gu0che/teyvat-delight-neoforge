@@ -1,0 +1,26 @@
+{
+  "order": 120,
+  "title": "commission.teyvatdelight.measure_world.title",
+  "description": "commission.teyvatdelight.measure_world.description",
+  "weight": 1,
+  "targets": [
+    {
+      "type": "event",
+      "source": "teyvatdelight:free_fall_100",
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "teyvatdelight:slow_falling_advancement_icon",
+  "reward": "",
+  "repeatable": false,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [
+    "teyvatdelight:main/measure_world"
+  ],
+  "completionRules": []
+}

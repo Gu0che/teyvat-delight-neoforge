@@ -1,0 +1,34 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_teyvat_scorched_egg": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:teyvat_scorched_egg"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.benny_adventure_team_set_out.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:teyvat_scorched_egg"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.benny_adventure_team_set_out.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_teyvat_scorched_egg"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

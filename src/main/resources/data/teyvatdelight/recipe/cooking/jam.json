@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    { "tag": "c:foods/fruit" },
+    { "tag": "c:foods/fruit" },
+    { "tag": "teyvatdelight:teyvat_fruits" },
+    { "tag": "teyvatdelight:teyvat_fruits" },
+    { "tag": "c:foods/sugar" }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:glass_bottle"
+  },
+  "recipe_book_tab": "misc",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:jam"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "type":  "neoforge:add_features",
+    "biomes":  [
+                   "minecraft:dripstone_caves"
+               ],
+    "features":  "teyvatdelight:patch_natural_deepslate_yeboshi_underground_common",
+    "step":  "vegetal_decoration"
+}

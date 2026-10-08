@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teyvatdelight:item/good_morning_windmill_town"
+  }
+}

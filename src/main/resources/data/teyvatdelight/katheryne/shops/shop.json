@@ -1,0 +1,221 @@
+{
+  "title": "gui.teyvatdelight.katheryne.shop",
+  "order": 10,
+  "refreshTime": -1,
+  "offers": [
+    {
+      "id": "teyvatdelight:pepper",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:pepper",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 3
+        }
+      ],
+      "dailyLimit": 10
+    },
+    {
+      "id": "teyvatdelight:salt",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:salt",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 3
+        }
+      ],
+      "dailyLimit": 10
+    },
+    {
+      "id": "teyvatdelight:tofu",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:tofu",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 3
+        }
+      ],
+      "dailyLimit": 10
+    },
+    {
+      "id": "teyvatdelight:glabrous_beans",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:glabrous_beans",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 3
+        }
+      ],
+      "dailyLimit": 10
+    },
+    {
+      "id": "teyvatdelight:almond",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:almond",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 3
+        }
+      ],
+      "dailyLimit": 10
+    },
+    {
+      "id": "teyvatdelight:sausage",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:sausage",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 3
+        }
+      ],
+      "dailyLimit": 10
+    },
+    {
+      "id": "teyvatdelight:chenyu_tea",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:chenyu_tea",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 3
+        }
+      ],
+      "dailyLimit": 10
+    },
+    {
+      "id": "teyvatdelight:matsutake",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:matsutake",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 3
+        }
+      ],
+      "dailyLimit": 10
+    },
+    {
+      "id": "teyvatdelight:shrimp_meat",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:shrimp_meat",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 3
+        }
+      ],
+      "dailyLimit": 10
+    },
+    {
+      "id": "teyvatdelight:crab",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:crab",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 3
+        }
+      ],
+      "dailyLimit": 10
+    },
+    {
+      "id": "nutrition_bag",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [
+        {
+          "item": "teyvatdelight:portable_nutrition_bag",
+          "count": 1
+        }
+      ],
+      "cost": [
+        {
+          "item": "teyvatdelight:mora",
+          "count": 42
+        },
+        {
+          "item": "teyvatdelight:primogem",
+          "count": 12
+        }
+      ],
+      "dailyLimit": 1
+    }
+  ],
+  "enabled": true
+}

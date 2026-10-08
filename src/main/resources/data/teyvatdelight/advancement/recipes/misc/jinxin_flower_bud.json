@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_jinxin_flower": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:jinxin_flower"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teyvatdelight:jinxin_flower_bud"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_jinxin_flower"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teyvatdelight:jinxin_flower_bud"
+    ]
+  }
+}

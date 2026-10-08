@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teyvatdelight:item/calla_lily_seafood_soup"
+  }
+}

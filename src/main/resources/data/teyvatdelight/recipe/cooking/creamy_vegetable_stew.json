@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:foods/raw_meat"
+    },
+    {
+      "tag": "c:foods/raw_meat"
+    },
+    {
+      "item": "teyvatdelight:cream"
+    },
+    {
+      "item": "teyvatdelight:cream"
+    },
+    {
+      "item": "teyvatdelight:snapdragon"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:creamy_vegetable_stew"
+  }
+}

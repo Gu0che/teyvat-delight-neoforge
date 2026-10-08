@@ -1,0 +1,372 @@
+{
+  "parent": "teyvatdelight:main/got_teyvat_plant",
+  "criteria": {
+    "small_lamp_grass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:small_lamp_grass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "windwheel_aster": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:windwheel_aster"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "calla_lily": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:calla_lily"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "mint": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:mint"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "jueyun_chili": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:jueyun_chili"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "glaze_lily": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:glaze_lily"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "mufeng_mushroom": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:mufeng_mushroom"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sumeru_rose": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:sumeru_rose"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "grainfruit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:grainfruit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "horsetail": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:horsetail"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "jinxin_flower": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:jinxin_flower"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "fluorescent_fungus": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:fluorescent_fungus"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sea_ganoderma": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:sea_ganoderma"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "dendrobium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:dendrobium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "frostlamp_flower": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:frostlamp_flower"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "yunyan_lieye": {
+      "conditions": {
+        "items": [
+          {
+           "items": "teyvatdelight:yunyan_lieye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "windblume": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:windblume"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pink_windblume": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:pink_windblume"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "yellow_windblume": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:yellow_windblume"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "purple_windblume": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:purple_windblume"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "wolfhook": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:wolfhook"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "snapdragon": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:snapdragon"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "valberry": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:valberry"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "dandelion_seeds": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:dandelion_seeds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "cecilia": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:cecilia"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "raspberry": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:raspberry"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sweet_flower": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:sweet_flower"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.teyvat_botanist.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:glaze_lily"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.teyvat_botanist.title"
+    }
+  },
+  "requirements": [
+    [
+      "small_lamp_grass"
+    ],
+    [
+      "windwheel_aster"
+    ],
+    [
+      "calla_lily"
+    ],
+    [
+      "mint"
+    ],
+    [
+      "jueyun_chili"
+    ],
+    [
+      "glaze_lily"
+    ],
+    [
+      "mufeng_mushroom"
+    ],
+    [
+      "sumeru_rose"
+    ],
+    [
+      "grainfruit"
+    ],
+    [
+      "horsetail"
+    ],
+    [
+      "jinxin_flower"
+    ],
+    [
+      "fluorescent_fungus"
+    ],
+    [
+      "sea_ganoderma"
+    ],
+    [
+      "dendrobium"
+    ],
+    [
+      "frostlamp_flower"
+    ],
+    [
+      "yunyan_lieye"
+    ],
+    [
+      "windblume"
+    ],
+    [
+      "pink_windblume"
+    ],
+    [
+      "yellow_windblume"
+    ],
+    [
+      "purple_windblume"
+    ],
+    [
+      "wolfhook"
+    ],
+    [
+      "snapdragon"
+    ],
+    [
+      "valberry"
+    ],
+    [
+      "dandelion_seeds"
+    ],
+    [
+      "cecilia"
+    ],
+    [
+      "raspberry"
+    ],
+    [
+      "sweet_flower"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

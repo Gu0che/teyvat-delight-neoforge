@@ -1,0 +1,19 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    { "tag": "c:drinks/milk" },
+    { "tag": "c:drinks/milk" },
+    { "item": "minecraft:stick" }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:paper"
+  },
+  "recipe_book_tab": "misc",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:butter"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_puppy_paw_hash_brown": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:puppy_paw_hash_brown"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_puppy_paw_hash_brown.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_puppy_paw_hash_brown.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:puppy_paw_hash_brown",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_puppy_paw_hash_brown"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

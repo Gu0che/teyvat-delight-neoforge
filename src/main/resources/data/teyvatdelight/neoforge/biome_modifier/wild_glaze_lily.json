@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:flower_forest",
+    "minecraft:jungle",
+    "minecraft:sparse_jungle",
+    "minecraft:bamboo_jungle"
+  ],
+  "features": "teyvatdelight:patch_wild_glaze_lily",
+  "step": "vegetal_decoration"
+}

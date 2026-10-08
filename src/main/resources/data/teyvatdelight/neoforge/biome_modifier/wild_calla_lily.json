@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:forest",
+    "minecraft:beach"
+  ],
+  "features": "teyvatdelight:patch_wild_calla_lily",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_survival_grilled_fish": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:survival_grilled_fish"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.where_is_the_offal.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:survival_grilled_fish"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.where_is_the_offal.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_survival_grilled_fish"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

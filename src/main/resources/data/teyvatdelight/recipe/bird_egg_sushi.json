@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "food",
+    "ingredients":  [
+                        {
+                            "item":  "teyvatdelight:bird_egg_yaki"
+                        },
+                        {
+                            "item":  "farmersdelight:cooked_rice"
+                        },
+                        {
+                            "tag":  "minecraft:planks"
+                        }
+                    ],
+    "result":  {
+                   "count":  1,
+                   "id":  "teyvatdelight:bird_egg_sushi"
+               }
+}

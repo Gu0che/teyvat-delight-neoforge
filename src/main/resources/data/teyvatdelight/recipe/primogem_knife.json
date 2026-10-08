@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "m": {
+      "item": "teyvatdelight:primogem"
+    },
+    "s": {
+      "item": "teyvatdelight:mora"
+    }
+  },
+  "pattern": [
+    "m",
+    "s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:primogem_knife"
+  }
+}

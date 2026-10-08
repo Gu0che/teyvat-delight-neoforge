@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_surveyors_egg_burger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:surveyors_egg_burger"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_surveyors_egg_burger.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_surveyors_egg_burger.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:surveyors_egg_burger",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_surveyors_egg_burger"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

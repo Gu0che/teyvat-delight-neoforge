@@ -1,0 +1,34 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_leisure_tea": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:leisure_tea"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.time_for_tea.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:leisure_tea"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.time_for_tea.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_leisure_tea"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

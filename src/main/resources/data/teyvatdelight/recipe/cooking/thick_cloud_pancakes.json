@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "teyvatdelight:raspberry"
+    },
+    {
+      "item": "teyvatdelight:raspberry"
+    },
+    {
+      "item": "teyvatdelight:valberry"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "tag": "c:eggs"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:heavy_weighted_pressure_plate"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:thick_cloud_pancakes"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    {
+      "tag": "c:foods/bread"
+    },
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "tag": "c:foods/cooked_fish"
+    },
+    {
+      "item": "teyvatdelight:windblume"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:harbor_fish_burger"
+  }
+}

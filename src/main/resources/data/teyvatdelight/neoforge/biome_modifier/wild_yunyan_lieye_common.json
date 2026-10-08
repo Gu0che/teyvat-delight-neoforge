@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:eroded_badlands",
+    "minecraft:badlands",
+    "minecraft:wooded_badlands"
+  ],
+  "features": "teyvatdelight:patch_wild_yunyan_lieye_common",
+  "step": "vegetal_decoration"
+}

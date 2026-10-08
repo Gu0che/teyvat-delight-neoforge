@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:grass_block",
+    "minecraft:dirt",
+    "minecraft:stone",
+    "minecraft:gravel",
+    "minecraft:sand",
+    "minecraft:red_sand",
+    "minecraft:andesite",
+    "minecraft:calcite",
+    "minecraft:granite",
+    "minecraft:copper_ore",
+    "minecraft:deepslate_copper_ore",
+    "minecraft:coal_ore",
+    "minecraft:deepslate_coal_ore",
+    "minecraft:iron_ore",
+    "minecraft:deepslate_iron_ore"
+  ]
+}

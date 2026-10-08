@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PMP",
+    "MSM",
+    "PGP"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "M": {
+      "item": "teyvatdelight:mora"
+    },
+    "S": {
+      "tag": "teyvatdelight:teyvat_crop_seeds"
+    },
+    "G": {
+      "item": "teyvatdelight:primogem"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:seed_dispensary"
+  }
+}

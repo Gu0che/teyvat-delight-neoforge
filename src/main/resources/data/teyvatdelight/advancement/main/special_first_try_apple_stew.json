@@ -1,0 +1,37 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_first_try_apple_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:first_try_apple_stew"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.special_first_try_apple_stew.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.special_first_try_apple_stew.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:first_try_apple_stew",
+      "count": 1
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "has_first_try_apple_stew"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

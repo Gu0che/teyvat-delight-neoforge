@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:windswept_hills"
+  ],
+  "features": "teyvatdelight:patch_wild_dandelion",
+  "step": "vegetal_decoration"
+}

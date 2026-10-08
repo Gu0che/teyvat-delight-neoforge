@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,waterlogged=false": {
+      "model": "teyvatdelight:block/natural_coral_pearl"
+    },
+    "facing=north,waterlogged=true": {
+      "model": "teyvatdelight:block/natural_coral_pearl"
+    },
+    "facing=east,waterlogged=false": {
+      "model": "teyvatdelight:block/natural_coral_pearl",
+      "y": 90
+    },
+    "facing=east,waterlogged=true": {
+      "model": "teyvatdelight:block/natural_coral_pearl",
+      "y": 90
+    },
+    "facing=south,waterlogged=false": {
+      "model": "teyvatdelight:block/natural_coral_pearl",
+      "y": 180
+    },
+    "facing=south,waterlogged=true": {
+      "model": "teyvatdelight:block/natural_coral_pearl",
+      "y": 180
+    },
+    "facing=west,waterlogged=false": {
+      "model": "teyvatdelight:block/natural_coral_pearl",
+      "y": 270
+    },
+    "facing=west,waterlogged=true": {
+      "model": "teyvatdelight:block/natural_coral_pearl",
+      "y": 270
+    }
+  }
+}

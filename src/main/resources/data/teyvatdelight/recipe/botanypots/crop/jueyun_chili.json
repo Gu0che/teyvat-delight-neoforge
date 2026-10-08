@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botanypots"
+    }
+  ],
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "teyvatdelight:jueyun_chili_crop"
+      ]
+    }
+  ],
+  "type": "botanypots:block_derived_crop",
+  "block": "teyvatdelight:jueyun_chili_crop",
+  "input": {
+    "item": "teyvatdelight:jueyun_chili_seeds"
+  },
+  "soil": {
+    "item": "teyvatdelight:xuan_ci_jade_field"
+  }
+}

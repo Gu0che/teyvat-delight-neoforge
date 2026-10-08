@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "age=0,blooming=false": {
+      "model": "teyvatdelight:block/glaze_lily_stage0"
+    },
+    "age=0,blooming=true": {
+      "model": "teyvatdelight:block/glaze_lily_stage0"
+    },
+    "age=1,blooming=false": {
+      "model": "teyvatdelight:block/glaze_lily_stage1"
+    },
+    "age=1,blooming=true": {
+      "model": "teyvatdelight:block/glaze_lily_stage1"
+    },
+    "age=2,blooming=false": {
+      "model": "teyvatdelight:block/glaze_lily_stage2"
+    },
+    "age=2,blooming=true": {
+      "model": "teyvatdelight:block/glaze_lily_stage2"
+    },
+    "age=3,blooming=false": {
+      "model": "teyvatdelight:block/glaze_lily_stage3"
+    },
+    "age=3,blooming=true": {
+      "model": "teyvatdelight:block/glaze_lily_stage3"
+    },
+    "age=4,blooming=false": {
+      "model": "teyvatdelight:block/glaze_lily_stage4"
+    },
+    "age=4,blooming=true": {
+      "model": "teyvatdelight:block/glaze_lily_stage4"
+    },
+    "age=5,blooming=false": {
+      "model": "teyvatdelight:block/glaze_lily_stage5"
+    },
+    "age=5,blooming=true": {
+      "model": "teyvatdelight:block/glaze_lily_stage5"
+    },
+    "age=6,blooming=false": {
+      "model": "teyvatdelight:block/glaze_lily_stage6"
+    },
+    "age=6,blooming=true": {
+      "model": "teyvatdelight:block/glaze_lily_stage6"
+    },
+    "age=7,blooming=false": {
+      "model": "teyvatdelight:block/glaze_lily_stage7_day"
+    },
+    "age=7,blooming=true": {
+      "model": "teyvatdelight:block/glaze_lily_stage7_night"
+    }
+  }
+}

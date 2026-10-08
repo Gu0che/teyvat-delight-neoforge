@@ -1,0 +1,10 @@
+// 固定奖励：同时发放 3 原石和 5 摩拉。此奖励不被默认内容引用；写入 reward 引用即可使用，不需要启用开关。引用写法："reward": "teyvatdelight:example_fixed_reward"。
+{
+  // 固定奖励，所有条目一起发放。item 为物品 ID，count 为个数；[] 表示没有固定奖励。不支持附写 NBT 或数据组件。
+  "items": [
+    {"item":"teyvatdelight:primogem","count":3},
+    {"item":"teyvatdelight:mora","count":5}
+  ],
+  // 随机奖励，可与上方固定奖励同时发放。[] 表示不抽取；抽取结果会保存，不在领取时重抽。
+  "random": []
+}

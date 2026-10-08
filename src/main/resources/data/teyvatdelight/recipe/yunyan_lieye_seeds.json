@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "teyvatdelight:yunyan_lieye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:yunyan_lieye_seeds"
+  }
+}

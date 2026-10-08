@@ -1,0 +1,60 @@
+{
+  "parent": "teyvatdelight:main/got_teyvat_biological_material",
+  "criteria": {
+    "starconch": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:starconch"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "coral_pearl": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:coral_pearl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "empty_feather_moth": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:empty_feather_moth"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.teyvat_biologist.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:coral_pearl"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.teyvat_biologist.title"
+    }
+  },
+  "requirements": [
+    [
+      "starconch"
+    ],
+    [
+      "coral_pearl"
+    ],
+    [
+      "empty_feather_moth"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

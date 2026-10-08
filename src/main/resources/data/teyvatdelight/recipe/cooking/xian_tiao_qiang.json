@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "farmersdelight:smoked_ham"
+    },
+    {
+      "item": "teyvatdelight:crab"
+    },
+    {
+      "item": "teyvatdelight:matsutake"
+    },
+    {
+      "item": "teyvatdelight:matsutake"
+    },
+    {
+      "item": "teyvatdelight:shrimp_meat"
+    },
+    {
+      "item": "teyvatdelight:shrimp_meat"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:flower_pot"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:xian_tiao_qiang"
+  }
+}

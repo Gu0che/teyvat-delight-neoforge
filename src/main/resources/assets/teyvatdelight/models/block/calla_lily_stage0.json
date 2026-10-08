@@ -1,0 +1,6 @@
+{
+  "parent": "teyvatdelight:block/template_sunken_crop_cross",
+  "textures": {
+    "cross": "teyvatdelight:block/calla_lily_stage0"
+  }
+}

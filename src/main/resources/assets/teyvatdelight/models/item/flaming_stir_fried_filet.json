@@ -1,0 +1,6 @@
+{
+    "parent":  "minecraft:item/generated",
+    "textures":  {
+                     "layer0":  "teyvatdelight:item/flaming_stir_fried_filet"
+                 }
+}

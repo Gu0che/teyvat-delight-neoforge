@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "teyvatdelight:block/katheryne_figurine" },
+    "facing=east": { "model": "teyvatdelight:block/katheryne_figurine" },
+    "facing=south": { "model": "teyvatdelight:block/katheryne_figurine" },
+    "facing=west": { "model": "teyvatdelight:block/katheryne_figurine" }
+  }
+}

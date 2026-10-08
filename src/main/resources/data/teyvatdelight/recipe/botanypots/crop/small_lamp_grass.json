@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botanypots"
+    }
+  ],
+  "bookshelf:load_conditions": [
+    {
+      "type": "bookshelf:block_exists",
+      "values": [
+        "teyvatdelight:small_lamp_grass_crop"
+      ]
+    }
+  ],
+  "type": "botanypots:block_derived_crop",
+  "block": "teyvatdelight:small_lamp_grass_crop",
+  "input": {
+    "item": "teyvatdelight:small_lamp_grass_seeds"
+  },
+  "soil": {
+    "item": "teyvatdelight:xuan_ci_jade_field"
+  }
+}

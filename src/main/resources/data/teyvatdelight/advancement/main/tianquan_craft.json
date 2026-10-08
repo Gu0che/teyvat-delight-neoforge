@@ -1,0 +1,34 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_qiankun_mora_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:qiankun_mora_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.tianquan_craft.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:qiankun_mora_meat"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.tianquan_craft.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_qiankun_mora_meat"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

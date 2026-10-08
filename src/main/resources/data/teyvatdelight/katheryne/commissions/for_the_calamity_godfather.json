@@ -1,0 +1,24 @@
+{
+  "order": 90,
+  "title": "commission.teyvatdelight.for_the_calamity_godfather.title",
+  "description": "commission.teyvatdelight.for_the_calamity_godfather.description",
+  "weight": 1,
+  "targets": [
+    {
+      "type": "kill",
+      "source": "minecraft:pillager",
+      "drawCount": 1,
+      "count": 3,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  "completionRules": []
+}

@@ -1,0 +1,28 @@
+{
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  100,
+    "experience":  0.35,
+    "ingredients":  [
+                        {
+                            "item":  "teyvatdelight:glabrous_beans"
+                        },
+                        {
+                            "item":  "teyvatdelight:glabrous_beans"
+                        },
+                        {
+                            "item":  "teyvatdelight:mint"
+                        },
+                        {
+                            "item":  "teyvatdelight:mint"
+                        }
+                    ],
+    "container":  {
+                      "count":  1,
+                      "id":  "minecraft:bowl"
+                  },
+    "recipe_book_tab":  "meals",
+    "result":  {
+                   "count":  1,
+                   "id":  "teyvatdelight:mint_bean_soup"
+               }
+}

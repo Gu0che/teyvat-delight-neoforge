@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "minecraft:ice"
+    },
+    {
+      "tag": "c:foods/raw_meat"
+    },
+    {
+      "tag": "c:foods/raw_meat"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "farmersdelight:tomato"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:rich_vegetable_stew"
+  }
+}

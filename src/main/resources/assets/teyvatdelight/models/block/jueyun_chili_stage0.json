@@ -1,0 +1,6 @@
+{
+  "parent": "teyvatdelight:block/template_lowered_crop_cross",
+  "textures": {
+    "cross": "teyvatdelight:block/jueyun_chili_stage0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  100,
+    "experience":  0.35,
+    "ingredients":  [
+                        {
+              "item":  "minecraft:cod"
+                        },
+                        {
+                            "item":  "teyvatdelight:pepper"
+                        }
+                    ],
+    "container":  {
+                      "count":  1,
+                      "id":  "minecraft:stick"
+                  },
+    "recipe_book_tab":  "meals",
+    "result":  {
+                   "count":  1,
+                   "id":  "teyvatdelight:grilled_tiger_fish"
+               }
+}

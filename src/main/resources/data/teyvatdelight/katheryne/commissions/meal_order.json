@@ -1,0 +1,30 @@
+{
+  "order": 20,
+  "title": "commission.teyvatdelight.meal_order.title",
+  "description": "commission.teyvatdelight.meal_order.description",
+  "weight": 2,
+  "targets": [
+    {
+      "type": "item",
+      "source": {
+        "include": [
+          "#teyvatdelight:teyvat_dishes"
+        ],
+        "exclude": [
+          "teyvatdelight:holy_water"
+        ]
+      },
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": []
+}

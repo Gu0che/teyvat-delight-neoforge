@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "order": 20,
+  "match": {
+    "methods": ["break"]
+  },
+  "changes": [
+    {"source": "mora", "operation": "replace", "item": "teyvatdelight:mora", "output": "minecraft:gold_nugget"}
+  ]
+}

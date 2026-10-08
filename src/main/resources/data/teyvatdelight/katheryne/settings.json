@@ -1,0 +1,21 @@
+{
+  "commissions": {
+    "refreshTime": 22000,
+    "durationTicks": -1,
+    "dailyCount": 1,
+    "limit": 4,
+    "selection": "random",
+    "reward": "teyvatdelight:commission",
+    "milestone": {
+      "every": 4,
+      "reward": "teyvatdelight:milestone"
+    }
+  },
+  "balanceItems": ["teyvatdelight:mora", "teyvatdelight:primogem"],
+  "shopRefreshTime": -1,
+  "equipment": {
+    "firstChance": 0.7,
+    "chanceStep": 0.1,
+    "allowCurses": false
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "entities": ["minecraft:player"],
+  "slots": ["back"],
+  "neoforge:conditions": [
+    {"type": "neoforge:mod_loaded", "modid": "caelus"},
+    {"type": "neoforge:mod_loaded", "modid": "curios"}
+  ]
+}

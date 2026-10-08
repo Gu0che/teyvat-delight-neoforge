@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "MPM",
+    "CEC"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:sand"
+    },
+    "M": {
+      "item": "teyvatdelight:mora"
+    },
+    "P": {
+      "item": "teyvatdelight:primogem"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:chu_ci_zhu_field"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "teyvatdelight:main/root",
+  "criteria": {
+    "has_special_dish": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#teyvatdelight:teyvat_special_dishes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.intertwined_fate.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:fruity_skewers"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.intertwined_fate.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_special_dish"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

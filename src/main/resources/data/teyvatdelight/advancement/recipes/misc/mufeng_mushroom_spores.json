@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mufeng_mushroom": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:mufeng_mushroom"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teyvatdelight:mufeng_mushroom_spores"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mufeng_mushroom"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teyvatdelight:mufeng_mushroom_spores"
+    ]
+  }
+}

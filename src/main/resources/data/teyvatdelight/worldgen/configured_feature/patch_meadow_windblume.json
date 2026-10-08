@@ -1,0 +1,12 @@
+{
+  "type": "teyvatdelight:wild_crop_patch",
+  "config": {
+    "state": {
+      "Name": "teyvatdelight:pink_windblume"
+    },
+    "meadow_windblume": true,
+    "tries": 96,
+    "xz_spread": 6,
+    "y_spread": 2
+  }
+}

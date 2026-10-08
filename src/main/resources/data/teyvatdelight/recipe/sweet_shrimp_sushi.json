@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "food",
+    "ingredients":  [
+                        {
+                            "item":  "teyvatdelight:shrimp_meat"
+                        },
+                        {
+                            "item":  "teyvatdelight:shrimp_meat"
+                        },
+                        {
+                            "item":  "farmersdelight:cooked_rice"
+                        },
+                        {
+                            "tag":  "minecraft:planks"
+                        }
+                    ],
+    "result":  {
+                   "count":  1,
+                   "id":  "teyvatdelight:sweet_shrimp_sushi"
+               }
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#teyvatdelight:teyvat_crop_items",
+    "#teyvatdelight:teyvat_mineral_items",
+    "#teyvatdelight:teyvat_biological_materials"
+  ]
+}

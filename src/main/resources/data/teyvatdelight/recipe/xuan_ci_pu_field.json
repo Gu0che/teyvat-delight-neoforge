@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC",
+    "MPM",
+    "AEA"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "M": {
+      "item": "teyvatdelight:mora"
+    },
+    "P": {
+      "item": "teyvatdelight:primogem"
+    },
+    "A": {
+      "item": "minecraft:amethyst_block"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:xuan_ci_pu_field"
+  }
+}

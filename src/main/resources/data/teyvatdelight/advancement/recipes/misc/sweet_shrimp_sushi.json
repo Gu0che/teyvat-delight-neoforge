@@ -1,0 +1,46 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_any_ingredient": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "teyvatdelight:shrimp_meat",
+              "farmersdelight:cooked_rice"
+            ]
+          }
+        ]
+      }
+    },
+    "has_any_ingredient_alternative_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "teyvatdelight:sweet_shrimp_sushi"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_any_ingredient",
+      "has_any_ingredient_alternative_1"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teyvatdelight:sweet_shrimp_sushi"
+    ]
+  }
+}

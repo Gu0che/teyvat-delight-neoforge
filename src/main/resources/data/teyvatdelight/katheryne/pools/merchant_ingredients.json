@@ -1,0 +1,16 @@
+{
+  "type": "item",
+  "include": [
+    "teyvatdelight:pepper",
+    "teyvatdelight:salt",
+    "teyvatdelight:tofu",
+    "teyvatdelight:glabrous_beans",
+    "teyvatdelight:shrimp_meat",
+    "teyvatdelight:almond",
+    "teyvatdelight:sausage",
+    "teyvatdelight:chenyu_tea",
+    "teyvatdelight:matsutake",
+    "teyvatdelight:crab"
+  ],
+  "exclude": []
+}

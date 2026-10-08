@@ -1,0 +1,14 @@
+{
+  "entity.katheryne.interact": {
+    "subtitle": "subtitle.teyvatdelight.katheryne.interact",
+    "sounds": ["teyvatdelight:entity/katheryne/interact"]
+  },
+  "entity.katheryne.commission_complete": {
+    "subtitle": "subtitle.teyvatdelight.katheryne.commission_complete",
+    "sounds": ["teyvatdelight:entity/katheryne/commission_complete"]
+  },
+  "entity.katheryne.idle_anomaly": {
+    "subtitle": "subtitle.teyvatdelight.katheryne.idle_anomaly",
+    "sounds": ["teyvatdelight:entity/katheryne/idle_anomaly"]
+  }
+}

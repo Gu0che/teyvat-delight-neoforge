@@ -1,0 +1,13 @@
+{
+  "enabled": false,
+  "order": 0,
+  "match": {
+    "mature": true,
+    "wild": false,
+    "preferredField": true,
+    "methods": ["right_click", "break", "cooling"]
+  },
+  "changes": [
+    {"source": "field", "operation": "multiply", "factor": 2}
+  ]
+}

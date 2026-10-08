@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teyvatdelight:item/magical_meat_sauce_pasta"
+  }
+}

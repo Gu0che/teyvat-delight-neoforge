@@ -1,0 +1,14 @@
+// 生物公共池示例：不被默认内容引用。仅供 kill 目标引用，不可用来抽物品。source 写 {"pool": "teyvatdelight:example_entities"}。
+{
+  // 公共池类型：item 为物品，entity 为生物。
+  "type": "entity",
+  // 候选直接写 ID 或 #标签时权重为 1；也可写 ["ID或#标签", 权重]。权重必须大于 0，2 相比 1 约有两倍被抽中的机会。
+  "include": [
+    "minecraft:zombie",
+    "minecraft:skeleton",
+    // 此候选的相对权重为 2；影响它在这个池内被抽中的机会。
+    ["minecraft:spider", 2]
+  ],
+  // 排除的 ID 或 #标签；[] 表示不排除。标签必须属于对应的物品或生物注册表。
+  "exclude": []
+}

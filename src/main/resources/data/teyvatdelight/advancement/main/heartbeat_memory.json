@@ -1,0 +1,463 @@
+{
+  "parent": "teyvatdelight:main/intertwined_fate",
+  "criteria": {
+    "fruity_skewers": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:fruity_skewers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "teyvat_scorched_egg": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:teyvat_scorched_egg"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "outriders_champion_steak": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:outriders_champion_steak"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "flaming_stir_fried_filet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:flaming_stir_fried_filet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "qiankun_mora_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:qiankun_mora_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "definitely_not_bar_food": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:definitely_not_bar_food"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "leisure_tea": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:leisure_tea"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rain_or_shine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:rain_or_shine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "eternal_faith": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:eternal_faith"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "satiety_gel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:satiety_gel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "stratagem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:stratagem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "warmth": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:warmth"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "catch_of_the_dark_depths": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:catch_of_the_dark_depths"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "long_night_flame": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:long_night_flame"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "survival_grilled_fish": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:survival_grilled_fish"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "thick_cloud_pancakes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:thick_cloud_pancakes"
+          }
+        ]
+      }
+    },
+    "fish_flavored_toast": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:fish_flavored_toast"
+          }
+        ]
+      }
+    },
+    "magical_meat_sauce_pasta": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:magical_meat_sauce_pasta"
+          }
+        ]
+      }
+    },
+    "spicy_vegetable_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:spicy_vegetable_stew"
+          }
+        ]
+      }
+    },
+    "supreme_wisdom_life": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:supreme_wisdom_life"
+          }
+        ]
+      }
+    },
+    "dinners_judgment": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:dinners_judgment"
+          }
+        ]
+      }
+    },
+    "hearty_revelry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:hearty_revelry"
+          }
+        ]
+      }
+    },
+    "blessed_symphony": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:blessed_symphony"
+          }
+        ]
+      }
+    },
+    "puppy_paw_hash_brown": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:puppy_paw_hash_brown"
+          }
+        ]
+      }
+    },
+    "once_upon_a_time_in_mondstadt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:once_upon_a_time_in_mondstadt"
+          }
+        ]
+      }
+    },
+    "nutritious_meal_593": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:nutritious_meal_593"
+          }
+        ]
+      }
+    },
+    "invigorating_pizza": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:invigorating_pizza"
+          }
+        ]
+      }
+    },
+    "true_barbatos_ratatouille": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:true_barbatos_ratatouille"
+          }
+        ]
+      }
+    },
+    "forest_dream": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:forest_dream"
+          }
+        ]
+      }
+    },
+    "surveyors_egg_burger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:surveyors_egg_burger"
+          }
+        ]
+      }
+    },
+    "night_talk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:night_talk"
+          }
+        ]
+      }
+    },
+    "first_try_apple_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:first_try_apple_stew"
+          }
+        ]
+      }
+    },
+    "boredom_bubble_gum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:boredom_bubble_gum"
+          }
+        ]
+      }
+    },
+    "surf_pie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:surf_pie"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.heartbeat_memory.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:outriders_champion_steak"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.heartbeat_memory.title"
+    }
+  },
+  "requirements": [
+    [
+      "fruity_skewers"
+    ],
+    [
+      "teyvat_scorched_egg"
+    ],
+    [
+      "outriders_champion_steak"
+    ],
+    [
+      "flaming_stir_fried_filet"
+    ],
+    [
+      "qiankun_mora_meat"
+    ],
+    [
+      "definitely_not_bar_food"
+    ],
+    [
+      "leisure_tea"
+    ],
+    [
+      "rain_or_shine"
+    ],
+    [
+      "eternal_faith"
+    ],
+    [
+      "satiety_gel"
+    ],
+    [
+      "stratagem"
+    ],
+    [
+      "warmth"
+    ],
+    [
+      "catch_of_the_dark_depths"
+    ],
+    [
+      "long_night_flame"
+    ],
+    [
+      "survival_grilled_fish"
+    ],
+    [
+      "thick_cloud_pancakes"
+    ],
+    [
+      "fish_flavored_toast"
+    ],
+    [
+      "magical_meat_sauce_pasta"
+    ],
+    [
+      "spicy_vegetable_stew"
+    ],
+    [
+      "supreme_wisdom_life"
+    ],
+    [
+      "dinners_judgment"
+    ],
+    [
+      "hearty_revelry"
+    ],
+    [
+      "blessed_symphony"
+    ],
+    [
+      "puppy_paw_hash_brown"
+    ],
+    [
+      "once_upon_a_time_in_mondstadt"
+    ],
+    [
+      "nutritious_meal_593"
+    ],
+    [
+      "invigorating_pizza"
+    ],
+    [
+      "true_barbatos_ratatouille"
+    ],
+    [
+      "forest_dream"
+    ],
+    [
+      "surveyors_egg_burger"
+    ],
+    [
+      "night_talk"
+    ],
+    [
+      "first_try_apple_stew"
+    ],
+    [
+      "boredom_bubble_gum"
+    ],
+    [
+      "surf_pie"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,37 @@
+{
+  "order": 100,
+  "title": "commission.teyvatdelight.drink_time.title",
+  "description": "commission.teyvatdelight.drink_time.description",
+  "weight": 2,
+  "targets": [
+    {
+      "type": "item",
+      "source": {
+        "include": [
+          "teyvatdelight:iced_wolfhook_juice",
+          "teyvatdelight:berry_mint_drink",
+          "teyvatdelight:sparkling_valberry_juice",
+          "teyvatdelight:apple_cider",
+          "teyvatdelight:holiday_fruit_brew",
+          "teyvatdelight:large_bowl_of_tea",
+          "teyvatdelight:chenyu_tea_brew"
+        ],
+        "exclude": [
+          "teyvatdelight:holy_water"
+        ]
+      },
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  "completionRules": []
+}

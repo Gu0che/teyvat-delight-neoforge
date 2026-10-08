@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mora": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:mora"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teyvatdelight:seed_dispensary"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mora"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teyvatdelight:seed_dispensary"
+    ]
+  }
+}

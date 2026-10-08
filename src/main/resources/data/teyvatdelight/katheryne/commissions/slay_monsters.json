@@ -1,0 +1,25 @@
+{
+  "order": 60,
+  "title": "commission.teyvatdelight.monsters.title",
+  "description": "commission.teyvatdelight.monsters.description",
+  "weight": 1,
+  "targets": [
+    {
+      "type": "kill",
+      "source": {
+        "pool": "teyvatdelight:monsters"
+      },
+      "drawCount": 1,
+      "count": 5,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": []
+}

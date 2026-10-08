@@ -1,0 +1,22 @@
+// 固定加随机奖励：固定发放 3 原石，再抽一种提瓦特作物给两个。在委托或全局 reward 中写 "teyvatdelight:example_mixed_reward" 即可使用，不需要启用开关。
+{
+  // 固定奖励，所有条目一起发放。item 为物品 ID，count 为个数；[] 表示没有固定奖励。不支持附写 NBT 或数据组件。
+  "items": [
+    {"item":"teyvatdelight:primogem","count":3}
+  ],
+  // 随机奖励，可与上方固定奖励同时发放。[] 表示不抽取；抽取结果会保存，不在领取时重抽。
+  "random": [
+    {
+      // 奖励类型固定写 item，表示抽取物品。
+      "type": "item",
+      // 目标或商品来源：具体 ID、#标签、include/exclude 对象或公共池引用。下面就是可直接复制的写法。
+      "source": "#teyvatdelight:teyvat_crop_items",
+      // 抽取次数：1 抽一个目标或商品，2 抽两个；不是物品数量。
+      "drawCount": 1,
+      // 每次抽中的目标需要多少个，或每种抽中的商品/奖励给多少个。2 次抽取、每次 3 个就是两份各 3 个。
+      "count": 2,
+      // 多次抽取是否允许抽到相同候选：false 不允许，true 允许。重复物品数量会相加；与 repeatable 无关。
+      "repeat": false
+    }
+  ]
+}

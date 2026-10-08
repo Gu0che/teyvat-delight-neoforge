@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "blooming=false": {
+      "model": "teyvatdelight:block/wild_glaze_lily_day"
+    },
+    "blooming=true": {
+      "model": "teyvatdelight:block/wild_glaze_lily_night"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "teyvatdelight:main/root",
+  "criteria": {
+    "has_teyvat_biological_material": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#teyvatdelight:teyvat_biological_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.got_teyvat_biological_material.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:starconch"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.got_teyvat_biological_material.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_teyvat_biological_material"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "teyvatdelight:snapdragon"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:snapdragon_seeds"
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  100,
+    "experience":  0.35,
+    "ingredients":  [
+                        {
+                            "item":  "teyvatdelight:mint"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        }
+                    ],
+    "container":  {
+                      "count":  1,
+                      "id":  "minecraft:heavy_weighted_pressure_plate"
+                  },
+    "recipe_book_tab":  "meals",
+    "result":  {
+                   "count":  1,
+                   "id":  "teyvatdelight:mint_jelly"
+               }
+}

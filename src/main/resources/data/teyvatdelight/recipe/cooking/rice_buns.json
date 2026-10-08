@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:crops/rice"
+    },
+    {
+      "item": "teyvatdelight:horsetail"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:rice_buns"
+  }
+}

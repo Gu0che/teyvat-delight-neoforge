@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:beach",
+    "minecraft:stony_shore"
+  ],
+  "features": "teyvatdelight:patch_natural_coral_pearl",
+  "step": "vegetal_decoration"
+}

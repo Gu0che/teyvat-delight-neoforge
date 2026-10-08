@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "teyvatdelight:fluorescent_fungus"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:fluorescent_fungus_spores"
+  }
+}

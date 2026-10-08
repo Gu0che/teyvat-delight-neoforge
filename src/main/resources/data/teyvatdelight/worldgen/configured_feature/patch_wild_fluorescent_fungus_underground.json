@@ -1,0 +1,12 @@
+{
+  "type": "teyvatdelight:mineral_patch",
+  "config": {
+    "state": {
+      "Name": "teyvatdelight:wild_fluorescent_fungus"
+    },
+    "min_count": 1,
+    "max_count": 4,
+    "xz_spread": 3,
+    "y_spread": 8
+  }
+}

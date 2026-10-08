@@ -1,0 +1,33 @@
+{
+  "parent": "teyvatdelight:main/got_primogem",
+  "criteria": {
+    "has_primogem_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:primogem_knife"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.primogem_knife.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:primogem_knife"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.primogem_knife.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_primogem_knife"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,11 @@
+{
+  "type": "teyvatdelight:wild_crop_patch",
+  "config": {
+    "state": {
+      "Name": "teyvatdelight:pink_windblume"
+    },
+    "min_count": 4,
+    "max_count": 10,
+    "xz_spread": 5
+  }
+}

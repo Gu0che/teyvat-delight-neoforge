@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:nether_wastes"
+  ],
+  "features": "teyvatdelight:patch_wild_dendrobium_common",
+  "step": "vegetal_decoration"
+}

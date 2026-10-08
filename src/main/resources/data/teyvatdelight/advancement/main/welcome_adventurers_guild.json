@@ -1,0 +1,29 @@
+{
+  "parent": "teyvatdelight:main/all_commission_stories",
+  "criteria": {
+    "complete": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.welcome_adventurers_guild.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.welcome_adventurers_guild.description"
+    },
+    "icon": {
+      "id": "minecraft:writable_book"
+    },
+    "frame": "task",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "complete"
+    ]
+  ]
+}
+

@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:deep_dark"
+  ],
+  "features": "teyvatdelight:patch_wild_fluorescent_fungus_underground",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "food",
+    "ingredients":  [
+                        {
+                            "item":  "teyvatdelight:bird_egg_yaki"
+                        },
+                        {
+                            "item":  "farmersdelight:cooked_rice"
+                        },
+                        {
+                            "item":  "teyvatdelight:coral_pearl"
+                        },
+                        {
+                            "tag":  "minecraft:planks"
+                        }
+                    ],
+    "result":  {
+                   "count":  1,
+                   "id":  "teyvatdelight:stratagem"
+               }
+}

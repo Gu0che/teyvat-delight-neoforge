@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
+    "minecraft:desert"
+  ],
+  "features": "teyvatdelight:patch_wild_grainfruit",
+  "step": "vegetal_decoration"
+}

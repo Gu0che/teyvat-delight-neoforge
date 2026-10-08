@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sea_ganoderma": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:sea_ganoderma"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teyvatdelight:sea_ganoderma_sample"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sea_ganoderma"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teyvatdelight:sea_ganoderma_sample"
+    ]
+  }
+}

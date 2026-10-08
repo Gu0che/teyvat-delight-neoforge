@@ -1,0 +1,34 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_eternal_faith": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:eternal_faith"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.tengu_not_dog.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:eternal_faith"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.tengu_not_dog.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_eternal_faith"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

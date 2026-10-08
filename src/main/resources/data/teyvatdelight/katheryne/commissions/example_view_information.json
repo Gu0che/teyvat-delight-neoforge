@@ -1,0 +1,31 @@
+// 查看信息委托：进入详情页即可达标，不扣除物品；玩家仍须点击“领取”结算奖励。
+// 复制改名并启用后使用。标题、描述和详细介绍均可直接写文字，也可写语言键。
+// type：view 为查看信息；objectives（默认）为提交、讨伐、统计或事件目标。
+// introduction：最多8192字符，空字符串不显示。使用 \n 换行，长文可在详情页滚动。
+// targets：空数组表示直接查看；填写提交、讨伐、统计或事件目标则须先完成全部目标。
+// previewBeforeUnlock：false 隐藏尚未解锁的介绍；true 可提前阅读，但仍须达标后再次查看才能领奖。
+// reward：空字符串继承全局，{} 不奖励物品。
+// repeatable：false 表示每位玩家只能完成一次，查看未领奖不计完成。
+// important：重要委托不过期、不占普通上限；urgent：条件满足立即派发。
+// order：越小越靠前；多个待派发的重要紧急委托按该顺序接取。
+// conditions：[] 无前置条件，可参考同目录的 example_condition_*.json。
+// completionAdvancements：领奖时解锁的完整进度ID，例如 ["teyvatdelight:main/welcome_adventurers_guild"]。
+{
+  "enabled": false,
+  "order": 0,
+  "type": "view",
+  "title": "协会介绍",
+  "description": "凯瑟琳有一些事情想告诉你。",
+  "introduction": "欢迎来到冒险家协会！\n请阅读这份介绍。\n向着星辰与深渊！",
+  "previewBeforeUnlock": false,
+  "icon": "minecraft:writable_book",
+  "weight": 1,
+  "repeatable": false,
+  "important": true,
+  "urgent": true,
+  "conditions": [],
+  "reward": "",
+  "targets": [],
+  "completionAdvancements": [],
+  "completionRules": []
+}

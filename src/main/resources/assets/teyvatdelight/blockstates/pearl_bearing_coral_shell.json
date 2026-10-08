@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "teyvatdelight:block/pearl_bearing_coral_shell"
+    },
+    "facing=east": {
+      "model": "teyvatdelight:block/pearl_bearing_coral_shell",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "teyvatdelight:block/pearl_bearing_coral_shell",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "teyvatdelight:block/pearl_bearing_coral_shell",
+      "y": 270
+    }
+  }
+}

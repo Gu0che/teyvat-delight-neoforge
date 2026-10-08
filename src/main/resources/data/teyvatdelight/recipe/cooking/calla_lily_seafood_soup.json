@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "teyvatdelight:crab"
+    },
+    {
+      "item": "teyvatdelight:crab"
+    },
+    {
+      "item": "teyvatdelight:calla_lily"
+    },
+    {
+      "item": "teyvatdelight:mint"
+    },
+    {
+      "item": "teyvatdelight:mint"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:calla_lily_seafood_soup"
+  }
+}

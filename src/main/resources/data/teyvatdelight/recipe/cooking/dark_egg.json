@@ -1,0 +1,22 @@
+{
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  200,
+    "experience":  0.35,
+    "ingredients":  [
+                        {
+                            "tag":  "c:eggs"
+                        },
+                        {
+                            "tag":  "c:eggs"
+                        }
+                    ],
+    "container":  {
+                      "count":  1,
+                      "id":  "minecraft:bowl"
+                  },
+    "recipe_book_tab":  "meals",
+    "result":  {
+                   "count":  1,
+                   "id":  "teyvatdelight:dark_egg"
+               }
+}

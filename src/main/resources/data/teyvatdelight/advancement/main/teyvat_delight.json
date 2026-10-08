@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "entered_teyvat_delight": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "teyvatdelight:textures/block/xuan_ci_jade_field_top.png",
+    "description": {
+      "translate": "advancements.teyvatdelight.teyvat_delight.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:xuan_ci_jade_field"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.teyvatdelight.teyvat_delight.title"
+    }
+  },
+  "requirements": [
+    [
+      "entered_teyvat_delight"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

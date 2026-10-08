@@ -1,0 +1,39 @@
+{
+  "parent": "teyvatdelight:main/root",
+  "criteria": {
+    "teyvatdelight:main/measure_world": {
+      "trigger": "minecraft:impossible"
+    },
+    "teyvatdelight:main/searching_for_sword": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.all_commission_stories.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.all_commission_stories.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:katheryne_figurine"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "teyvatdelight:main/measure_world"
+    ],
+    [
+      "teyvatdelight:main/searching_for_sword"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "teyvatdelight:advancement/all_commission_stories"
+    ]
+  }
+}

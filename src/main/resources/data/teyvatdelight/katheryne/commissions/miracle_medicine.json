@@ -1,0 +1,23 @@
+{
+  "order": 40,
+  "title": "commission.teyvatdelight.medicine.title",
+  "description": "commission.teyvatdelight.medicine.description",
+  "weight": 2,
+  "targets": [
+    {
+      "type": "item",
+      "source": "#teyvatdelight:teyvat_crop_items",
+      "drawCount": 1,
+      "count": 3,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": []
+}

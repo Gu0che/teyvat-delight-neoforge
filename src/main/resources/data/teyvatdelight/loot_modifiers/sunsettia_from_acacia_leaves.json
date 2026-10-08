@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:blocks/acacia_leaves"
+    }
+  ],
+  "table": "teyvatdelight:blocks/sunsettia_from_acacia_leaves"
+}

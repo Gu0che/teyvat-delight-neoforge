@@ -1,0 +1,27 @@
+{
+  "enabled": true,
+  "order": -1000000,
+  "type": "view",
+  "title": "commission.teyvatdelight.welcome.title",
+  "description": "commission.teyvatdelight.welcome.description",
+  "introduction": "commission.teyvatdelight.welcome.introduction",
+  "icon": "minecraft:writable_book",
+  "weight": 1,
+  "repeatable": false,
+  "important": true,
+  "urgent": true,
+  "conditions": [
+    {
+      "type": "event",
+      "id": "teyvatdelight:katheryne_interaction",
+      "min": 1
+    }
+  ],
+  "reward": "",
+  "targets": [],
+  "completionAdvancements": [
+    "teyvatdelight:main/welcome_adventurers_guild"
+  ],
+  "completionRules": []
+}
+

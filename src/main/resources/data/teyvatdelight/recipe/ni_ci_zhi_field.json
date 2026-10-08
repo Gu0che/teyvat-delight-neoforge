@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FDF",
+    "MPM",
+    "DED"
+  ],
+  "key": {
+    "F": {
+      "tag": "minecraft:flowers"
+    },
+    "D": {
+      "item": "minecraft:dirt"
+    },
+    "M": {
+      "item": "teyvatdelight:mora"
+    },
+    "P": {
+      "item": "teyvatdelight:primogem"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:ni_ci_zhi_field"
+  }
+}

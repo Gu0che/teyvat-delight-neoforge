@@ -1,0 +1,31 @@
+{
+  "parent": "teyvatdelight:main/root",
+  "criteria": {
+    "eat_holy_water": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "teyvatdelight:holy_water"
+        }
+      }
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.was_it_worth_it.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.was_it_worth_it.description"
+    },
+    "icon": {
+      "id": "teyvatdelight:holy_water",
+      "count": 1
+    },
+    "frame": "task",
+    "hidden": true
+  },
+  "requirements": [
+    ["eat_holy_water"]
+  ],
+  "sends_telemetry_event": true
+}

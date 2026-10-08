@@ -1,0 +1,6 @@
+{
+  "parent": "teyvatdelight:block/template_water_filed_crop_cross_top",
+  "textures": {
+    "cross": "teyvatdelight:block/horsetail_top_stage2"
+  }
+}

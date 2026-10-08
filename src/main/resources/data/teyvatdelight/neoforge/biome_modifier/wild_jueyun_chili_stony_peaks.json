@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:stony_peaks"
+  ],
+  "features": "teyvatdelight:patch_wild_jueyun_chili_common",
+  "step": "vegetal_decoration"
+}

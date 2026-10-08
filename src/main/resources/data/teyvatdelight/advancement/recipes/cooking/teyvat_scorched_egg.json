@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_egg_or_windwheel_aster": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "#c:eggs",
+              "teyvatdelight:windwheel_aster"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teyvatdelight:cooking/teyvat_scorched_egg"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_egg_or_windwheel_aster"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teyvatdelight:cooking/teyvat_scorched_egg"
+    ]
+  }
+}

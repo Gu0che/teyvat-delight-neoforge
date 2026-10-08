@@ -1,0 +1,28 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:foods/raw_meat"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "teyvatdelight:small_lamp_grass"
+    },
+    {
+      "item": "teyvatdelight:cheese"
+    }
+  ],
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "teyvatdelight:pile_em_up"
+  }
+}

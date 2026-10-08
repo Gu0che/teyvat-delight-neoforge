@@ -1,0 +1,340 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=1": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=2": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=3": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=4": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=5": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=6": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=7": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=8": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=9": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=10": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=11": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=12": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=13": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=14": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=15": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=16": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=17": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=18": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=19": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=20": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=21": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=22": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=23": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=24": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=25": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=26": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=27": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=28": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=29": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=30": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=31": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=32": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=33": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=34": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=35": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=36": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=37": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=38": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=39": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=40": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=41": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=42": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=43": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=44": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=45": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=46": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=47": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=48": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=49": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=50": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=51": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=52": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=53": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=54": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=55": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=56": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=57": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=58": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=59": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=60": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=61": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=62": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=63": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=64": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=65": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=66": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=67": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=68": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=69": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=70": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=71": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=72": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=73": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=74": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=75": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=76": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=77": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=78": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=79": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=80": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=81": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=82": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=83": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=84": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=85": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=86": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=87": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=88": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=89": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=90": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=91": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=92": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=93": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=94": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=95": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=96": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=97": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=98": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=99": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=100": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=101": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=102": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=103": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=104": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=105": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=106": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=107": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=108": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=109": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=110": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    },
+    "age=111": {
+      "model": "teyvatdelight:block/blazing_jinxin_flower"
+    }
+  }
+}

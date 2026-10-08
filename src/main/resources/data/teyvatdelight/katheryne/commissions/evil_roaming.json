@@ -1,0 +1,26 @@
+{
+  "order": 70,
+  "title": "commission.teyvatdelight.evil_roaming.title",
+  "description": "commission.teyvatdelight.evil_roaming.description",
+  "weight": 1,
+  "targets": [
+    {
+      "type": "kill",
+      "source": {
+        "pool": "teyvatdelight:monsters"
+      },
+      "drawCount": 1,
+      "count": 5,
+      "repeat": false
+    }
+  ],
+  "enabled": true,
+  "icon": "",
+  "reward": "",
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "completionAdvancements": [],
+  "completionRules": []
+}

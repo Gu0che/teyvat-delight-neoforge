@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:sunflower_plains"
+  ],
+  "features": "teyvatdelight:patch_wild_mint_common",
+  "step": "vegetal_decoration"
+}

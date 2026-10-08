@@ -1,0 +1,13 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:wheat_seeds",
+    "minecraft:beetroot_seeds",
+    "minecraft:melon_seeds",
+    "minecraft:pumpkin_seeds",
+    "minecraft:torchflower_seeds",
+    "minecraft:pitcher_pod",
+    "minecraft:cocoa_beans",
+    "#teyvatdelight:teyvat_crop_seeds"
+  ]
+}

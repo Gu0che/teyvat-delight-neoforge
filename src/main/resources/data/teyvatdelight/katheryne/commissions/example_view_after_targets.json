@@ -1,0 +1,37 @@
+// 完成目标后查看介绍，再单独领取奖励。复制改名并设置 enabled: true 即可使用。
+// title/description/introduction：可直接写文字，也可填语言键；介绍用 \n 换行，最多8192字符。
+// previewBeforeUnlock：false 在目标达成前隐藏介绍；true 可提前阅读，不会提前算作已查看。
+// targets：所有目标必须完成。此例先击杀2只僵尸并提交3个苹果，再解锁“查看”。
+// 有提交目标时只在点击“提交”后扣除材料；已提交的材料不再重复扣除。
+// source：物品/生物ID、#标签、{"include":["ID"],"exclude":[]} 或 {"pool":"命名空间:池文件名"}。
+// selection：random 抽出具体目标，any 接受任意符合来源的物品并允许混合凑数（仅物品）。
+// count：每个目标所需数量；drawCount：抽几个目标；repeat：同次抽取是否允许抽到相同候选。
+// weight：普通随机派发的权重，正数越大越容易抽到。order：定义排序，数字小的在前。
+// repeatable：false 每位玩家只能成功完成一次，未完成可重接。
+// important：true 未领奖时不过期、不占普通委托上限。urgent：true 条件满足后立即派发。
+// conditions：接取条件，空数组无条件，可参考同目录 example_condition_*.json。
+// reward："" 继承全局奖励；{} 无奖励；{"items":[{"item":"minecraft:diamond","count":1}]} 给指定物品。
+// completionAdvancements：领奖后授予进度，例如 ["teyvatdelight:main/welcome_adventurers_guild"]。
+// completionRules：根据实际提交物品附加进度/停止重复的规则，空数组不附加。
+{
+  "enabled": false,
+  "order": 100,
+  "type": "view",
+  "title": "调查后的报告",
+  "description": "清理附近的僵尸，带上补给，再听取凯瑟琳的报告。",
+  "introduction": "感谢你带来的补给。\n附近的威胁已经解除，请阅读这份调查报告。",
+  "previewBeforeUnlock": false,
+  "icon": "minecraft:writable_book",
+  "weight": 1,
+  "repeatable": true,
+  "important": false,
+  "urgent": false,
+  "conditions": [],
+  "reward": "",
+  "targets": [
+    {"type": "item", "source": "minecraft:apple", "selection": "random", "count": 3, "drawCount": 1, "repeat": false},
+    {"type": "kill", "source": "minecraft:zombie", "count": 2, "drawCount": 1, "repeat": false}
+  ],
+  "completionAdvancements": [],
+  "completionRules": []
+}

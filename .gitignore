@@ -1,0 +1,105 @@
+### Gradle ###
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/**/build/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/**/out/
+
+.run/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.eclipse/
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/**/bin/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+### Minecraft Modding ###
+run/
+!**/src/**/run/
+**/src/generated/**/.cache/
+repo/
+!**/src/**/repo/
+
+### 提瓦特乐事：本地工作区内容（不进版本控制）###
+
+# 第三方 mod 的 jar：版权原因不能公开分发，体积也大。
+# 构建依赖通过公共 Maven 获取，见 README 的「从源码构建」。
+/libs/
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# 发布归档：历史 jar 全部保留在本地，不进仓库
+/outputs/
+
+# 美术、音频、参考素材原稿（版权与体积原因）
+/建模/
+/贴图/
+/音频/
+/原版材质/
+/农夫乐事材质/
+/图标示例/
+
+# 反编译参考物与解压开的 loader 分发物
+/.tmp_fd/
+/1.21.1-NeoForge_21.1.244/
+
+# 开发日志与本地工作记录
+/logs/
+/.workbuddy/
+
+# 抓取的网络资料与临时文件
+*.htm
+*.html
+*.pdf
+食物一览*
+生物群系标签选择器*
+*.zip
+*.7z
+_crash*_tmp.txt
+
+# MDK 模板自带的许可说明文件（本项目实际的许可见 LICENSE）
+/TEMPLATE_LICENSE.txt
+
+# 模型试做、交接原稿与预览图；游戏实际模型/贴图在 src/main/resources 中，必须入库
+/models/
+/anemo_crystalfly_blockbench_preview*.png
+
+# 个人任务便笺、旧参考清单与策划原稿仅留本地
+/任务.txt
+/作物清单.txt
+/更新推进.txt
+/版本.txt
+/材料获取方式.txt
+/描述.txt
+/料理英文名清单.txt
+/工作计划.xlsx
+/原神魔神任务剧情大纲.docx
+/原神魔神任务剧情大纲.md
+
+# 内部开发资料与验证工具仅留本地，源码库只保留模组实现及构建所需文件
+/AGENTS.md
+/docs/
+/scripts/
+/tools/
+/src/gameTest/
+/食材数值.txt
+/CHANGELOG*.md

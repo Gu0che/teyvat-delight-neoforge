@@ -1,0 +1,34 @@
+{
+  "parent": "teyvatdelight:main/heartbeat_memory",
+  "criteria": {
+    "has_catch_of_the_dark_depths": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:catch_of_the_dark_depths"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.teyvatdelight.can_this_really_be_eaten.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "teyvatdelight:catch_of_the_dark_depths"
+    },
+    "title": {
+      "translate": "advancements.teyvatdelight.can_this_really_be_eaten.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_catch_of_the_dark_depths"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:flower_forest"
+  ],
+  "features": "teyvatdelight:patch_wild_sumeru_rose",
+  "step": "vegetal_decoration"
+}

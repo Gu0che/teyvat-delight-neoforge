@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "teyvatdelight:block/wild_mufeng_mushroom"
+    },
+    "facing=east": {
+      "model": "teyvatdelight:block/wild_mufeng_mushroom",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "teyvatdelight:block/wild_mufeng_mushroom",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "teyvatdelight:block/wild_mufeng_mushroom",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "teyvatdelight:block/wild_mufeng_mushroom"
+    },
+    "facing=west": {
+      "model": "teyvatdelight:block/wild_mufeng_mushroom",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "parent":  "minecraft:item/generated",
+    "textures":  {
+                     "layer0":  "teyvatdelight:item/qiankun_mora_meat"
+                 }
+}

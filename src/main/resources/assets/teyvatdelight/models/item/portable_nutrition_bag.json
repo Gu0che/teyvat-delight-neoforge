@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": { "layer0": "teyvatdelight:item/portable_nutrition_bag_empty" },
+  "overrides": [
+    {
+      "predicate": { "custom_model_data": 1 },
+      "model": "teyvatdelight:item/portable_nutrition_bag_filled"
+    }
+  ]
+}

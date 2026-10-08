@@ -1,0 +1,28 @@
+{
+  "parent": "teyvatdelight:main/welcome_adventurers_guild",
+  "criteria": {
+    "complete": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.teyvatdelight.searching_for_sword.title"
+    },
+    "description": {
+      "translate": "advancements.teyvatdelight.searching_for_sword.description"
+    },
+    "icon": {
+      "id": "minecraft:iron_sword"
+    },
+    "frame": "task",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "complete"
+    ]
+  ]
+}

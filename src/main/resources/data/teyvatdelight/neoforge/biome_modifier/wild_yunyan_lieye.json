@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:stony_peaks",
+    "minecraft:windswept_hills",
+    "minecraft:windswept_gravelly_hills",
+    "minecraft:windswept_forest"
+  ],
+  "features": "teyvatdelight:patch_wild_yunyan_lieye",
+  "step": "vegetal_decoration"
+}
