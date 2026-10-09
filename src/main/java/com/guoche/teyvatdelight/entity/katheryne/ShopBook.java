@@ -116,8 +116,17 @@ public final class ShopBook {
 
   public List<KatheryneSnapshot.StackAmount> products(
       ServerPlayer player, ShopDefinitions.Shop shop, ShopDefinitions.Offer offer) {
+    if (!ShopDefinitions.available(player, shop, offer)) return List.of();
     Entry entry = entry(player, shop, offer);
     var goods = offer.goods();
+    if (entry.rolled == null && goods.fixed() && offer.artifactStars() > 0) {
+      entry.rolled = goods.sell().stream().map(a -> {
+        ItemStack stack = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.tryParse(a.item())), a.count());
+        return com.guoche.teyvatdelight.integration.artifacts.ArtifactShopIntegration
+            .initialize(stack, offer.artifactStars(), player.getRandom());
+      }).toList();
+      dirty.run();
+    }
     if (entry.rolled == null && !goods.fixed()) {
       entry.rolled =
           CommissionConfig.drawChoices(
@@ -134,7 +143,8 @@ public final class ShopBook {
                             ? KatheryneEquipment.roll(player, item)
                             : new ItemStack(item);
                     stack.setCount(goods.count());
-                    return stack;
+                    return com.guoche.teyvatdelight.integration.artifacts.ArtifactShopIntegration
+                        .initialize(stack, offer.artifactStars(), player.getRandom());
                   })
               .toList();
       dirty.run();
@@ -153,6 +163,12 @@ public final class ShopBook {
 
   public KatheryneSnapshot.StoreRow row(
       ServerPlayer player, ShopDefinitions.Shop shop, ShopDefinitions.Offer offer) {
+    if (!ShopDefinitions.available(player, shop, offer))
+      return new KatheryneSnapshot.StoreRow(offer.id(), offer.name(),
+          offer.goods().fixed() ? stacks(offer.goods().sell())
+              : List.of(new KatheryneSnapshot.StackAmount(new ItemStack(net.minecraft.world.item.Items.BOOK), 1)),
+          stacks(offer.goods().cost()), 0, true,
+          CommissionConditions.description(player, offer.conditions()));
     return new KatheryneSnapshot.StoreRow(
         offer.id(),
         offer.name(),
@@ -163,6 +179,7 @@ public final class ShopBook {
 
   public String buy(ServerPlayer player, ShopDefinitions.Shop shop, ShopDefinitions.Offer offer) {
     if (!CommissionConfig.runtimeValid) return "gui.teyvatdelight.katheryne.invalid_rules";
+    if (!ShopDefinitions.available(player, shop, offer)) return "gui.teyvatdelight.katheryne.locked";
     if (remaining(player, shop, offer) == 0) return "gui.teyvatdelight.katheryne.sold_out";
     List<KatheryneSnapshot.StackAmount> goods = products(player, shop, offer);
     if (goods.isEmpty() || goods.stream().anyMatch(g -> g.icon().isEmpty()))
@@ -195,6 +212,7 @@ public final class ShopBook {
       }
     }
     recordTrade(player, shop.id());
+    KatheryneData.get(player.server).commissions.checkUrgent(player);
     com.guoche.teyvatdelight.api.KatheryneApi.shopPurchased(player, shop.id(), offer.id());
     return "";
   }

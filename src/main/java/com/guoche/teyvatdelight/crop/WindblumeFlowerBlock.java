@@ -1,6 +1,7 @@
 package com.guoche.teyvatdelight.crop;
 
 import com.guoche.teyvatdelight.harvest.HarvestDrops;
+import com.guoche.teyvatdelight.harvest.CollectionTools;
 import com.guoche.teyvatdelight.api.harvest.HarvestContext.Method;
 import java.util.List;
 import net.minecraft.world.level.storage.loot.LootParams;
@@ -68,8 +69,9 @@ public class WindblumeFlowerBlock extends BushBlock implements BonemealableBlock
         var tool = builder.getOptionalParameter(LootContextParams.TOOL);
         if (tool == null) tool = ItemStack.EMPTY;
         var pos = BlockPos.containing(builder.getParameter(LootContextParams.ORIGIN));
-        var drops = HarvestDrops.create(builder.getLevel(), pos, state, player, tool, Method.BREAK)
-                .loot(super.getDrops(state, builder));
+        var drops = HarvestDrops.create(builder.getLevel(), pos, state, player, tool, Method.BREAK);
+        if (CollectionTools.isShears(tool)) return drops.base(this, 1).resolve(false);
+        drops.loot(super.getDrops(state, builder));
         if (player != null && !player.isCreative()) drops.cropMora();
         return drops.resolve(false);
     }

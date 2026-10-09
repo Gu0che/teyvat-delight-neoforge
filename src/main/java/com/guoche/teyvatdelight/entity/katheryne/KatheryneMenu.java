@@ -140,9 +140,12 @@ public class KatheryneMenu extends AbstractContainerMenu {
 
   private List<KatheryneSnapshot.StoreHeader> headers() {
     return ShopDefinitions.shops().stream()
+        .filter(s -> ShopDefinitions.available(serverPlayer, s) || s.lockedDisplay().equals("show"))
         .map(
             s ->
-                new KatheryneSnapshot.StoreHeader(s.id(), s.title().isEmpty() ? s.id() : s.title()))
+                new KatheryneSnapshot.StoreHeader(s.id(), s.title().isEmpty() ? s.id() : s.title(),
+                    !ShopDefinitions.available(serverPlayer, s),
+                    CommissionConditions.description(serverPlayer, s.conditions())))
         .toList();
   }
 
@@ -151,9 +154,9 @@ public class KatheryneMenu extends AbstractContainerMenu {
     List<KatheryneSnapshot.StoreRow> rows = new ArrayList<>();
     if (shop != null && CommissionConfig.runtimeValid) {
       if (replace)
-        for (var offer : shop.offers()) rows.add(data().stores.row(serverPlayer, shop, offer));
-      else if (index >= 0 && index < shop.offers().size())
-        rows.add(data().stores.row(serverPlayer, shop, shop.offers().get(index)));
+        for (var offer : ShopDefinitions.visibleOffers(serverPlayer, shop)) rows.add(data().stores.row(serverPlayer, shop, offer));
+      else if (index >= 0 && index < ShopDefinitions.visibleOffers(serverPlayer, shop).size())
+        rows.add(data().stores.row(serverPlayer, shop, ShopDefinitions.visibleOffers(serverPlayer, shop).get(index)));
     }
     return new KatheryneSnapshot.StoreView(
         replace ? headers() : List.of(),
@@ -165,7 +168,8 @@ public class KatheryneMenu extends AbstractContainerMenu {
 
   public void sendSnapshot() {
     if (serverPlayer == null) return;
-    if (!activeStore.isEmpty() && ShopDefinitions.get(activeStore) == null) activeStore = "";
+    if (!activeStore.isEmpty() && !ShopDefinitions.available(serverPlayer, ShopDefinitions.get(activeStore))) activeStore = "";
+    lastConditions = conditionSignature();
     shopKeys = KatheryneRules.shopOffers().stream().map(o -> o.key()).toList();
     dailyKeys = KatheryneRules.dailySlots().stream().map(o -> o.key()).toList();
     lastRules = CommissionConfig.revision();
@@ -185,8 +189,24 @@ public class KatheryneMenu extends AbstractContainerMenu {
       sendSnapshot();
       return;
     }
+    if (!lastConditions.equals(conditionSignature())) {
+      sendSnapshot();
+      return;
+    }
     String current = commissions();
     if (!current.equals(lastCommissions) || inventoryChanged()) send(true, 0, -1, false);
+  }
+
+  private List<Boolean> lastConditions = List.of();
+
+  private List<Boolean> conditionSignature() {
+    List<Boolean> result = new ArrayList<>();
+    for (var shop : ShopDefinitions.shops()) {
+      if (!shop.conditions().isEmpty()) result.add(ShopDefinitions.available(serverPlayer, shop));
+      for (var offer : shop.offers())
+        if (!offer.conditions().isEmpty()) result.add(ShopDefinitions.available(serverPlayer, shop, offer));
+    }
+    return result;
   }
 
   private void send(boolean partial, int kind, int index, boolean replaceStore) {
@@ -252,7 +272,7 @@ public class KatheryneMenu extends AbstractContainerMenu {
       return;
     }
     if (kind == 6) {
-      if (!key.isEmpty() && ShopDefinitions.get(key) == null) {
+      if (!key.isEmpty() && !ShopDefinitions.available(p, ShopDefinitions.get(key))) {
         feedback = "gui.teyvatdelight.katheryne.stale";
         sendSnapshot();
         return;
@@ -292,15 +312,17 @@ public class KatheryneMenu extends AbstractContainerMenu {
       }
     } else if (kind == 5) {
       var shop = ShopDefinitions.get(activeStore);
+      var visible = shop == null ? List.<ShopDefinitions.Offer>of() : ShopDefinitions.visibleOffers(p, shop);
       if (shop == null
           || lastShopCycle != ShopDefinitions.cycle(p.server, shop)
           || index < 0
-          || index >= shop.offers().size()
-          || !shop.offers().get(index).id().equals(key)) {
+          || index >= visible.size()
+          || !visible.get(index).id().equals(key)) {
         feedback = "gui.teyvatdelight.katheryne.stale";
         sendSnapshot();
         return;
       }
+      index = shop.offers().indexOf(visible.get(index));
     } else if (kind == 1 || kind == 2) {
       var keys = kind == 1 ? shopKeys : dailyKeys;
       if (index < 0 || index >= keys.size() || !keys.get(index).equals(key)) {
@@ -355,7 +377,8 @@ public class KatheryneMenu extends AbstractContainerMenu {
       if (kind > 0 && kind != 7 && katheryne != null) katheryne.playHappy();
     }
     if (lastRules != CommissionConfig.revision()) sendSnapshot();
-    else send(true, kind == 5 ? 5 : 0, kind == 5 ? index : -1, false);
+    else if (kind == 1 || kind == 2 || kind == 5) sendSnapshot();
+    else send(true, 0, -1, false);
   }
 
   private List<ItemStack> inventorySnapshot() {

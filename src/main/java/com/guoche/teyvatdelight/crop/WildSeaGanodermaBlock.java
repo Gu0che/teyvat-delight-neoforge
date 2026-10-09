@@ -1,6 +1,7 @@
 package com.guoche.teyvatdelight.crop;
 
 import com.guoche.teyvatdelight.harvest.HarvestDrops;
+import com.guoche.teyvatdelight.harvest.CollectionTools;
 import com.guoche.teyvatdelight.api.harvest.HarvestContext.Method;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
@@ -129,6 +130,10 @@ public class WildSeaGanodermaBlock extends BushBlock implements SimpleWaterlogge
             level.setBlock(pos, Blocks.WATER.defaultBlockState(), 35);
 
             if (!player.isCreative()) {
+                if (CollectionTools.isShears(tool)) {
+                    HarvestDrops.create(level, pos, state, player, tool, Method.BREAK).base(this, 1).drop();
+                    return;
+                }
                 HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
                         .base(TeyvatDelight.SEA_GANODERMA.get(), 1)
                         .seed(TeyvatDelight.SEA_GANODERMA_SAMPLE.get()).cropMora().drop();

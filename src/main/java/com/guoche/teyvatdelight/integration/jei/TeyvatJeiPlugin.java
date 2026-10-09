@@ -4,6 +4,8 @@ import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.TeyvatMerchantCatalog;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.guoche.teyvatdelight.api.TeyvatCropApi;
+import com.guoche.teyvatdelight.api.TeyvatMineralApi;
+import com.guoche.teyvatdelight.crop.NaturalCoralPearlBlock;
 import com.guoche.teyvatdelight.client.katheryne.KatheryneScreen;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
@@ -22,6 +24,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -132,6 +135,17 @@ public final class TeyvatJeiPlugin implements IModPlugin {
                 List.of(Component.translatable("jei.teyvatdelight.source.primogem")));
         addInformation(registration, infoRecipes, com.guoche.teyvatdelight.registry.ModItems.MORA.get(),
                 List.of(Component.translatable("jei.teyvatdelight.source.mora")));
+        TeyvatCropApi.definitions().stream().flatMap(crop -> crop.wildBlocks().stream()).distinct()
+                .filter(block -> !(block instanceof NaturalCoralPearlBlock))
+                .map(Block::asItem).filter(item -> item != Items.AIR)
+                .forEach(item -> addInformation(registration, infoRecipes, item,
+                        List.of(Component.translatable("jei.teyvatdelight.placeable"),
+                                Component.translatable("jei.teyvatdelight.collect_shears"))));
+        TeyvatMineralApi.definitions().stream().flatMap(mineral -> mineral.naturalBlocks().stream()).distinct()
+                .map(Block::asItem).filter(item -> item != Items.AIR)
+                .forEach(item -> addInformation(registration, infoRecipes, item,
+                        List.of(Component.translatable("jei.teyvatdelight.placeable"),
+                                Component.translatable("jei.teyvatdelight.collect_silk_pickaxe"))));
         registration.addRecipes(RecipeTypes.INFORMATION, infoRecipes);
     }
 

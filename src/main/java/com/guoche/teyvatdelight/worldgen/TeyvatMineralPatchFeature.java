@@ -1,6 +1,7 @@
 package com.guoche.teyvatdelight.worldgen;
 
 import com.guoche.teyvatdelight.TeyvatMineralPatchConfiguration;
+import com.guoche.teyvatdelight.mineral.NaturalMineralPlacement;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -41,13 +42,13 @@ public class TeyvatMineralPatchFeature extends Feature<TeyvatMineralPatchConfigu
                     // 有朝向的方块（如晶化骨髓）：遍历 6 个方向，找到能存活的那一侧
                     for (Direction facing : Direction.values()) {
                         BlockState candidate = state.setValue(BlockStateProperties.FACING, facing);
-                        if (candidate.canSurvive(level, pos)) {
+                        if (NaturalMineralPlacement.canGenerateAt(candidate, level, pos)) {
                             level.setBlock(pos, candidate, 2);
                             placed++;
                             break;
                         }
                     }
-                } else if (state.canSurvive(level, pos)) {
+                } else if (NaturalMineralPlacement.canGenerateAt(state, level, pos)) {
                     level.setBlock(pos, state, 2);
                     placed++;
                 }

@@ -537,6 +537,20 @@ public final class CommissionConfig {
     return List.copyOf(choices.values());
   }
 
+  static List<Choice> itemChoices(Settings candidate, List<String> selectors) {
+    Settings previous = settings;
+    Map<String, List<Choice>> old = new HashMap<>(resolved);
+    try {
+      settings = candidate;
+      resolved.clear();
+      return itemChoices(selectors);
+    } finally {
+      settings = previous;
+      resolved.clear();
+      resolved.putAll(old);
+    }
+  }
+
   public static void validateShop(
       Settings candidate,
       List<com.guoche.teyvatdelight.KatheryneShopConfig.RawOffer> offers,

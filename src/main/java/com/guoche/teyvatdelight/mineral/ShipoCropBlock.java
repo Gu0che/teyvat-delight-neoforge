@@ -1,6 +1,7 @@
 package com.guoche.teyvatdelight.mineral;
 
 import com.guoche.teyvatdelight.harvest.HarvestDrops;
+import com.guoche.teyvatdelight.harvest.CollectionTools;
 import com.guoche.teyvatdelight.api.harvest.HarvestContext.Method;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
@@ -12,7 +13,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
@@ -144,7 +144,7 @@ public class ShipoCropBlock extends BushBlock {
             ItemStack tool
     ) {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
-        if (!level.isClientSide && !player.isCreative() && tool.is(ItemTags.PICKAXES)) {
+        if (!level.isClientSide && !player.isCreative() && CollectionTools.isPickaxe(tool)) {
             if (this.stage >= 2) {
                 HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
                         .base(this.mineralItem.get(), 3).mineralMora().drop();

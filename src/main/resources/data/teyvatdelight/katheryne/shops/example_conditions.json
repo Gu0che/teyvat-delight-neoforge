@@ -1,0 +1,66 @@
+{
+  // 复制并改文件名后，改为 true 才启用。标题可直接写文字，也可填语言键。
+  "enabled": false,
+  "title": "阶段商店示例",
+  "order": 100,
+  "refreshTime": -1,
+  // [] 表示不限制。数组中多项必须全部满足。
+  "conditions": [],
+  // hide 隐藏未解锁商店/商品；show 显示锁定项并提示条件。
+  "lockedDisplay": "show",
+  "offers": [
+    {
+      "id": "starter_food",
+      "name": "新手食品",
+      "type": "fixed",
+      "sell": [{"item": "minecraft:bread", "count": 3}],
+      "cost": [{"item": "minecraft:emerald", "count": 1}],
+      "dailyLimit": 10,
+      // 总交易次数小于 10。min 为至少（包含），max 为小于（不包含）。
+      "conditions": [{"type": "trade_total", "min": 0, "max": 10}],
+      "lockedDisplay": "hide"
+    },
+    {
+      "id": "advanced_supplies",
+      "name": "冒险补给",
+      "type": "random",
+      "source": {"include": ["minecraft:diamond", "minecraft:gold_ingot"], "exclude": []},
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false,
+      "enchantEquipment": false,
+      "cost": [{"item": "minecraft:emerald", "count": 2}],
+      "dailyLimit": 1,
+      "conditions": [
+        // any 任意满足一项；all 全部满足；not 反转其内部的一项条件。可嵌套。
+        {"any": [
+          {"type": "advancement", "id": "minecraft:story/mine_diamond"},
+          {"type": "commission_total", "min": 10}
+        ]},
+        {"not": {"type": "advancement", "id": "minecraft:end/kill_dragon"}}
+      ],
+      "lockedDisplay": "show"
+    },
+    {
+      "id": "experienced_customer",
+      "name": "熟客纪念品",
+      "type": "fixed",
+      "sell": [{"item": "minecraft:gold_ingot", "count": 1}],
+      "cost": [{"item": "minecraft:emerald", "count": 1}],
+      "dailyLimit": 1,
+      "conditions": [
+        {"all": [
+          // 商店 ID 来自文件路径。本例 shops/example_conditions.json 即此 ID。
+          {"type": "shop_trades", "id": "example_conditions", "min": 3},
+          // 指定委托成功领取奖励两次；提交或仅达标不算。
+          {"type": "commission", "id": "teyvatdelight:no_honor", "min": 2},
+          // 统计类型默认 minecraft:custom。也可用 minecraft:killed 等类型。
+          {"type": "stat", "category": "minecraft:custom", "id": "minecraft:fish_caught", "min": 5},
+          // 使用已记录的事件次数；任意自定义事件需要模组通过 API 记录。
+          {"type": "event", "id": "teyvatdelight:successful_fishing", "min": 1}
+        ]}
+      ],
+      "lockedDisplay": "show"
+    }
+  ]
+}

@@ -1,7 +1,30 @@
 {
   "variants": {
-    "": {
+    "facing=up": {
       "model": "teyvatdelight:block/natural_shipo"
+    },
+    "facing=down": {
+      "model": "teyvatdelight:block/natural_shipo",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "teyvatdelight:block/natural_shipo",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "teyvatdelight:block/natural_shipo",
+      "x": 90,
+      "y": 90
+    },
+    "facing=south": {
+      "model": "teyvatdelight:block/natural_shipo",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "teyvatdelight:block/natural_shipo",
+      "x": 90,
+      "y": 270
     }
   }
 }

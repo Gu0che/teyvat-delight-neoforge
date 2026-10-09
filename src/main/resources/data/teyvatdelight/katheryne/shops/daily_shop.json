@@ -100,6 +100,22 @@
         }
       ],
       "dailyLimit": 1
+    },
+    {
+      "id": "artifact_sale",
+      "name": "gui.teyvatdelight.katheryne.artifact_sale",
+      "enabled": true,
+      "type": "random",
+      "source": "#teyvatdelight:domain_artifacts",
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false,
+      "enchantEquipment": false,
+      "artifactStars": 5,
+      "cost": [{"item": "teyvatdelight:primogem", "count": 1}],
+      "dailyLimit": 1,
+      "conditions": [{"type": "mod_loaded", "id": "teyvat_artifacts"}],
+      "lockedDisplay": "hide"
     }
   ],
   "enabled": true

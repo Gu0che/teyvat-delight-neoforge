@@ -883,6 +883,11 @@ public final class CommissionBook {
     return state == null ? 0 : state.events.getOrDefault(id, 0L);
   }
 
+  /** Conditions must not allocate, refresh or dispatch commissions. */
+  public State conditionState(ServerPlayer player) {
+    return players.get(player.getUUID());
+  }
+
   /** Read active goals without assigning quests or scanning anything outside this player's list. */
   public String activeEventToken(ServerPlayer player, String id) {
     State state = players.get(player.getUUID());

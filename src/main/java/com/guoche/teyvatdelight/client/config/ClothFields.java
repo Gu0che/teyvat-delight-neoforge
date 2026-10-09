@@ -22,6 +22,18 @@ final class ClothFields {
 
   Screen build() { return builder.build(); }
 
+  void conditions(JsonObject object) {
+    String initial = object.has("conditions") ? object.get("conditions").toString() : "[]";
+    category.addEntry(entries.startStrField(t("conditions"), initial).setDefaultValue("[]")
+        .setTooltip(t("conditions.tip")).setErrorSupplier(value -> {
+          try {
+            if (value.length() > 32768) return Optional.of(t("invalid_text"));
+            com.guoche.teyvatdelight.entity.katheryne.CommissionConditions.parse(JsonParser.parseString(value));
+            return Optional.empty();
+          } catch (RuntimeException error) { return Optional.of(Component.literal(error.getMessage())); }
+        }).setSaveConsumer(value -> object.add("conditions", JsonParser.parseString(value))).build());
+  }
+
   void integer(JsonObject object, String field, int fallback, int min, int max) {
     integer(object, field, fallback, min, max, field);
   }

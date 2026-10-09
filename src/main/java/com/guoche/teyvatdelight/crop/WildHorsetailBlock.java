@@ -1,6 +1,7 @@
 package com.guoche.teyvatdelight.crop;
 
 import com.guoche.teyvatdelight.harvest.HarvestDrops;
+import com.guoche.teyvatdelight.harvest.CollectionTools;
 import com.guoche.teyvatdelight.api.harvest.HarvestContext.Method;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
@@ -164,6 +165,11 @@ public class WildHorsetailBlock extends DoublePlantBlock implements SimpleWaterl
             TeyvatCropDropTracker.consumeSkipDrop(level, upperPos);
 
             if (!player.isCreative()) {
+                if (CollectionTools.isShears(tool)) {
+                    HarvestDrops.create(level, lowerPos, state.setValue(HALF, DoubleBlockHalf.LOWER),
+                            player, tool, Method.BREAK, true).base(this, 1).drop();
+                    return;
+                }
                 HarvestDrops.create(level, lowerPos, state.setValue(HALF, DoubleBlockHalf.LOWER),
                         player, tool, Method.BREAK, true).base(TeyvatDelight.HORSETAIL.get(), 1)
                         .seed(TeyvatDelight.HORSETAIL_SEEDS.get()).cropMora().drop();

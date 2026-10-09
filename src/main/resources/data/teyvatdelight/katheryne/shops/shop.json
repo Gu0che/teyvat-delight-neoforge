@@ -4,6 +4,17 @@
   "refreshTime": -1,
   "offers": [
     {
+      "id": "beginner_bundle",
+      "name": "gui.teyvatdelight.katheryne.beginner_bundle",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [{"item": "teyvatdelight:teyvat_fried_egg", "count": 1}],
+      "cost": [{"item": "teyvatdelight:mora", "count": 1}],
+      "dailyLimit": 10,
+      "conditions": [{"type": "trade_total", "max": 10}],
+      "lockedDisplay": "hide"
+    },
+    {
       "id": "teyvatdelight:pepper",
       "name": "",
       "enabled": true,

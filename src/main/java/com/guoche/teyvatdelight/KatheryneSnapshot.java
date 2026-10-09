@@ -122,10 +122,20 @@ public record KatheryneSnapshot(
 
   public record StackAmount(ItemStack icon, int count) {}
 
-  public record StoreHeader(String id, String title) {}
+  public record StoreHeader(String id, String title, boolean locked,
+      net.minecraft.network.chat.Component lockReason) {
+    public StoreHeader(String id, String title) {
+      this(id, title, false, net.minecraft.network.chat.Component.empty());
+    }
+  }
 
   public record StoreRow(
-      String id, String name, List<StackAmount> outputs, List<StackAmount> prices, int remaining) {}
+      String id, String name, List<StackAmount> outputs, List<StackAmount> prices, int remaining,
+      boolean locked, net.minecraft.network.chat.Component lockReason) {
+    public StoreRow(String id, String name, List<StackAmount> outputs, List<StackAmount> prices, int remaining) {
+      this(id, name, outputs, prices, remaining, false, net.minecraft.network.chat.Component.empty());
+    }
+  }
 
   public record StoreView(
       List<StoreHeader> headers,
@@ -139,7 +149,7 @@ public record KatheryneSnapshot(
 
     private StoreView merge(StoreView previous, int kind, int index) {
       List<StoreHeader> names = headers.isEmpty() ? previous.headers() : headers;
-      if (replaceRows) return new StoreView(names, active, rows, seconds, false);
+      if (replaceRows) return new StoreView(headers, active, rows, seconds, false);
       List<StoreRow> merged = new java.util.ArrayList<>(previous.rows());
       if (kind == 5
           && active.equals(previous.active())

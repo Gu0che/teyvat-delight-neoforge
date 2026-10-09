@@ -31,6 +31,8 @@ final class KatheryneEditableDefaults {
       case "shops" -> {
         put(value, "title", "");
         put(value, "refreshTime", -1);
+        array(value, "conditions");
+        put(value, "lockedDisplay", "hide");
         if (value.has("offers"))
           for (var entry : value.getAsJsonArray("offers"))
             if (entry.isJsonObject()) offer(entry.getAsJsonObject());
@@ -51,6 +53,9 @@ final class KatheryneEditableDefaults {
     put(value, "enabled", true);
     put(value, "type", "fixed");
     put(value, "name", "");
+    array(value, "conditions");
+    put(value, "lockedDisplay", "hide");
+    put(value, "artifactStars", 0);
     boolean fixed = value.get("type").getAsString().trim().equals("fixed");
     put(value, "dailyLimit", fixed ? -1 : 1);
     if (!fixed) {

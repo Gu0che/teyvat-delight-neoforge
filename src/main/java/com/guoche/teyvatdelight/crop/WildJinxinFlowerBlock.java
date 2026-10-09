@@ -1,6 +1,7 @@
 package com.guoche.teyvatdelight.crop;
 
 import com.guoche.teyvatdelight.harvest.HarvestDrops;
+import com.guoche.teyvatdelight.harvest.CollectionTools;
 import com.guoche.teyvatdelight.api.harvest.HarvestContext.Method;
 
 import com.guoche.teyvatdelight.JinxinFlowerBehavior;
@@ -109,6 +110,10 @@ public class WildJinxinFlowerBlock extends BushBlock {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
         TeyvatCropDropTracker.consumeSkipDrop(level, pos);
         if (!level.isClientSide && !player.isCreative()) {
+            if (CollectionTools.isShears(tool)) {
+                HarvestDrops.create(level, pos, state, player, tool, Method.BREAK).base(this, 1).drop();
+                return;
+            }
             HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
                     .base(TeyvatDelight.JINXIN_FLOWER_BUD.get(), 1)
                     .seed(TeyvatDelight.JINXIN_FLOWER_BUD.get()).drop();

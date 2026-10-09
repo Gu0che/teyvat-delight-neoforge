@@ -51,6 +51,9 @@
   "shops": [
     "teyvatdelight:shop",
     "teyvatdelight:daily_shop",
+    "teyvatdelight:souvenirs",
+    "teyvatdelight:example_conditions",
+    "teyvatdelight:example_artifact_integration",
     "teyvatdelight:example_fixed",
     "teyvatdelight:example_bundle",
     "teyvatdelight:example_random",

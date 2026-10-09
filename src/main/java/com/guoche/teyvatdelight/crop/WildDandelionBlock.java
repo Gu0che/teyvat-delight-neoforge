@@ -43,7 +43,8 @@ public class WildDandelionBlock extends WildTeyvatCropBlock {
                               @Nullable BlockEntity blockEntity, ItemStack tool) {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
         if (!level.isClientSide && !player.isCreative()) {
-            if (!DandelionHarvestRules.canHarvest(player, tool)) {
+            if (!com.guoche.teyvatdelight.harvest.CollectionTools.isShears(tool)
+                    && !DandelionHarvestRules.canHarvest(player, tool)) {
                 player.displayClientMessage(Component.translatable("message.teyvatdelight.dandelion_scattered"), true);
             }
         }

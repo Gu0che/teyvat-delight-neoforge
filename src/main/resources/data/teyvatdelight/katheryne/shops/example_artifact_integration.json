@@ -1,0 +1,30 @@
+{
+  // 可复制此交易到任意商店的 offers 中；本例整店默认禁用。
+  "enabled": false,
+  "title": "圣遗物联动示例",
+  "order": 100,
+  "refreshTime": -1,
+  "conditions": [{"type": "mod_loaded", "id": "teyvat_artifacts"}],
+  "lockedDisplay": "hide",
+  "offers": [
+    {
+      "id": "artifact",
+      "name": "随机五星圣遗物",
+      "type": "random",
+      // 各国度刷本圣遗物；也可替换为具体圣遗物 ID、自定义标签或公共池。
+      "source": "#teyvatdelight:domain_artifacts",
+      "drawCount": 1,
+      "count": 1,
+      "repeat": false,
+      "enchantEquipment": false,
+      // 0 不初始化圣遗物；1..5 设置星级并由饰品模组生成主副词条。
+      // 来源必须全部是圣遗物，不要混入普通物品。抽好后保存，购买不重抽。
+      "artifactStars": 5,
+      "cost": [{"item": "teyvatdelight:primogem", "count": 1}],
+      "dailyLimit": 1,
+      // 单独复制交易时保留这一条件，没安装饰品也能正常加载。
+      "conditions": [{"type": "mod_loaded", "id": "teyvat_artifacts"}],
+      "lockedDisplay": "hide"
+    }
+  ]
+}

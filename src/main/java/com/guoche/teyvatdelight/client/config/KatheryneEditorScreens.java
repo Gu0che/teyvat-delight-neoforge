@@ -133,6 +133,8 @@ public final class KatheryneEditorScreens {
               f.bool(draft, "enabled", true);
               f.integer(draft, "order", 1000, -1000000, 1000000);
               f.integer(draft, "refreshTime", -1, -2, 23999);
+              f.choice(draft, "lockedDisplay", "hide", "hide", "show");
+              f.conditions(draft);
               show(f.build());
             }),
             new EditorListScreen.Action(text("add_trade"), () -> {
@@ -181,6 +183,9 @@ public final class KatheryneEditorScreens {
               f.integer(draft, "count", 1, 1, 64, "randomCount");
               f.bool(draft, "repeat", false);
               f.bool(draft, "enchantEquipment", false);
+              f.choice(draft, "lockedDisplay", "hide", "hide", "show");
+              f.integer(draft, "artifactStars", 0, 0, 5);
+              f.conditions(draft);
               show(f.build());
             }),
             new EditorListScreen.Row(text("sell"), icons(array(draft, "sell")),

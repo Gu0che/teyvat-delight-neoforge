@@ -31,6 +31,8 @@ final class KatheryneContentFormat {
       return value;
     }
     if (!KatheryneDataPack.enabled(value)) return value;
+    if (Set.of("shops", "offers", "commissions").contains(category)
+        && !CommissionConditions.possible(CommissionConditions.parse(value.get("conditions")))) return value;
     if (category.equals("shops")) {
       if (!value.has("offers") || !value.get("offers").isJsonArray())
         throw new IllegalArgumentException("Shop needs an offers array");
@@ -38,7 +40,10 @@ final class KatheryneContentFormat {
       for (JsonElement entry : value.getAsJsonArray("offers")) {
         if (!entry.isJsonObject())
           throw new IllegalArgumentException("Write trade objects inside the shop, not file references");
-        offers.add(canonical("offers", entry.getAsJsonObject(), catalog));
+        try { offers.add(canonical("offers", entry.getAsJsonObject(), catalog)); }
+        catch (IllegalArgumentException error) {
+          throw new IllegalArgumentException("Trade " + entry.getAsJsonObject().get("id") + ": " + error.getMessage(), error);
+        }
       }
       value.add("offers", offers);
     } else if (category.equals("offers")) {
@@ -74,8 +79,9 @@ final class KatheryneContentFormat {
     milestone.add("reward", compileReward(milestone.get("reward"), catalog, pools, "milestone"));
     JsonArray templates = new JsonArray();
     for (var entry : KatheryneDataPack.ordered(catalog.category("commissions"))) {
-      JsonObject template = canonical("commissions", entry.getValue(), catalog);
+      JsonObject template = checked("commissions", entry, catalog);
       if (!KatheryneDataPack.enabled(template)) continue;
+      if (!CommissionConditions.possible(CommissionConditions.parse(template.get("conditions")))) continue;
       String id = identity("commissions", entry.getKey(), catalog);
       template.addProperty("id", id);
       compileTargets(template, "targets", pools, "commission/" + id);
@@ -87,14 +93,16 @@ final class KatheryneContentFormat {
     commissions.add("templates", templates);
     JsonArray shops = new JsonArray();
     for (var entry : KatheryneDataPack.ordered(catalog.category("shops"))) {
-      JsonObject shop = canonical("shops", entry.getValue(), catalog);
+      JsonObject shop = checked("shops", entry, catalog);
       if (!KatheryneDataPack.enabled(shop)) continue;
+      if (!CommissionConditions.possible(CommissionConditions.parse(shop.get("conditions")))) continue;
       String id = identity("shops", entry.getKey(), catalog);
       shop.addProperty("id", id);
       JsonArray offers = new JsonArray();
       for (JsonElement element : shop.getAsJsonArray("offers")) {
         JsonObject offer = element.getAsJsonObject();
         if (!KatheryneDataPack.enabled(offer)) continue;
+        if (!CommissionConditions.possible(CommissionConditions.parse(offer.get("conditions")))) continue;
         if (offer.has("type") && offer.get("type").getAsString().trim().equals("random")) {
           String pool = compileSource(offer.get("source"), "item", pools, "shop/" + id + "/" + offer.get("id").getAsString());
           JsonArray selectors = new JsonArray();
@@ -109,6 +117,15 @@ final class KatheryneContentFormat {
     }
     root.add("shops", shops);
     return root;
+  }
+
+  private static JsonObject checked(String category, Map.Entry<String, JsonObject> entry,
+      KatheryneDataPack.Catalog catalog) {
+    try { return canonical(category, entry.getValue(), catalog); }
+    catch (IllegalArgumentException error) {
+      throw new IllegalArgumentException("katheryne/" + category + "/" + entry.getKey()
+          + ": " + error.getMessage(), error);
+    }
   }
 
   private static JsonObject compileReward(JsonElement ref, KatheryneDataPack.Catalog catalog, JsonObject pools, String context) {

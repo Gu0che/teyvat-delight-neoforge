@@ -1,6 +1,7 @@
 package com.guoche.teyvatdelight.worldgen;
 
 import com.guoche.teyvatdelight.NaturalCoralPearlBlock;
+import com.guoche.teyvatdelight.mineral.NaturalMineralPlacement;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.WildCallaLilyBlock;
 import com.guoche.teyvatdelight.WildDendrobiumBlock;
@@ -125,7 +126,8 @@ public class WildTeyvatCropPatchFeature extends Feature<WildTeyvatCropPatchConfi
             int y = level.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, x, z);
             BlockPos pos = new BlockPos(x, y, z);
 
-            if (level.ensureCanWrite(pos) && level.isEmptyBlock(pos) && state.canSurvive(level, pos)) {
+            if (level.ensureCanWrite(pos) && level.isEmptyBlock(pos)
+                    && NaturalMineralPlacement.canGenerateAt(state, level, pos)) {
                 level.setBlock(pos, state, 2);
                 placed++;
             }

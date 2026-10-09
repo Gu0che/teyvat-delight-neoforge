@@ -22,7 +22,7 @@ public final class KatheryneNetwork {
   }
 
   private static void registerPayloads(RegisterPayloadHandlersEvent event) {
-    var registrar = event.registrar("15");
+    var registrar = event.registrar("16");
     registrar.playToClient(
         Sync.TYPE,
         Sync.CODEC,
@@ -218,6 +218,8 @@ public final class KatheryneNetwork {
     for (var header : view.headers()) {
       buf.writeUtf(header.id(), 128);
       buf.writeUtf(header.title(), 256);
+      buf.writeBoolean(header.locked());
+      net.minecraft.network.chat.ComponentSerialization.STREAM_CODEC.encode(buf, header.lockReason());
     }
     buf.writeUtf(view.active(), 128);
     buf.writeVarInt(view.seconds());
@@ -227,6 +229,8 @@ public final class KatheryneNetwork {
       buf.writeUtf(row.id(), 128);
       buf.writeUtf(row.name(), 256);
       buf.writeVarInt(row.remaining());
+      buf.writeBoolean(row.locked());
+      net.minecraft.network.chat.ComponentSerialization.STREAM_CODEC.encode(buf, row.lockReason());
       writeAmounts(buf, row.outputs());
       writeAmounts(buf, row.prices());
     }
@@ -267,7 +271,8 @@ public final class KatheryneNetwork {
     for (int i = 0; i < count; i++) {
       String id = buf.readUtf(128), title = buf.readUtf(256);
       if (id.isEmpty() || !ids.add(id)) throw new IllegalArgumentException("Invalid shop ID");
-      headers.add(new KatheryneSnapshot.StoreHeader(id, title));
+      headers.add(new KatheryneSnapshot.StoreHeader(id, title, buf.readBoolean(),
+          net.minecraft.network.chat.ComponentSerialization.STREAM_CODEC.decode(buf)));
     }
     String active = buf.readUtf(128);
     int seconds = buf.readVarInt();
@@ -280,10 +285,16 @@ public final class KatheryneNetwork {
       if (id.isEmpty() || !ids.add(id) || remaining < -1 || remaining > 1000000)
         throw new IllegalArgumentException("Invalid store row");
       rows.add(
-          new KatheryneSnapshot.StoreRow(id, name, readAmounts(buf), readAmounts(buf), remaining));
+          readStoreRow(buf, id, name, remaining));
     }
     return new KatheryneSnapshot.StoreView(
         List.copyOf(headers), active, List.copyOf(rows), seconds, replace);
+  }
+
+  private static KatheryneSnapshot.StoreRow readStoreRow(RegistryFriendlyByteBuf buf, String id, String name, int remaining) {
+    boolean locked = buf.readBoolean();
+    var reason = net.minecraft.network.chat.ComponentSerialization.STREAM_CODEC.decode(buf);
+    return new KatheryneSnapshot.StoreRow(id, name, readAmounts(buf), readAmounts(buf), remaining, locked, reason);
   }
 
   private static int boundedSize(RegistryFriendlyByteBuf buf) {

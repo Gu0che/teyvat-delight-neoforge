@@ -101,6 +101,8 @@ public final class KatheryneConfigEditor {
       for (JsonElement row : rows) {
         JsonObject offer = row.getAsJsonObject();
         offer.addProperty("enabled", true);
+        if (!CommissionConditions.possible(CommissionConditions.parse(checked.get("conditions")))
+            || !CommissionConditions.possible(CommissionConditions.parse(offer.get("conditions")))) continue;
         checkStacks(offer.get("cost"), false);
         String type = offer.has("type") ? offer.get("type").getAsString() : "fixed";
         if (type.equals("fixed")) checkStacks(offer.get("sell"), true);

@@ -1,6 +1,7 @@
 package com.guoche.teyvatdelight.mineral;
 
 import com.guoche.teyvatdelight.harvest.HarvestDrops;
+import com.guoche.teyvatdelight.harvest.CollectionTools;
 import com.guoche.teyvatdelight.api.harvest.HarvestContext.Method;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
@@ -11,7 +12,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -77,8 +77,12 @@ public class NaturalNoctilucousJadeBlock extends BushBlock {
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         Direction facing = state.getValue(FACING);
         BlockPos supportPos = pos.relative(facing.getOpposite());
-        return this.deepslateBase
-                ? level.getBlockState(supportPos).is(Blocks.DEEPSLATE)
+        return NaturalMineralPlacement.hasFullSupport(level, supportPos, facing);
+    }
+
+    public boolean canGenerateAt(BlockState state, LevelReader level, BlockPos pos) {
+        BlockPos supportPos = pos.relative(state.getValue(FACING).getOpposite());
+        return this.deepslateBase ? level.getBlockState(supportPos).is(Blocks.DEEPSLATE)
                 : level.getBlockState(supportPos).is(Blocks.STONE);
     }
 
@@ -107,9 +111,11 @@ public class NaturalNoctilucousJadeBlock extends BushBlock {
             ItemStack tool
     ) {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
-        if (!level.isClientSide && !player.isCreative() && tool.is(ItemTags.PICKAXES)) {
-            HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
-                    .base(this.mineralItem.get(), 1).mineralMora().drop();
+        if (!level.isClientSide && !player.isCreative() && CollectionTools.isPickaxe(tool)) {
+            var drops = HarvestDrops.create(level, pos, state, player, tool, Method.BREAK);
+            if (CollectionTools.hasSilkTouch(level, tool)) drops.base(this, 1);
+            else drops.base(this.mineralItem.get(), 1).mineralMora();
+            drops.drop();
             level.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
     }

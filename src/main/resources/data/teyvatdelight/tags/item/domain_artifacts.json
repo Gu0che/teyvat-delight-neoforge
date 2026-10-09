@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "#teyvat_artifacts:mondstadt_artifacts", "required": false},
+    {"id": "#teyvat_artifacts:liyue_artifacts", "required": false},
+    {"id": "#teyvat_artifacts:inazuma_artifacts", "required": false},
+    {"id": "#teyvat_artifacts:sumeru_artifacts", "required": false},
+    {"id": "#teyvat_artifacts:fontaine_artifacts", "required": false},
+    {"id": "#teyvat_artifacts:natlan_artifacts", "required": false},
+    {"id": "#teyvat_artifacts:nod_krai_artifacts", "required": false},
+    {"id": "#teyvat_artifacts:snezhnaya_artifacts", "required": false}
+  ]
+}

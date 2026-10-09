@@ -1,0 +1,34 @@
+{
+  "title": "gui.teyvatdelight.katheryne.souvenirs",
+  "order": 30,
+  "enabled": true,
+  "refreshTime": -1,
+  "conditions": [
+    {"type": "advancement", "id": "teyvatdelight:main/all_commission_stories"},
+    {"type": "advancement", "id": "teyvatdelight:main/food_archon"}
+  ],
+  "lockedDisplay": "hide",
+  "offers": [
+    {
+      "id": "wind_wings",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [{"item": "teyvatdelight:wind_wings", "count": 1}],
+      "cost": [
+        {"item": "teyvatdelight:primogem_block", "count": 3},
+        {"item": "teyvatdelight:mora_block", "count": 4}
+      ],
+      "dailyLimit": 1
+    },
+    {
+      "id": "katheryne_figurine",
+      "name": "",
+      "enabled": true,
+      "type": "fixed",
+      "sell": [{"item": "teyvatdelight:katheryne_figurine", "count": 1}],
+      "cost": [{"item": "teyvatdelight:primogem_block", "count": 1}],
+      "dailyLimit": 10
+    }
+  ]
+}

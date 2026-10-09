@@ -8,9 +8,25 @@ import net.minecraft.server.MinecraftServer;
 
 /** Ordered definitions only. Stocks and rolls must never be kept in this registry. */
 public final class ShopDefinitions {
-  public record Offer(String id, String name, KatheryneShopConfig.DailyEntry goods, int limit) {}
+  public record Offer(String id, String name, KatheryneShopConfig.DailyEntry goods, int limit,
+      List<CommissionConditions.Condition> conditions, String lockedDisplay, int artifactStars) {
+    public Offer {
+      conditions = List.copyOf(conditions);
+    }
+    public Offer(String id, String name, KatheryneShopConfig.DailyEntry goods, int limit) {
+      this(id, name, goods, limit, List.of(), "hide", 0);
+    }
+  }
 
-  public record Shop(String id, String title, int refreshTime, List<Offer> offers) {
+  public record Shop(String id, String title, int refreshTime, List<Offer> offers,
+      List<CommissionConditions.Condition> conditions, String lockedDisplay) {
+    public Shop {
+      offers = List.copyOf(offers);
+      conditions = List.copyOf(conditions);
+    }
+    public Shop(String id, String title, int refreshTime, List<Offer> offers) {
+      this(id, title, refreshTime, offers, List.of(), "hide");
+    }
     public Offer offer(String id) {
       return offers.stream().filter(o -> o.id().equals(id)).findFirst().orElse(null);
     }
@@ -136,9 +152,12 @@ public final class ShopDefinitions {
       var goods =
           new KatheryneShopConfig.DailyEntry(
               key, name, fixed, sell, pool, draws, count, enchant, cost, repeat);
-      result.add(new Offer(key, name, goods, limit));
+      result.add(new Offer(key, name, goods, limit,
+          CommissionConditions.parse(offer.get("conditions")), lockedDisplay(offer),
+          CommissionConfig.number(offer, "artifactStars", 0, 0, 5)));
     }
-    return new Shop(id, title, time, List.copyOf(result));
+    return new Shop(id, title, time, List.copyOf(result),
+        CommissionConditions.parse(value.get("conditions")), lockedDisplay(value));
   }
 
   public static void validate(
@@ -146,12 +165,51 @@ public final class ShopDefinitions {
       List<Shop> shops,
       KatheryneShopConfig.Equipment equipment) {
     for (Shop shop : shops) {
+      if (!CommissionConditions.possible(shop.conditions())) continue;
+      CommissionConditions.validate(shop.conditions());
+      for (var offer : shop.offers()) {
+        if (!CommissionConditions.possible(offer.conditions())) continue;
+        CommissionConditions.validate(offer.conditions());
+        if (offer.artifactStars() > 0) {
+          com.guoche.teyvatdelight.integration.artifacts.ArtifactShopIntegration.validate();
+          List<String> items = offer.goods().fixed()
+              ? offer.goods().sell().stream().map(RawStack::item).toList()
+              : CommissionConfig.itemChoices(candidate, offer.goods().pool()).stream().map(CommissionConfig.Choice::id).toList();
+          for (String item : items)
+            if (!com.guoche.teyvatdelight.integration.artifacts.ArtifactShopIntegration.isArtifact(
+                net.minecraft.core.registries.BuiltInRegistries.ITEM.get(net.minecraft.resources.ResourceLocation.tryParse(item))))
+              throw new IllegalArgumentException("Shop " + shop.id() + ", trade " + offer.id()
+                  + ": artifactStars source contains a non-artifact: " + item);
+        }
+      }
       CommissionConfig.validateShop(
           candidate,
           List.of(),
           new KatheryneShopConfig.Settings(
-              -1, equipment, shop.offers().stream().map(Offer::goods).toList()));
+              -1, equipment, shop.offers().stream()
+                  .filter(o -> CommissionConditions.possible(o.conditions())).map(Offer::goods).toList()));
     }
+  }
+
+  public static boolean available(net.minecraft.server.level.ServerPlayer player, Shop shop) {
+    return shop != null && CommissionConditions.matches(player, shop.conditions());
+  }
+
+  public static boolean available(net.minecraft.server.level.ServerPlayer player, Shop shop, Offer offer) {
+    return available(player, shop) && CommissionConditions.matches(player, offer.conditions());
+  }
+
+  public static List<Offer> visibleOffers(net.minecraft.server.level.ServerPlayer player, Shop shop) {
+    if (!available(player, shop)) return List.of();
+    return shop.offers().stream().filter(o -> available(player, shop, o)
+        || o.lockedDisplay().equals("show")).toList();
+  }
+
+  private static String lockedDisplay(JsonObject object) {
+    String mode = text(object, "lockedDisplay", "hide", 8);
+    if (!Set.of("hide", "show").contains(mode))
+      throw new IllegalArgumentException("lockedDisplay must be hide or show");
+    return mode;
   }
 
   public static int refreshTime(Shop shop) {

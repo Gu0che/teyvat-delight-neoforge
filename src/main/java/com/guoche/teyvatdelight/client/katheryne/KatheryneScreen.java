@@ -227,10 +227,11 @@ public class KatheryneScreen extends AbstractContainerScreen<KatheryneMenu> {
       button.setWidth(crowded ? 84 : 98);
       button.setMessage(
           Component.literal(font.plainSubstrByWidth(label.getString(), button.getWidth() - 8)));
-      button.setTooltip(Tooltip.create(label));
+      button.setTooltip(Tooltip.create(header.locked()
+          ? label.copy().append("\n").append(header.lockReason()) : label));
       button.active =
-          !header.id().equals(menu.snapshot().stores().active())
-              || header.id().isEmpty() && !selected.isEmpty();
+          !header.locked() && (!header.id().equals(menu.snapshot().stores().active())
+              || header.id().isEmpty() && !selected.isEmpty());
     }
     var q = selectedQuest();
     submit.visible = tab == 0 && q != null;
@@ -259,13 +260,17 @@ public class KatheryneScreen extends AbstractContainerScreen<KatheryneMenu> {
         b.setWidth(45);
         b.setMessage(Component.translatable("gui.teyvatdelight.katheryne.buy"));
         boolean sold = storeRows().get(index).remaining() == 0;
-        if (sold) reason = "gui.teyvatdelight.katheryne.sold_out";
+        if (storeRows().get(index).locked()) reason = "gui.teyvatdelight.katheryne.locked";
+        else if (sold) reason = "gui.teyvatdelight.katheryne.sold_out";
         else if (!affordable(prices(index))) reason = "gui.teyvatdelight.katheryne.missing_payment";
         b.active = reason.isEmpty();
       }
       b.setTooltip(reason.isEmpty()
           ? tab == 0 ? submissionTooltip(view().quests().get(index)) : null
           : Tooltip.create(Component.translatable(reason)));
+      if (tab != 0 && storeRows().get(index).locked())
+        b.setTooltip(Tooltip.create(Component.translatable("gui.teyvatdelight.katheryne.locked")
+            .append("\n").append(storeRows().get(index).lockReason())));
     }
   }
 
@@ -824,6 +829,9 @@ public class KatheryneScreen extends AbstractContainerScreen<KatheryneMenu> {
         String name = storeRows().get(i).name();
         Component label =
             name.isEmpty() ? output.get(0).icon().getHoverName() : Component.translatable(name);
+        if (name.isEmpty() && storeRows().get(i).locked()
+            && output.get(0).icon().is(net.minecraft.world.item.Items.BOOK))
+          label = Component.translatable("gui.teyvatdelight.katheryne.locked_product");
         g.drawString(
             font, font.plainSubstrByWidth(label.getString(), 177 - tx), tx, yy, TEXT, false);
         int remaining = storeRows().get(i).remaining();
@@ -835,6 +843,7 @@ public class KatheryneScreen extends AbstractContainerScreen<KatheryneMenu> {
                         ? "gui.teyvatdelight.katheryne.sold_out"
                         : "gui.teyvatdelight.katheryne.remaining",
                 remaining);
+        if (storeRows().get(i).locked()) stock = Component.translatable("gui.teyvatdelight.katheryne.locked");
         g.drawString(font, stock, tx, yy + 11, 0xFFADC2BA, false);
         int visibleCosts = Math.min(3, cost.size());
         int costX = 239 - (visibleCosts - 1) * 27;
