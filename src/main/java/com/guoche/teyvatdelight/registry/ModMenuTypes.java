@@ -16,6 +16,10 @@ public final class ModMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<KatheryneMenu>> KATHERYNE_MENU = MENUS.register(
             "katheryne", () -> new MenuType<>(KatheryneMenu::new, FeatureFlags.DEFAULT_FLAGS));
 
+    public static final DeferredHolder<MenuType<?>, MenuType<com.guoche.teyvatdelight.inventory.AdeptiSeekersStoveMenu>> ADEPTI_SEEKERS_STOVE = MENUS.register(
+            "adepti_seekers_stove", () -> net.neoforged.neoforge.common.extensions.IMenuTypeExtension.create(
+                    com.guoche.teyvatdelight.inventory.AdeptiSeekersStoveMenu::new));
+
     private ModMenuTypes() {
     }
 

@@ -1,0 +1,5 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": { "particle": "teyvatdelight:bedrock/blocks/adepti_seekers_stove" },
+  "elements": []
+}

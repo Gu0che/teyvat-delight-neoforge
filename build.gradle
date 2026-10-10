@@ -17,6 +17,12 @@ tasks.named('wrapper', Wrapper).configure {
 version = mod_version
 group = mod_group_id
 
+// Java's Windows argument files can misdecode non-ASCII classpaths. Allow a local
+// ASCII output directory without moving the checkout or changing published resources.
+if (providers.gradleProperty('buildOutputDir').isPresent()) {
+    layout.buildDirectory.set(file(providers.gradleProperty('buildOutputDir').get()))
+}
+
 tasks.named('jar', Jar).configure {
     from('LICENSE', 'ASSETS_LICENSE.md')
 }
@@ -57,6 +63,10 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 // Development-only tests are never included in the distributable jar.
 sourceSets {
+    test {
+        compileClasspath += sourceSets.main.compileClasspath
+        runtimeClasspath += sourceSets.main.runtimeClasspath
+    }
     gameTest {
         compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
         runtimeClasspath += sourceSets.main.output + sourceSets.main.runtimeClasspath
@@ -99,6 +109,7 @@ neoForge {
         gameTestServer {
             type = "gameTestServer"
             sourceSet = sourceSets.gameTest
+            gameDirectory = layout.buildDirectory.dir('gametest-run').get().asFile
             systemProperty 'neoforge.enabledGameTestNamespaces', "${project.mod_id},minecraft"
         }
 
@@ -136,6 +147,11 @@ neoForge {
             sourceSet(sourceSets.gameTest)
         }
     }
+
+    unitTest {
+        enable()
+        testedMod = mods."${mod_id}"
+    }
 }
 
 // Sets up a dependency configuration called 'localRuntime'.
@@ -147,6 +163,9 @@ configurations {
 }
 
 dependencies {
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     // Optional client UI. Never bundled or loaded by dedicated servers.
     compileOnly "me.shedaniel.cloth:cloth-config-neoforge:15.0.140:neoforge@jar"
     if (project.hasProperty('clothConfigRuntime')) {
@@ -188,6 +207,10 @@ dependencies {
     // Caelus：仅在用到 Curios 背饰槽位时才需要
     compileOnly "maven.modrinth:caelus:${caelus_version}"
     localRuntime "maven.modrinth:caelus:${caelus_version}"
+}
+
+tasks.named('test', Test).configure {
+    useJUnitPlatform()
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

@@ -644,6 +644,11 @@ public final class ModItems {
 
     public static final DeferredItem<Item> SLOW_FALLING_ADVANCEMENT_ICON = ITEMS.registerSimpleItem("slow_falling_advancement_icon", new Item.Properties());
 
+    public static final DeferredItem<com.guoche.teyvatdelight.item.AdeptiSeekersStoveItem> ADEPTI_SEEKERS_STOVE = ITEMS.register(
+            "adepti_seekers_stove", () -> new com.guoche.teyvatdelight.item.AdeptiSeekersStoveItem(
+                    ModBlocks.ADEPTI_SEEKERS_STOVE.get(), new Item.Properties().stacksTo(1))
+    );
+
     private ModItems() {
     }
 

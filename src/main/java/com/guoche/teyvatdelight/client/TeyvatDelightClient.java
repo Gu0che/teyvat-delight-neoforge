@@ -84,6 +84,8 @@ public class TeyvatDelightClient {
     @SubscribeEvent
     public static void registerMenuScreens(RegisterMenuScreensEvent event) {
         event.register(TeyvatDelight.KATHERYNE_MENU.get(), KatheryneScreen::new);
+        event.register(com.guoche.teyvatdelight.registry.ModMenuTypes.ADEPTI_SEEKERS_STOVE.get(),
+                vectorwing.farmersdelight.client.gui.CookingPotScreen::new);
     }
 
     @SubscribeEvent

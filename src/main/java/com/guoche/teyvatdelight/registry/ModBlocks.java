@@ -517,6 +517,11 @@ public final class ModBlocks {
                     BlockBehaviour.Properties.of().strength(15.0F).sound(SoundType.METAL).noOcclusion())
     );
 
+    public static final DeferredBlock<com.guoche.teyvatdelight.block.AdeptiSeekersStoveBlock> ADEPTI_SEEKERS_STOVE = BLOCKS.register(
+            "adepti_seekers_stove", () -> new com.guoche.teyvatdelight.block.AdeptiSeekersStoveBlock(
+                    BlockBehaviour.Properties.ofFullCopy(vectorwing.farmersdelight.common.registry.ModBlocks.COOKING_POT.get()))
+    );
+
     private ModBlocks() {
     }
 

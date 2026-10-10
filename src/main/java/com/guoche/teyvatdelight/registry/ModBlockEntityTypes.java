@@ -15,6 +15,10 @@ public final class ModBlockEntityTypes {
             BLOCK_ENTITY_TYPES.register("katheryne_figurine", () -> BlockEntityType.Builder.of(
                     KatheryneFigurineBlockEntity::new, ModBlocks.KATHERYNE_FIGURINE.get()).build(null));
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<com.guoche.teyvatdelight.block.AdeptiSeekersStoveBlockEntity>> ADEPTI_SEEKERS_STOVE =
+            BLOCK_ENTITY_TYPES.register("adepti_seekers_stove", () -> BlockEntityType.Builder.of(
+                    com.guoche.teyvatdelight.block.AdeptiSeekersStoveBlockEntity::new, ModBlocks.ADEPTI_SEEKERS_STOVE.get()).build(null));
+
     private ModBlockEntityTypes() {
     }
 

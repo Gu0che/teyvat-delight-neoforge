@@ -134,6 +134,7 @@ public final class ModCreativeTabs {
                         output.accept(ModItems.EMPTY_FEATHER_MOTH_SPAWN_EGG.get());
                         output.accept(ModItems.KATHERYNE_SPAWN_EGG.get());
                         output.accept(ModItems.KATHERYNE_FIGURINE_ITEM.get());
+                        output.accept(ModItems.ADEPTI_SEEKERS_STOVE.get());
                         output.accept(ModItems.PRIMOGEM_KNIFE.get());
                         output.accept(ModItems.SEED_DISPENSARY.get());
                         output.accept(ModItems.WIND_WINGS.get());

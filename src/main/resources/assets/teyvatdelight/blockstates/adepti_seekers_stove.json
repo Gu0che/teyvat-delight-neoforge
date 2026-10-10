@@ -1,0 +1,5 @@
+{
+  "multipart": [
+    { "apply": { "model": "teyvatdelight:block/adepti_seekers_stove" } }
+  ]
+}
