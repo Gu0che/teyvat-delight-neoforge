@@ -1,24 +1,24 @@
 package com.guoche.teyvatdelight.worldgen;
 
-import com.guoche.teyvatdelight.NaturalCoralPearlBlock;
+import com.guoche.teyvatdelight.crop.NaturalCoralPearlBlock;
 import com.guoche.teyvatdelight.mineral.NaturalMineralPlacement;
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.WildCallaLilyBlock;
-import com.guoche.teyvatdelight.WildDendrobiumBlock;
-import com.guoche.teyvatdelight.WildFluorescentFungusBlock;
-import com.guoche.teyvatdelight.WildFrostlampFlowerBlock;
-import com.guoche.teyvatdelight.WildGrainfruitBlock;
-import com.guoche.teyvatdelight.WildHorsetailBlock;
-import com.guoche.teyvatdelight.WildJinxinFlowerBlock;
-import com.guoche.teyvatdelight.WildMufengMushroomBlock;
-import com.guoche.teyvatdelight.WildRaspberryBlock;
-import com.guoche.teyvatdelight.WildSeaGanodermaBlock;
-import com.guoche.teyvatdelight.WildSnapdragonBlock;
-import com.guoche.teyvatdelight.WildSumeruRoseBlock;
-import com.guoche.teyvatdelight.WildTeyvatCropPatchConfiguration;
-import com.guoche.teyvatdelight.WildValberryBlock;
-import com.guoche.teyvatdelight.WildWolfhookBlock;
-import com.guoche.teyvatdelight.WindblumeFlowerBlock;
+import com.guoche.teyvatdelight.crop.WildCallaLilyBlock;
+import com.guoche.teyvatdelight.crop.WildDendrobiumBlock;
+import com.guoche.teyvatdelight.crop.WildFluorescentFungusBlock;
+import com.guoche.teyvatdelight.crop.WildFrostlampFlowerBlock;
+import com.guoche.teyvatdelight.crop.WildGrainfruitBlock;
+import com.guoche.teyvatdelight.crop.WildHorsetailBlock;
+import com.guoche.teyvatdelight.crop.WildJinxinFlowerBlock;
+import com.guoche.teyvatdelight.crop.WildMufengMushroomBlock;
+import com.guoche.teyvatdelight.crop.WildRaspberryBlock;
+import com.guoche.teyvatdelight.crop.WildSeaGanodermaBlock;
+import com.guoche.teyvatdelight.crop.WildSnapdragonBlock;
+import com.guoche.teyvatdelight.crop.WildSumeruRoseBlock;
+import com.guoche.teyvatdelight.worldgen.WildTeyvatCropPatchConfiguration;
+import com.guoche.teyvatdelight.crop.WildValberryBlock;
+import com.guoche.teyvatdelight.crop.WildWolfhookBlock;
+import com.guoche.teyvatdelight.crop.WindblumeFlowerBlock;
 import com.mojang.serialization.Codec;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,9 +58,9 @@ public class WildTeyvatCropPatchFeature extends Feature<WildTeyvatCropPatchConfi
         if (state.getBlock() instanceof WindblumeFlowerBlock) {
             int color = config.meadowWindblume() ? meadowWindblumeColor(origin) : random.nextInt(3);
             state = switch (color) {
-                case 0 -> TeyvatDelight.PINK_WINDBLUME.get().defaultBlockState();
-                case 1 -> TeyvatDelight.YELLOW_WINDBLUME.get().defaultBlockState();
-                default -> TeyvatDelight.PURPLE_WINDBLUME.get().defaultBlockState();
+                case 0 -> com.guoche.teyvatdelight.registry.ModBlocks.PINK_WINDBLUME.get().defaultBlockState();
+                case 1 -> com.guoche.teyvatdelight.registry.ModBlocks.YELLOW_WINDBLUME.get().defaultBlockState();
+                default -> com.guoche.teyvatdelight.registry.ModBlocks.PURPLE_WINDBLUME.get().defaultBlockState();
             };
             if (config.meadowWindblume()) {
                 return placeMeadowWindblumePatch(config, level, random, origin, state);

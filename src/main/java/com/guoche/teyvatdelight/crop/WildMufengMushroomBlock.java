@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.crop;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.WildTeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.WildTeyvatCropBlock;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
@@ -27,8 +27,8 @@ public class WildMufengMushroomBlock extends WildTeyvatCropBlock {
     public WildMufengMushroomBlock(BlockBehaviour.Properties properties) {
         super(
                 properties,
-                TeyvatDelight.MUFENG_MUSHROOM,
-                TeyvatDelight.MUFENG_MUSHROOM_SPORES,
+                com.guoche.teyvatdelight.registry.ModItems.MUFENG_MUSHROOM,
+                com.guoche.teyvatdelight.registry.ModItems.MUFENG_MUSHROOM_SPORES,
                 Surface.MUFENG_BUILDING
         );
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.UP));

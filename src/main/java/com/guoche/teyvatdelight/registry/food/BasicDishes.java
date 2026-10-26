@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.registry.food;
 
-import com.guoche.teyvatdelight.PlaceableTeaItem;
-import com.guoche.teyvatdelight.TeyvatDishItem;
+import com.guoche.teyvatdelight.food.PlaceableTeaItem;
+import com.guoche.teyvatdelight.food.TeyvatDishItem;
 import com.guoche.teyvatdelight.registry.ModBlocks;
 import com.guoche.teyvatdelight.registry.ModDataComponents;
 import com.guoche.teyvatdelight.registry.ModItems;

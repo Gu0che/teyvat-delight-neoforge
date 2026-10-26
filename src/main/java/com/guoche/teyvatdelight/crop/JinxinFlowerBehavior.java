@@ -68,12 +68,12 @@ public final class JinxinFlowerBehavior {
     }
 
     public static void dropBud(Level level, BlockPos pos) {
-        Block.popResource(level, pos, new ItemStack(TeyvatDelight.JINXIN_FLOWER_BUD.get()));
+        Block.popResource(level, pos, new ItemStack(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER_BUD.get()));
     }
 
     public static void dropHarvest(Level level, BlockPos pos) {
         int count = 1 + (isOnPreferredField(level, pos) ? 1 : 0);
-        Block.popResource(level, pos, new ItemStack(TeyvatDelight.JINXIN_FLOWER.get(), count));
+        Block.popResource(level, pos, new ItemStack(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER.get(), count));
     }
 
     public static void playFuelSound(Level level, BlockPos pos) {

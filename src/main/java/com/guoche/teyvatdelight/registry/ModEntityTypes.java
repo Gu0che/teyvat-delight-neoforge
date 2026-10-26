@@ -1,8 +1,8 @@
 package com.guoche.teyvatdelight.registry;
 
-import com.guoche.teyvatdelight.EmptyFeatherMothEntity;
-import com.guoche.teyvatdelight.KatheryneEntity;
-import com.guoche.teyvatdelight.StarconchEntity;
+import com.guoche.teyvatdelight.entity.EmptyFeatherMothEntity;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneEntity;
+import com.guoche.teyvatdelight.entity.StarconchEntity;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;

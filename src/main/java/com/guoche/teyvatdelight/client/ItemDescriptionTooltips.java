@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.client;
 
-import com.guoche.teyvatdelight.PlaceableTeaItem;
-import com.guoche.teyvatdelight.PortableNutritionBagItem;
+import com.guoche.teyvatdelight.food.PlaceableTeaItem;
+import com.guoche.teyvatdelight.item.PortableNutritionBagItem;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.item.KatheryneFigurineBlockItem;
 import com.guoche.teyvatdelight.api.TeyvatTags;
@@ -26,7 +26,7 @@ public final class ItemDescriptionTooltips {
     @SubscribeEvent
     public static void addItemDescription(ItemTooltipEvent event) {
         ItemStack stack = event.getItemStack();
-        if (stack.is(TeyvatDelight.PORTABLE_NUTRITION_BAG.get())) {
+        if (stack.is(com.guoche.teyvatdelight.registry.ModItems.PORTABLE_NUTRITION_BAG.get())) {
             PortableNutritionBagItem.appendRemainingTooltip(stack, event.getToolTip());
         }
         int insertIndex = 1;

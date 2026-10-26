@@ -11,7 +11,7 @@ import net.neoforged.neoforge.event.entity.player.AdvancementEvent;
 
 public final class CountryChallengeRewards {
     private static final Map<String, Supplier<? extends Item>> WIND_WINGS_BY_CHALLENGE = Map.of(
-            "teyvatdelight:main/outlander_who_caught_the_wind", TeyvatDelight.WIND_WINGS::get
+            "teyvatdelight:main/outlander_who_caught_the_wind", com.guoche.teyvatdelight.registry.ModItems.WIND_WINGS::get
     );
 
     private CountryChallengeRewards() {

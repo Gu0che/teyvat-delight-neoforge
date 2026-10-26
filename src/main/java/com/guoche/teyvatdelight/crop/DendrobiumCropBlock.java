@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.crop;
 
-import com.guoche.teyvatdelight.TeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.TeyvatCropBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -13,8 +13,8 @@ public class DendrobiumCropBlock extends TeyvatCropBlock {
         super(
                 properties,
                 TeyvatTags.Blocks.NI_CI_ZHI_FIELDS,
-                TeyvatDelight.DENDROBIUM,
-                TeyvatDelight.DENDROBIUM_SEEDS
+                com.guoche.teyvatdelight.registry.ModItems.DENDROBIUM,
+                com.guoche.teyvatdelight.registry.ModItems.DENDROBIUM_SEEDS
         );
     }
 

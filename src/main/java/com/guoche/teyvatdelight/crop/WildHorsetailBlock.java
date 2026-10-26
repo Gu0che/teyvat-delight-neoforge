@@ -171,8 +171,8 @@ public class WildHorsetailBlock extends DoublePlantBlock implements SimpleWaterl
                     return;
                 }
                 HarvestDrops.create(level, lowerPos, state.setValue(HALF, DoubleBlockHalf.LOWER),
-                        player, tool, Method.BREAK, true).base(TeyvatDelight.HORSETAIL.get(), 1)
-                        .seed(TeyvatDelight.HORSETAIL_SEEDS.get()).cropMora().drop();
+                        player, tool, Method.BREAK, true).base(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL.get(), 1)
+                        .seed(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL_SEEDS.get()).cropMora().drop();
             }
         }
     }
@@ -189,7 +189,7 @@ public class WildHorsetailBlock extends DoublePlantBlock implements SimpleWaterl
             level.setBlock(lowerPos, Blocks.WATER.defaultBlockState(), 35);
             level.setBlock(upperPos, Blocks.AIR.defaultBlockState(), 35);
             HarvestDrops.create(level, lowerPos, state.setValue(HALF, DoubleBlockHalf.LOWER),
-                    null, ItemStack.EMPTY, Method.BREAK, true).base(TeyvatDelight.HORSETAIL.get(), 1).drop();
+                    null, ItemStack.EMPTY, Method.BREAK, true).base(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL.get(), 1).drop();
         }
 
         super.onRemove(state, level, pos, newState, isMoving);
@@ -210,6 +210,6 @@ public class WildHorsetailBlock extends DoublePlantBlock implements SimpleWaterl
     }
 
     private static boolean isMatchingHalf(BlockState state, DoubleBlockHalf half) {
-        return state.is(TeyvatDelight.WILD_HORSETAIL.get()) && state.getValue(HALF) == half;
+        return state.is(com.guoche.teyvatdelight.registry.ModBlocks.WILD_HORSETAIL.get()) && state.getValue(HALF) == half;
     }
 }

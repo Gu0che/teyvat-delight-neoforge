@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.client.katheryne;
 
-import com.guoche.teyvatdelight.KatheryneMenu;
-import com.guoche.teyvatdelight.KatheryneSnapshot;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneMenu;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneSnapshot;
 import net.minecraft.client.Minecraft;
 
 public final class KatheryneClientNetwork {

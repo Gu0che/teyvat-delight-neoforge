@@ -1,8 +1,11 @@
 package com.guoche.teyvatdelight.network;
 
-import com.guoche.teyvatdelight.NutritionBagNetwork.Absorb;
-import com.guoche.teyvatdelight.PortableNutritionBagItem;
+import com.guoche.teyvatdelight.item.PortableNutritionBagItem;
 import com.guoche.teyvatdelight.TeyvatDelight;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -15,6 +18,21 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 
 public final class NutritionBagNetwork {
+    public record Absorb(int menuId, int slot) implements CustomPacketPayload {
+        public static final Type<Absorb> TYPE = new Type<>(
+                ResourceLocation.fromNamespaceAndPath(TeyvatDelight.MODID, "nutrition_bag_absorb"));
+        public static final StreamCodec<RegistryFriendlyByteBuf, Absorb> CODEC = StreamCodec.of(
+                (buf, message) -> {
+                    buf.writeVarInt(message.menuId());
+                    buf.writeVarInt(message.slot());
+                }, buf -> new Absorb(buf.readVarInt(), buf.readVarInt()));
+
+        @Override
+        public Type<? extends CustomPacketPayload> type() {
+            return TYPE;
+        }
+    }
+
     private NutritionBagNetwork() {
     }
 
@@ -40,7 +58,7 @@ public final class NutritionBagNetwork {
         ItemStack bag = menu.getCarried();
         ItemStack food = slot.getItem();
         if (!slot.mayPickup(player) || !slot.mayPlace(food)
-                || !bag.is(TeyvatDelight.PORTABLE_NUTRITION_BAG.get()) || bag.getCount() != 1
+                || !bag.is(com.guoche.teyvatdelight.registry.ModItems.PORTABLE_NUTRITION_BAG.get()) || bag.getCount() != 1
                 || food.isEmpty()) return;
         ItemStack remainder = PortableNutritionBagItem.containerFor(food, player);
         int count = food.getCount();

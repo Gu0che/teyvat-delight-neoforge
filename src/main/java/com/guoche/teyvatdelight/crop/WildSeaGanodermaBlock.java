@@ -135,8 +135,8 @@ public class WildSeaGanodermaBlock extends BushBlock implements SimpleWaterlogge
                     return;
                 }
                 HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
-                        .base(TeyvatDelight.SEA_GANODERMA.get(), 1)
-                        .seed(TeyvatDelight.SEA_GANODERMA_SAMPLE.get()).cropMora().drop();
+                        .base(com.guoche.teyvatdelight.registry.ModItems.SEA_GANODERMA.get(), 1)
+                        .seed(com.guoche.teyvatdelight.registry.ModItems.SEA_GANODERMA_SAMPLE.get()).cropMora().drop();
             }
         }
     }
@@ -151,7 +151,7 @@ public class WildSeaGanodermaBlock extends BushBlock implements SimpleWaterlogge
             }
 
             HarvestDrops.create(level, pos, state, null, ItemStack.EMPTY, Method.BREAK)
-                    .base(TeyvatDelight.SEA_GANODERMA.get(), 1).drop();
+                    .base(com.guoche.teyvatdelight.registry.ModItems.SEA_GANODERMA.get(), 1).drop();
         }
 
         super.onRemove(state, level, pos, newState, isMoving);

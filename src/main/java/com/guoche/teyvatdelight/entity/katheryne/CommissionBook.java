@@ -1,8 +1,7 @@
 package com.guoche.teyvatdelight.entity.katheryne;
 
-import com.google.gson.Gson;
-import com.guoche.teyvatdelight.KatheryneData.Quest;
-import com.guoche.teyvatdelight.KatheryneShopConfig.RawStack;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneData.Quest;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneShopConfig.RawStack;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import java.util.*;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -16,8 +15,6 @@ import net.minecraft.world.item.ItemStack;
 
 /** Server-only state machine. Material payment and reward claiming are separate transactions. */
 public final class CommissionBook {
-  private static final Gson JSON = new Gson();
-
   public static final class Objective {
     public String type, target;
     public int count, progress;
@@ -210,58 +207,11 @@ public final class CommissionBook {
   }
 
   public void load(CompoundTag saved) {
-    for (String key : saved.getAllKeys())
-      try {
-        State state = JSON.fromJson(saved.getString(key), State.class);
-        if (state == null
-            || state.quests == null
-            || state.pending == null
-            || state.rotation == null) continue;
-        if (state.targetRotation == null) state.targetRotation = new HashMap<>();
-        if (state.acceptedTemplates == null) state.acceptedTemplates = new HashSet<>();
-        if (state.completedTemplates == null) state.completedTemplates = new HashSet<>();
-        if (state.closedTemplates == null) state.closedTemplates = new HashSet<>();
-        state.closedTemplates.removeIf(id -> id == null || !id.matches("[a-z0-9_:/.-]{1,128}"));
-        if (state.completedCounts == null) state.completedCounts = new HashMap<>();
-        state.completedCounts.entrySet().removeIf(e -> e.getKey() == null
-            || !e.getKey().matches("[a-z0-9_:/.-]{1,128}")
-            || e.getValue() == null || e.getValue() < 0);
-        if (state.events == null) state.events = new HashMap<>();
-        state.events.entrySet().removeIf(e -> e.getKey() == null
-            || ResourceLocation.tryParse(e.getKey()) == null || e.getValue() == null || e.getValue() < 0);
-        state.acceptedTemplates.addAll(state.rotation);
-        for (Instance q : state.quests) {
-          if (q != null && q.template != null) state.acceptedTemplates.add(q.template);
-          if (q != null && q.completionAdvancements == null) q.completionAdvancements = List.of();
-          if (q != null && q.completionRules == null) q.completionRules = List.of();
-          if (q != null && q.introduction == null) q.introduction = "";
-        }
-        state.acceptedTemplates.removeIf(id -> id == null || !id.matches("[a-z0-9_:/.-]{1,128}"));
-        state.quests.removeIf(q -> !valid(q));
-        // Acceptance/rotation history cannot prove completion in older saves.
-        for (Instance q : state.quests)
-          if (q.done) state.completedTemplates.add(q.template);
-        state.completedTemplates.removeIf(id -> id == null || !id.matches("[a-z0-9_:/.-]{1,128}"));
-        state.pending.removeIf(rewards -> !validRewards(rewards) || rewards.isEmpty());
-        if (state.nextBonus != null && !validRewards(state.nextBonus)) state.nextBonus = null;
-        state.rotation.removeIf(id -> id == null || id.length() > 128);
-        state
-            .targetRotation
-            .entrySet()
-            .removeIf(e -> e.getKey() == null || e.getKey().length() > 256 || e.getValue() == null);
-        state.remainder = Math.max(0, state.remainder);
-        state.totalCompleted = Math.max(0L, state.totalCompleted);
-        state.milestoneEvery = Math.max(0, state.milestoneEvery);
-        players.put(UUID.fromString(key), state);
-      } catch (RuntimeException e) {
-        TeyvatDelight.LOGGER.warn("Invalid commission record {}", key);
-      }
+    players.putAll(CommissionBookStorage.load(saved));
   }
 
   public CompoundTag save() {
-    CompoundTag tag = new CompoundTag();
-    players.forEach((id, state) -> tag.putString(id.toString(), JSON.toJson(state)));
-    return tag;
+    return CommissionBookStorage.save(players);
   }
 
   public State state(ServerPlayer player, Quest legacy) {
@@ -571,13 +521,13 @@ public final class CommissionBook {
     return !q.important && q.expiresAt >= 0 && clock(player, q) >= q.expiresAt;
   }
 
-  private static int remaining(ServerPlayer player, Instance q) {
+  static int remaining(ServerPlayer player, Instance q) {
     if (q.important || q.protectedProgress() || q.expiresAt < 0) return -1;
     return (int)
         Math.min(Integer.MAX_VALUE, (Math.max(0, q.expiresAt - clock(player, q)) + 19) / 20);
   }
 
-  private static boolean valid(Instance q) {
+  static boolean valid(Instance q) {
     if (q == null
         || !text(q.id, 128)
         || !text(q.template, 128)
@@ -618,7 +568,7 @@ public final class CommissionBook {
     return value != null && value.length() <= max;
   }
 
-  private static boolean validRewards(List<RawStack> values) {
+  static boolean validRewards(List<RawStack> values) {
     return values != null
         && values.size() <= 144
         && values.stream()
@@ -919,90 +869,19 @@ public final class CommissionBook {
   }
 
   static Component progressMessage(Instance q, Objective o) {
-    String text =
-        q.ready()
-            ? "gui.teyvatdelight.katheryne.ready_named_message"
-            : q.viewUnlocked() ? "gui.teyvatdelight.katheryne.view_unlocked_named_message"
-                : "gui.teyvatdelight.katheryne.progress_message";
-    Component title =
-        q.title.isEmpty()
-            ? Component.translatable("gui.teyvatdelight.katheryne.auto_title")
-            : Component.translatable(q.title);
-    return Component.translatable(text, title, o.progress, o.count);
+    return CommissionBookView.progressMessage(q, o);
   }
 
   public Snapshot snapshot(ServerPlayer p, State s, String message) {
-    return snapshot(p, s, message, 0);
+    return CommissionBookView.snapshot(p, s, message);
   }
 
   public Snapshot snapshot(ServerPlayer p, State s, String message, int requestedOffset) {
-    List<View> views = new ArrayList<>();
-    int offset = Math.max(0, Math.min(requestedOffset, Math.max(0, s.quests.size() - 1)));
-    int bytes = 0;
-    for (int index = offset; index < s.quests.size() && views.size() < 32; index++) {
-      Instance q = s.quests.get(index);
-      var plan = CommissionItemPlan.create(p.getInventory(), q.objectives);
-      List<ObjectiveView> objectives = new ArrayList<>();
-      for (int goal = 0; goal < q.objectives.size(); goal++) {
-        Objective o = q.objectives.get(goal);
-        int progress = q.done ? o.count : o.progress;
-        if (!q.done && !q.submitted && o.type.equals("item")) {
-          progress = plan.progress[goal];
-        }
-        objectives.add(new ObjectiveView(o.type, o.target, o.count, progress,
-            o.alternatives == null ? List.of() : o.alternatives.stream()
-                .limit(Math.max(1, 256 / q.objectives.size())).toList(), o.name, o.tag));
-      }
-      View view = new View(
-              q.id,
-              q.title,
-              q.description,
-              q.icon,
-              q.done,
-              q.ready(),
-              List.copyOf(objectives),
-              q.rewards,
-              remaining(p, q),
-              q.important,
-              !q.done && !q.submitted && plan.complete ? plan.payment : List.of(),
-              q.previewBeforeUnlock || q.ready() || q.done
-                  || q.objectives.stream().noneMatch(o -> o.type.equals("view"))
-                  ? q.introduction : "",
-              q.viewUnlocked());
-      int size = JSON.toJson(view).length();
-      if (!views.isEmpty() && bytes + size > 180000) break;
-      views.add(view);
-      bytes += size;
-    }
-    return new Snapshot(
-        views,
-        CommissionConfig.settings().limit(),
-        s.remainder,
-        s.milestoneEvery <= 0 ? CommissionConfig.settings().milestoneEvery() : s.milestoneEvery,
-        s.pending.size(),
-        s.pending.isEmpty() ? s.nextBonus == null ? List.of() : s.nextBonus : s.pending.get(0),
-        CommissionConfig.runtimeValid ? message : "gui.teyvatdelight.katheryne.invalid_rules",
-        s.revision,
-        offset,
-        s.quests.size(),
-        (int) s.quests.stream().filter(q -> q.done).count(),
-        offset + views.size() < s.quests.size() ? offset + views.size() : -1,
-        KatheryneShopConfig.balanceItems());
+    return CommissionBookView.snapshot(p, s, message, requestedOffset);
   }
 
   public static boolean matches(ItemStack stack, String target) {
-    return !stack.isEmpty()
-        && CommissionConfig.resolve("item", target)
-            .contains(BuiltInRegistries.ITEM.getKey(stack.getItem()).toString());
-  }
-
-  private static int available(ServerPlayer p, String target) {
-    int count = 0;
-    for (int i = 0; i < p.getInventory().getContainerSize(); i++) {
-      ItemStack stack = p.getInventory().getItem(i);
-      if (matches(stack, target)) count += stack.getCount();
-    }
-    return count;
+    return CommissionBookView.matches(stack, target);
   }
 
   private void change(State s) {

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_field": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:chu_ci_zhu_field"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teyvatdelight:chu_ci_zhu_field_duplication"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_field",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teyvatdelight:chu_ci_zhu_field_duplication"
+    ]
+  }
+}

@@ -2,13 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SSS",
+    "SWS",
     "MPM",
     "CEC"
   ],
   "key": {
     "S": {
       "item": "minecraft:sand"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
     },
     "M": {
       "item": "teyvatdelight:mora"

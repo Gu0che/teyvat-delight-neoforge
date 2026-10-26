@@ -3,7 +3,7 @@ package com.guoche.teyvatdelight.crop;
 import com.guoche.teyvatdelight.harvest.HarvestDrops;
 import com.guoche.teyvatdelight.api.harvest.HarvestContext.Method;
 
-import com.guoche.teyvatdelight.JinxinFlowerBehavior;
+import com.guoche.teyvatdelight.crop.JinxinFlowerBehavior;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
@@ -122,7 +122,7 @@ public class BlazingJinxinFlowerBlock extends BushBlock {
 
     @Override
     public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
-        return new ItemStack(TeyvatDelight.JINXIN_FLOWER_BUD.get());
+        return new ItemStack(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER_BUD.get());
     }
 
     @Override
@@ -138,7 +138,7 @@ public class BlazingJinxinFlowerBlock extends BushBlock {
         TeyvatCropDropTracker.consumeSkipDrop(level, pos);
         if (!level.isClientSide && !player.isCreative()) {
             HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
-                    .base(TeyvatDelight.JINXIN_FLOWER_BUD.get(), 1).drop();
+                    .base(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER_BUD.get(), 1).drop();
         }
     }
 
@@ -157,7 +157,7 @@ public class BlazingJinxinFlowerBlock extends BushBlock {
                 && state.getBlock() != newState.getBlock()
                 && !TeyvatCropDropTracker.consumeSkipDrop(level, pos)) {
             HarvestDrops.create(level, pos, state, null, ItemStack.EMPTY, Method.BREAK)
-                    .base(TeyvatDelight.JINXIN_FLOWER_BUD.get(), 1).drop();
+                    .base(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER_BUD.get(), 1).drop();
         }
 
         super.onRemove(state, level, pos, newState, isMoving);
@@ -183,7 +183,7 @@ public class BlazingJinxinFlowerBlock extends BushBlock {
         int nextAge = age + steps;
         if (nextAge >= MAX_AGE) {
             TeyvatCropDropTracker.skipNextDrop(level, pos);
-            level.setBlock(pos, TeyvatDelight.BURNT_OUT_JINXIN_FLOWER.get().defaultBlockState(), 2);
+            level.setBlock(pos, com.guoche.teyvatdelight.registry.ModBlocks.BURNT_OUT_JINXIN_FLOWER.get().defaultBlockState(), 2);
             JinxinFlowerBehavior.playBurntOutSound(level, pos);
         } else {
             level.setBlock(pos, state.setValue(AGE, nextAge), 2);
@@ -192,7 +192,7 @@ public class BlazingJinxinFlowerBlock extends BushBlock {
 
     private static void becomeBurntOut(ServerLevel level, BlockPos pos) {
         TeyvatCropDropTracker.skipNextDrop(level, pos);
-        level.setBlock(pos, TeyvatDelight.BURNT_OUT_JINXIN_FLOWER.get().defaultBlockState(), 2);
+        level.setBlock(pos, com.guoche.teyvatdelight.registry.ModBlocks.BURNT_OUT_JINXIN_FLOWER.get().defaultBlockState(), 2);
         JinxinFlowerBehavior.playBurntOutSound(level, pos);
     }
 }

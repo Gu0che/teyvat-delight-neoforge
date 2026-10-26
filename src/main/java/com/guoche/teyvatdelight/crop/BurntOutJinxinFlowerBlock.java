@@ -3,7 +3,7 @@ package com.guoche.teyvatdelight.crop;
 import com.guoche.teyvatdelight.harvest.HarvestDrops;
 import com.guoche.teyvatdelight.api.harvest.HarvestContext.Method;
 
-import com.guoche.teyvatdelight.JinxinFlowerBehavior;
+import com.guoche.teyvatdelight.crop.JinxinFlowerBehavior;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
@@ -84,7 +84,7 @@ public class BurntOutJinxinFlowerBlock extends BushBlock {
 
     @Override
     public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
-        return new ItemStack(TeyvatDelight.JINXIN_FLOWER_BUD.get());
+        return new ItemStack(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER_BUD.get());
     }
 
     @Override
@@ -100,7 +100,7 @@ public class BurntOutJinxinFlowerBlock extends BushBlock {
         TeyvatCropDropTracker.consumeSkipDrop(level, pos);
         if (!level.isClientSide && !player.isCreative()) {
             HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
-                    .base(TeyvatDelight.JINXIN_FLOWER_BUD.get(), 1).drop();
+                    .base(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER_BUD.get(), 1).drop();
         }
     }
 
@@ -119,7 +119,7 @@ public class BurntOutJinxinFlowerBlock extends BushBlock {
                 && state.getBlock() != newState.getBlock()
                 && !TeyvatCropDropTracker.consumeSkipDrop(level, pos)) {
             HarvestDrops.create(level, pos, state, null, ItemStack.EMPTY, Method.BREAK)
-                    .base(TeyvatDelight.JINXIN_FLOWER_BUD.get(), 1).drop();
+                    .base(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER_BUD.get(), 1).drop();
         }
 
         super.onRemove(state, level, pos, newState, isMoving);
@@ -130,10 +130,10 @@ public class BurntOutJinxinFlowerBlock extends BushBlock {
             var state = level.getBlockState(pos);
             int bonus = JinxinFlowerBehavior.isOnPreferredField(level, pos) ? 1 : 0;
             HarvestDrops.create(level, pos, state, player, player.getMainHandItem(), Method.COOLING)
-                    .base(TeyvatDelight.JINXIN_FLOWER.get(), 1).field(TeyvatDelight.JINXIN_FLOWER.get(), bonus)
-                    .seed(TeyvatDelight.JINXIN_FLOWER_BUD.get()).cropMora().drop();
+                    .base(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER.get(), 1).field(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER.get(), bonus)
+                    .seed(com.guoche.teyvatdelight.registry.ModItems.JINXIN_FLOWER_BUD.get()).cropMora().drop();
             TeyvatCropDropTracker.skipNextDrop(level, pos);
-            level.setBlock(pos, TeyvatDelight.THIRSTING_JINXIN_FLOWER.get().defaultBlockState(), 2);
+            level.setBlock(pos, com.guoche.teyvatdelight.registry.ModBlocks.THIRSTING_JINXIN_FLOWER.get().defaultBlockState(), 2);
             level.playSound(null, pos, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
             JinxinFlowerBehavior.playCoolingSound(level, pos);
         }

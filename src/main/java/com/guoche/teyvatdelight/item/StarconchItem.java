@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.item;
 
-import com.guoche.teyvatdelight.StarconchEntity;
+import com.guoche.teyvatdelight.entity.StarconchEntity;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import java.util.Objects;
 import net.minecraft.core.BlockPos;
@@ -38,7 +38,7 @@ public class StarconchItem extends Item {
             spawnPos = clickedPos.relative(face);
         }
 
-        StarconchEntity entity = TeyvatDelight.STARCONCH.get().spawn(
+        StarconchEntity entity = com.guoche.teyvatdelight.registry.ModEntityTypes.STARCONCH.get().spawn(
                 serverLevel,
                 stack,
                 context.getPlayer(),

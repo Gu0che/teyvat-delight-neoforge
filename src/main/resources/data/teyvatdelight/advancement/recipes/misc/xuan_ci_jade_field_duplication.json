@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_field": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvatdelight:xuan_ci_jade_field"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teyvatdelight:xuan_ci_jade_field_duplication"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_field",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teyvatdelight:xuan_ci_jade_field_duplication"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.crop;
 
-import com.guoche.teyvatdelight.TeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.TeyvatCropBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -15,8 +15,8 @@ public class FluorescentFungusCropBlock extends TeyvatCropBlock {
         super(
                 properties,
                 TeyvatTags.Blocks.NI_CI_ZHI_FIELDS,
-                TeyvatDelight.FLUORESCENT_FUNGUS,
-                TeyvatDelight.FLUORESCENT_FUNGUS_SPORES
+                com.guoche.teyvatdelight.registry.ModItems.FLUORESCENT_FUNGUS,
+                com.guoche.teyvatdelight.registry.ModItems.FLUORESCENT_FUNGUS_SPORES
         );
     }
 

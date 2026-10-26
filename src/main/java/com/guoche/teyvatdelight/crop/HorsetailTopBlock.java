@@ -3,7 +3,7 @@ package com.guoche.teyvatdelight.crop;
 import com.guoche.teyvatdelight.harvest.HarvestDrops;
 import com.guoche.teyvatdelight.api.harvest.HarvestContext.Method;
 
-import com.guoche.teyvatdelight.HorsetailBottomBlock;
+import com.guoche.teyvatdelight.crop.HorsetailBottomBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -63,7 +63,7 @@ public class HorsetailTopBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
-        return state.is(TeyvatDelight.HORSETAIL_BOTTOM.get()) && state.getValue(HorsetailBottomBlock.AGE) >= 3;
+        return state.is(com.guoche.teyvatdelight.registry.ModBlocks.HORSETAIL_BOTTOM.get()) && state.getValue(HorsetailBottomBlock.AGE) >= 3;
     }
 
     @Override
@@ -175,7 +175,7 @@ public class HorsetailTopBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
-        return new ItemStack(TeyvatDelight.HORSETAIL_SEEDS.get());
+        return new ItemStack(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL_SEEDS.get());
     }
 
     @Override
@@ -194,8 +194,8 @@ public class HorsetailTopBlock extends BushBlock implements BonemealableBlock {
         if (!level.isClientSide) {
             int bonus = level.getBlockState(pos.below(2)).is(TeyvatTags.Blocks.CHU_CI_ZHU_FIELDS) ? 1 : 0;
             HarvestDrops.create(level, pos, state, player, player.getMainHandItem(), Method.RIGHT_CLICK, true)
-                    .base(TeyvatDelight.HORSETAIL.get(), 1).field(TeyvatDelight.HORSETAIL.get(), bonus)
-                    .seed(TeyvatDelight.HORSETAIL_SEEDS.get()).cropMora().drop();
+                    .base(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL.get(), 1).field(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL.get(), bonus)
+                    .seed(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL_SEEDS.get()).cropMora().drop();
             level.setBlock(pos, state.setValue(AGE, 0), 2);
             level.playSound(null, pos, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
@@ -203,11 +203,11 @@ public class HorsetailTopBlock extends BushBlock implements BonemealableBlock {
 
     public static void dropForBreak(Level level, BlockPos pos, BlockState state, @Nullable Player player, ItemStack tool) {
         var drops = HarvestDrops.create(level, pos, state, player, tool, Method.BREAK, state.getValue(AGE) >= 2)
-                .base(TeyvatDelight.HORSETAIL_SEEDS.get(), 1);
+                .base(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL_SEEDS.get(), 1);
         if (state.getValue(AGE) >= 2) {
             int bonus = level.getBlockState(pos.below(2)).is(TeyvatTags.Blocks.CHU_CI_ZHU_FIELDS) ? 1 : 0;
-            drops.base(TeyvatDelight.HORSETAIL.get(), 1).field(TeyvatDelight.HORSETAIL.get(), bonus)
-                    .seed(TeyvatDelight.HORSETAIL_SEEDS.get());
+            drops.base(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL.get(), 1).field(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL.get(), bonus)
+                    .seed(com.guoche.teyvatdelight.registry.ModItems.HORSETAIL_SEEDS.get());
             if (player != null) drops.cropMora();
         }
         drops.drop();

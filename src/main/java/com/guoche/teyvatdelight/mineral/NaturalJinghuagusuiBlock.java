@@ -88,7 +88,7 @@ public class NaturalJinghuagusuiBlock extends BushBlock {
         if (!level.isClientSide && !player.isCreative() && CollectionTools.isPickaxe(tool)) {
             var drops = HarvestDrops.create(level, pos, state, player, tool, Method.BREAK);
             if (CollectionTools.hasSilkTouch(level, tool)) drops.base(this, 1);
-            else drops.base(TeyvatDelight.JINGHUAGUSUI.get(), 1).mineralMora();
+            else drops.base(com.guoche.teyvatdelight.registry.ModItems.JINGHUAGUSUI.get(), 1).mineralMora();
             drops.drop();
             level.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
         }

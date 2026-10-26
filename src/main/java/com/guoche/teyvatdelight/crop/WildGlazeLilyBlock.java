@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.crop;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.WildTeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.WildTeyvatCropBlock;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -16,8 +16,8 @@ public class WildGlazeLilyBlock extends WildTeyvatCropBlock {
     public WildGlazeLilyBlock(BlockBehaviour.Properties properties) {
         super(
                 properties,
-                TeyvatDelight.GLAZE_LILY,
-                TeyvatDelight.GLAZE_LILY_SEEDS,
+                com.guoche.teyvatdelight.registry.ModItems.GLAZE_LILY,
+                com.guoche.teyvatdelight.registry.ModItems.GLAZE_LILY_SEEDS,
                 Surface.GRASS_DIRT_OR_MUD
         );
         this.registerDefaultState(this.stateDefinition.any().setValue(GlazeLilyBlooming.BLOOMING, false));

@@ -1,8 +1,8 @@
 package com.guoche.teyvatdelight.crop;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.WildTeyvatCropBlock;
-import com.guoche.teyvatdelight.WolfhookCropBlock;
+import com.guoche.teyvatdelight.crop.WildTeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.WolfhookCropBlock;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -14,7 +14,7 @@ public class WildWolfhookBlock extends WildTeyvatCropBlock {
     public static final MapCodec<WildWolfhookBlock> CODEC = simpleCodec(WildWolfhookBlock::new);
 
     public WildWolfhookBlock(BlockBehaviour.Properties properties) {
-        super(properties, TeyvatDelight.WOLFHOOK, TeyvatDelight.WOLFHOOK, Surface.GRASS_OR_DIRT);
+        super(properties, com.guoche.teyvatdelight.registry.ModItems.WOLFHOOK, com.guoche.teyvatdelight.registry.ModItems.WOLFHOOK, Surface.GRASS_OR_DIRT);
     }
 
     @Override

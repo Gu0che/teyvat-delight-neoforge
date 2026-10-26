@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.crop;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.WildTeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.WildTeyvatCropBlock;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
@@ -11,8 +11,8 @@ public class WildFrostlampFlowerBlock extends WildTeyvatCropBlock {
     public WildFrostlampFlowerBlock(BlockBehaviour.Properties properties) {
         super(
                 properties,
-                TeyvatDelight.FROSTLAMP_FLOWER,
-                TeyvatDelight.FROSTLAMP_FLOWER_SEEDS,
+                com.guoche.teyvatdelight.registry.ModItems.FROSTLAMP_FLOWER,
+                com.guoche.teyvatdelight.registry.ModItems.FROSTLAMP_FLOWER_SEEDS,
                 Surface.FROSTLAMP
         );
     }

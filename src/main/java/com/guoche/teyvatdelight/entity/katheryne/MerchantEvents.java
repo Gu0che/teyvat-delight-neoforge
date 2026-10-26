@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.entity.katheryne;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.TeyvatMerchantCatalog;
+import com.guoche.teyvatdelight.entity.katheryne.TeyvatMerchantCatalog;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import java.util.List;
 import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
@@ -16,7 +16,7 @@ public final class MerchantEvents {
     }
 
     public static void registerTeyvatMerchantTrades(VillagerTradesEvent event) {
-        if (event.getType() != TeyvatDelight.TEYVAT_MERCHANT_PROFESSION.get()) {
+        if (event.getType() != com.guoche.teyvatdelight.registry.ModVillage.TEYVAT_MERCHANT_PROFESSION.get()) {
             return;
         }
         Int2ObjectMap<List<ItemListing>> trades = event.getTrades();
@@ -26,7 +26,7 @@ public final class MerchantEvents {
 
         for (int i = 0; i < TeyvatMerchantCatalog.INGREDIENTS.size(); i++) {
             trades.get(i / 2 + 1).add(new BasicItemListing(
-                    new ItemStack(TeyvatDelight.MORA.get(), TeyvatMerchantCatalog.PRICE),
+                    new ItemStack(com.guoche.teyvatdelight.registry.ModItems.MORA.get(), TeyvatMerchantCatalog.PRICE),
                     new ItemStack(TeyvatMerchantCatalog.ingredient(i)), maxUses, xp, priceMult));
         }
     }

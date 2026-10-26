@@ -121,7 +121,7 @@ public class NaturalCoralPearlBlock extends BushBlock implements SimpleWaterlogg
 
     @Override
     public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
-        return new ItemStack(TeyvatDelight.CORAL_PEARL.get());
+        return new ItemStack(com.guoche.teyvatdelight.registry.ModItems.CORAL_PEARL.get());
     }
 
     @Override
@@ -142,7 +142,7 @@ public class NaturalCoralPearlBlock extends BushBlock implements SimpleWaterlogg
             // 掉 1 珊瑚珍珠 + 1 珊瑚贝，不受化种匣影响
             if (!player.isCreative()) {
                 HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
-                        .base(TeyvatDelight.CORAL_PEARL.get(), 1).base(TeyvatDelight.CORAL_SHELL.get(), 1).drop();
+                        .base(com.guoche.teyvatdelight.registry.ModItems.CORAL_PEARL.get(), 1).base(com.guoche.teyvatdelight.registry.ModItems.CORAL_SHELL.get(), 1).drop();
             }
         }
     }

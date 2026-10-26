@@ -4,8 +4,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.guoche.teyvatdelight.KatheryneShopConfig.RawOffer;
-import com.guoche.teyvatdelight.KatheryneShopConfig.RawStack;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneShopConfig.RawOffer;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneShopConfig.RawStack;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import java.io.IOException;
 import java.io.Reader;
@@ -22,6 +22,10 @@ import java.util.List;
 import java.util.Set;
 
 public final class KatheryneShopConfig {
+  public record RawStack(String item, int count) {}
+
+  public record RawOffer(String id, List<RawStack> sell, List<RawStack> cost, int dailyLimit) {}
+
   public static final String FILE_NAME = "teyvatdelight-katheryne.json";
   private static Path directory;
   public static String lastError = "";

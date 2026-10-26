@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.client;
 
-import com.guoche.teyvatdelight.NutritionBagNetwork;
+import com.guoche.teyvatdelight.network.NutritionBagNetwork;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatItemData;
 import java.lang.reflect.Field;
@@ -34,7 +34,7 @@ public class TeyvatDelightClientGameEvents {
         if (!(event.getScreen() instanceof AbstractContainerScreen<?> screen)) return;
         ItemStack carried = screen.getMenu().getCarried();
         Slot slot = screen.getSlotUnderMouse();
-        if (!carried.is(TeyvatDelight.PORTABLE_NUTRITION_BAG.get()) || slot == null || !slot.hasItem()
+        if (!carried.is(com.guoche.teyvatdelight.registry.ModItems.PORTABLE_NUTRITION_BAG.get()) || slot == null || !slot.hasItem()
                 || Minecraft.getInstance().player == null
                 || !slot.mayPickup(Minecraft.getInstance().player) || !slot.mayPlace(slot.getItem())) return;
         ItemStack food = slot.getItem();

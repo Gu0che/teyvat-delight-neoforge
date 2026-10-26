@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.crop;
 
-import com.guoche.teyvatdelight.TeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.TeyvatCropBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -15,8 +15,8 @@ public class SmallLampGrassCropBlock extends TeyvatCropBlock {
         super(
                 properties,
                 TeyvatTags.Blocks.XUAN_CI_JADE_FIELDS,
-                TeyvatDelight.SMALL_LAMP_GRASS,
-                TeyvatDelight.SMALL_LAMP_GRASS_SEEDS
+                com.guoche.teyvatdelight.registry.ModItems.SMALL_LAMP_GRASS,
+                com.guoche.teyvatdelight.registry.ModItems.SMALL_LAMP_GRASS_SEEDS
         );
     }
 

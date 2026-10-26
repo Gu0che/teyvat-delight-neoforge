@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.item;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.WindWingsCurios;
+import com.guoche.teyvatdelight.integration.curios.WindWingsCurios;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
@@ -27,7 +27,7 @@ public final class WindWingsFlight {
 
     private static boolean usingWings(ServerPlayer player) {
         ItemStack chest = player.getItemBySlot(EquipmentSlot.CHEST);
-        if (chest.is(TeyvatDelight.WIND_WINGS.get())) return true;
+        if (chest.is(com.guoche.teyvatdelight.registry.ModItems.WIND_WINGS.get())) return true;
         return !chest.is(Items.ELYTRA) && ModList.get().isLoaded("curios")
                 && ModList.get().isLoaded("caelus") && !WindWingsCurios.getBackWings(player).isEmpty();
     }

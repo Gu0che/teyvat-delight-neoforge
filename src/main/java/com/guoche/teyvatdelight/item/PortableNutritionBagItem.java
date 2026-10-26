@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.item;
 
-import com.guoche.teyvatdelight.PortableNutritionBagItem.Contents;
+import com.guoche.teyvatdelight.item.PortableNutritionBagItem.Contents;
 import com.guoche.teyvatdelight.api.TeyvatItemData;
 import java.util.List;
 import net.minecraft.core.component.DataComponents;
@@ -22,6 +22,16 @@ import net.minecraft.world.item.component.CustomModelData;
 import net.minecraft.world.level.Level;
 
 public class PortableNutritionBagItem extends Item {
+    public record Contents(int total, int remaining, long nutrition, double saturation) {
+        public int servingNutrition() {
+            return total == 0 ? 0 : (int) Math.min(Integer.MAX_VALUE, nutrition / total);
+        }
+
+        public int servingSaturation() {
+            return total == 0 ? 0 : (int) Math.min(Integer.MAX_VALUE, Math.floor(saturation / total + 0.000001D));
+        }
+    }
+
     public static final int DEFAULT_STARS = 4;
 
     private static final String CONTENTS = "NutritionBag";

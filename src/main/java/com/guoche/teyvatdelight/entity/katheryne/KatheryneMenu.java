@@ -1,8 +1,8 @@
 package com.guoche.teyvatdelight.entity.katheryne;
 
 import com.google.gson.Gson;
-import com.guoche.teyvatdelight.KatheryneRules;
-import com.guoche.teyvatdelight.KatheryneSnapshot;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneRules;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneSnapshot;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import java.util.*;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
@@ -43,7 +43,7 @@ public class KatheryneMenu extends AbstractContainerMenu {
   }
 
   public KatheryneMenu(int id, Inventory inventory, ServerPlayer player, KatheryneEntity entity) {
-    super(TeyvatDelight.KATHERYNE_MENU.get(), id);
+    super(com.guoche.teyvatdelight.registry.ModMenuTypes.KATHERYNE_MENU.get(), id);
     this.inventory = inventory;
     serverPlayer = player;
     katheryne = entity;
@@ -111,11 +111,11 @@ public class KatheryneMenu extends AbstractContainerMenu {
   }
 
   public int getMoraBalance() {
-    return countItem(TeyvatDelight.MORA.get());
+    return countItem(com.guoche.teyvatdelight.registry.ModItems.MORA.get());
   }
 
   public int getPrimogemBalance() {
-    return countItem(TeyvatDelight.PRIMOGEM.get());
+    return countItem(com.guoche.teyvatdelight.registry.ModItems.PRIMOGEM.get());
   }
 
   public int countItem(Item item) {

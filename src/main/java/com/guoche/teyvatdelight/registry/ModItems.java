@@ -1,10 +1,10 @@
 package com.guoche.teyvatdelight.registry;
 
-import com.guoche.teyvatdelight.PortableNutritionBagItem;
-import com.guoche.teyvatdelight.SeedDispensaryItem;
-import com.guoche.teyvatdelight.StarconchItem;
+import com.guoche.teyvatdelight.item.PortableNutritionBagItem;
+import com.guoche.teyvatdelight.item.SeedDispensaryItem;
+import com.guoche.teyvatdelight.item.StarconchItem;
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.WindWingsItem;
+import com.guoche.teyvatdelight.item.WindWingsItem;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

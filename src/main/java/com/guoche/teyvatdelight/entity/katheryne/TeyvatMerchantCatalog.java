@@ -8,11 +8,11 @@ import net.minecraft.world.item.Item;
 public final class TeyvatMerchantCatalog {
     public static final int PRICE = 3;
     public static final List<Supplier<? extends Item>> INGREDIENTS = List.of(
-            TeyvatDelight.PEPPER, TeyvatDelight.SALT,
-            TeyvatDelight.TOFU, TeyvatDelight.GLABROUS_BEANS,
-            TeyvatDelight.ALMOND, TeyvatDelight.SAUSAGE,
-            TeyvatDelight.CHENYU_TEA, TeyvatDelight.MATSUTAKE,
-            TeyvatDelight.SHRIMP_MEAT, TeyvatDelight.CRAB);
+            com.guoche.teyvatdelight.registry.ModItems.PEPPER, com.guoche.teyvatdelight.registry.ModItems.SALT,
+            com.guoche.teyvatdelight.registry.ModItems.TOFU, com.guoche.teyvatdelight.registry.ModItems.GLABROUS_BEANS,
+            com.guoche.teyvatdelight.registry.ModItems.ALMOND, com.guoche.teyvatdelight.registry.ModItems.SAUSAGE,
+            com.guoche.teyvatdelight.registry.ModItems.CHENYU_TEA, com.guoche.teyvatdelight.registry.ModItems.MATSUTAKE,
+            com.guoche.teyvatdelight.registry.ModItems.SHRIMP_MEAT, com.guoche.teyvatdelight.registry.ModItems.CRAB);
 
     private TeyvatMerchantCatalog() {
     }

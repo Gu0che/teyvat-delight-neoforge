@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.client;
 
-import com.guoche.teyvatdelight.StarconchEntity;
+import com.guoche.teyvatdelight.entity.StarconchEntity;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;

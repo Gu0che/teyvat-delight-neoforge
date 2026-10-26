@@ -1,8 +1,8 @@
 package com.guoche.teyvatdelight.entity;
 
-import com.guoche.teyvatdelight.EmptyFeatherMothEntity;
-import com.guoche.teyvatdelight.KatheryneEntity;
-import com.guoche.teyvatdelight.StarconchEntity;
+import com.guoche.teyvatdelight.entity.EmptyFeatherMothEntity;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneEntity;
+import com.guoche.teyvatdelight.entity.StarconchEntity;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -15,22 +15,22 @@ import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 public class TeyvatDelightEntityEvents {
     @SubscribeEvent
     public static void onRegisterAttributes(EntityAttributeCreationEvent event) {
-        event.put(TeyvatDelight.STARCONCH.get(), StarconchEntity.createAttributes().build());
-        event.put(TeyvatDelight.EMPTY_FEATHER_MOTH.get(), EmptyFeatherMothEntity.createAttributes().build());
-        event.put(TeyvatDelight.KATHERYNE.get(), KatheryneEntity.createAttributes().build());
+        event.put(com.guoche.teyvatdelight.registry.ModEntityTypes.STARCONCH.get(), StarconchEntity.createAttributes().build());
+        event.put(com.guoche.teyvatdelight.registry.ModEntityTypes.EMPTY_FEATHER_MOTH.get(), EmptyFeatherMothEntity.createAttributes().build());
+        event.put(com.guoche.teyvatdelight.registry.ModEntityTypes.KATHERYNE.get(), KatheryneEntity.createAttributes().build());
     }
 
     @SubscribeEvent
     public static void onRegisterSpawnPlacements(RegisterSpawnPlacementsEvent event) {
         event.register(
-                TeyvatDelight.STARCONCH.get(),
+                com.guoche.teyvatdelight.registry.ModEntityTypes.STARCONCH.get(),
                 SpawnPlacementTypes.ON_GROUND,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 StarconchEntity::checkStarconchSpawnRules,
                 RegisterSpawnPlacementsEvent.Operation.AND
         );
         event.register(
-                TeyvatDelight.EMPTY_FEATHER_MOTH.get(),
+                com.guoche.teyvatdelight.registry.ModEntityTypes.EMPTY_FEATHER_MOTH.get(),
                 SpawnPlacementTypes.ON_GROUND,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 EmptyFeatherMothEntity::checkSpawnRules,

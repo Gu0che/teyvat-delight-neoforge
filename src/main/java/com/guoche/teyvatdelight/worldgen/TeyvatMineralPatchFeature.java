@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.worldgen;
 
-import com.guoche.teyvatdelight.TeyvatMineralPatchConfiguration;
+import com.guoche.teyvatdelight.worldgen.TeyvatMineralPatchConfiguration;
 import com.guoche.teyvatdelight.mineral.NaturalMineralPlacement;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;

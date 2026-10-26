@@ -52,7 +52,7 @@ public class WindblumeFlowerBlock extends BushBlock implements BonemealableBlock
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
         HarvestDrops.create(level, pos, state, null, ItemStack.EMPTY, Method.BONEMEAL)
-                .base(TeyvatDelight.WINDBLUME.get(), 1).drop();
+                .base(com.guoche.teyvatdelight.registry.ModItems.WINDBLUME.get(), 1).drop();
     }
 
     @Override

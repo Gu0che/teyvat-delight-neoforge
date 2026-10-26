@@ -1,8 +1,8 @@
 package com.guoche.teyvatdelight.crop;
 
-import com.guoche.teyvatdelight.DandelionHarvestRules;
+import com.guoche.teyvatdelight.crop.DandelionHarvestRules;
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.WildTeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.WildTeyvatCropBlock;
 import com.mojang.serialization.MapCodec;
 import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
@@ -18,14 +18,14 @@ public class WildDandelionBlock extends WildTeyvatCropBlock {
     public static final MapCodec<WildDandelionBlock> CODEC = simpleCodec(WildDandelionBlock::new);
 
     public WildDandelionBlock(BlockBehaviour.Properties properties) {
-        super(properties, TeyvatDelight.DANDELION_SEEDS,
-                TeyvatDelight.DANDELION_SEEDS, Surface.GRASS_OR_DIRT);
+        super(properties, com.guoche.teyvatdelight.registry.ModItems.DANDELION_SEEDS,
+                com.guoche.teyvatdelight.registry.ModItems.DANDELION_SEEDS, Surface.GRASS_OR_DIRT);
     }
 
     @Override
     protected void addHarvestBonuses(com.guoche.teyvatdelight.harvest.HarvestDrops drops, Player player, ItemStack tool) {
         if (DandelionHarvestRules.canHarvest(player, tool))
-            drops.base(TeyvatDelight.DANDELION_SEEDS.get(), 1).cropMora();
+            drops.base(com.guoche.teyvatdelight.registry.ModItems.DANDELION_SEEDS.get(), 1).cropMora();
     }
 
     @Override

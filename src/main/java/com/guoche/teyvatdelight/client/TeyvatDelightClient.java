@@ -35,8 +35,8 @@ public class TeyvatDelightClient {
                             ? BiomeColors.getAverageGrassColor(level, pos)
                             : GrassColor.getDefaultColor();
                 },
-                TeyvatDelight.XUAN_CI_JADE_FIELD.get(),
-                TeyvatDelight.NI_CI_ZHI_FIELD.get()
+                com.guoche.teyvatdelight.registry.ModBlocks.XUAN_CI_JADE_FIELD.get(),
+                com.guoche.teyvatdelight.registry.ModBlocks.NI_CI_ZHI_FIELD.get()
         );
 
         event.register(
@@ -49,7 +49,7 @@ public class TeyvatDelightClient {
                             ? BiomeColors.getAverageWaterColor(level, pos)
                             : DEFAULT_WATER_COLOR;
                 },
-                TeyvatDelight.CHU_CI_ZHU_FIELD.get()
+                com.guoche.teyvatdelight.registry.ModBlocks.CHU_CI_ZHU_FIELD.get()
         );
     }
 
@@ -57,16 +57,16 @@ public class TeyvatDelightClient {
     public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
         event.register(
                 (stack, tintIndex) -> tintIndex == 1 ? DEFAULT_WATER_COLOR : 0xFFFFFFFF,
-                TeyvatDelight.CHU_CI_ZHU_FIELD_ITEM.get()
+                com.guoche.teyvatdelight.registry.ModItems.CHU_CI_ZHU_FIELD_ITEM.get()
         );
     }
 
     @SubscribeEvent
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntityTypes.KATHERYNE_FIGURINE.get(), KatheryneFigurineRenderer::new);
-        event.registerEntityRenderer(TeyvatDelight.STARCONCH.get(), StarconchRenderer::new);
-        event.registerEntityRenderer(TeyvatDelight.EMPTY_FEATHER_MOTH.get(), EmptyFeatherMothRenderer::new);
-        event.registerEntityRenderer(TeyvatDelight.KATHERYNE.get(), KatheryneRenderer::new);
+        event.registerEntityRenderer(com.guoche.teyvatdelight.registry.ModEntityTypes.STARCONCH.get(), StarconchRenderer::new);
+        event.registerEntityRenderer(com.guoche.teyvatdelight.registry.ModEntityTypes.EMPTY_FEATHER_MOTH.get(), EmptyFeatherMothRenderer::new);
+        event.registerEntityRenderer(com.guoche.teyvatdelight.registry.ModEntityTypes.KATHERYNE.get(), KatheryneRenderer::new);
     }
 
     @SubscribeEvent
@@ -83,7 +83,7 @@ public class TeyvatDelightClient {
 
     @SubscribeEvent
     public static void registerMenuScreens(RegisterMenuScreensEvent event) {
-        event.register(TeyvatDelight.KATHERYNE_MENU.get(), KatheryneScreen::new);
+        event.register(com.guoche.teyvatdelight.registry.ModMenuTypes.KATHERYNE_MENU.get(), KatheryneScreen::new);
     }
 
     @SubscribeEvent

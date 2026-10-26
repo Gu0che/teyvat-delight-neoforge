@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.crop;
 
-import com.guoche.teyvatdelight.TeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.TeyvatCropBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -15,8 +15,8 @@ public class SeaGanodermaCropBlock extends TeyvatCropBlock {
         super(
                 properties,
                 TeyvatTags.Blocks.CHU_CI_ZHU_FIELDS,
-                TeyvatDelight.SEA_GANODERMA,
-                TeyvatDelight.SEA_GANODERMA_SAMPLE
+                com.guoche.teyvatdelight.registry.ModItems.SEA_GANODERMA,
+                com.guoche.teyvatdelight.registry.ModItems.SEA_GANODERMA_SAMPLE
         );
     }
 

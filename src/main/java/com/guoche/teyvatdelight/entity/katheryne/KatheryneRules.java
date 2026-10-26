@@ -1,12 +1,12 @@
 package com.guoche.teyvatdelight.entity.katheryne;
 
-import com.guoche.teyvatdelight.KatheryneRules.DailySlot;
-import com.guoche.teyvatdelight.KatheryneRules.ShopOffer;
-import com.guoche.teyvatdelight.KatheryneRules.StackAmount;
-import com.guoche.teyvatdelight.KatheryneShopConfig.RawOffer;
-import com.guoche.teyvatdelight.KatheryneShopConfig.RawStack;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneRules.DailySlot;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneRules.ShopOffer;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneRules.StackAmount;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneShopConfig.RawOffer;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneShopConfig.RawStack;
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.TeyvatMerchantCatalog;
+import com.guoche.teyvatdelight.entity.katheryne.TeyvatMerchantCatalog;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -24,6 +24,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
 public final class KatheryneRules {
+  public record StackAmount(Item item, int count) {}
+
+  public record ShopOffer(String key, List<StackAmount> outputs, List<StackAmount> prices, int dailyLimit) {}
+
+  public record DailySlot(String key, List<Item> pool, List<StackAmount> prices, int drawCount) {}
+
   private static List<ShopOffer> cachedShop;
   private static long ruleBuilds;
 

@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.registry;
 
-import com.guoche.teyvatdelight.KatheryneMenu;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneMenu;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.flag.FeatureFlags;

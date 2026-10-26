@@ -1,10 +1,10 @@
 package com.guoche.teyvatdelight.registry;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.TeyvatMineralPatchConfiguration;
-import com.guoche.teyvatdelight.TeyvatMineralPatchFeature;
-import com.guoche.teyvatdelight.WildTeyvatCropPatchConfiguration;
-import com.guoche.teyvatdelight.WildTeyvatCropPatchFeature;
+import com.guoche.teyvatdelight.worldgen.TeyvatMineralPatchConfiguration;
+import com.guoche.teyvatdelight.worldgen.TeyvatMineralPatchFeature;
+import com.guoche.teyvatdelight.worldgen.WildTeyvatCropPatchConfiguration;
+import com.guoche.teyvatdelight.worldgen.WildTeyvatCropPatchFeature;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.neoforged.bus.api.IEventBus;

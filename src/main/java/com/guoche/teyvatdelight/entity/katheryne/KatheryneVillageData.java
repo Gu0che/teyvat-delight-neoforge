@@ -15,11 +15,11 @@ public class KatheryneVillageData extends SavedData {
 
     public static KatheryneVillageData get(MinecraftServer server) {
         return server.overworld().getDataStorage().computeIfAbsent(
-                new Factory<>(com.guoche.teyvatdelight.KatheryneVillageData::new, KatheryneVillageData::load), "teyvatdelight_katheryne_libraries");
+                new Factory<>(com.guoche.teyvatdelight.entity.katheryne.KatheryneVillageData::new, KatheryneVillageData::load), "teyvatdelight_katheryne_libraries");
     }
 
     private static KatheryneVillageData load(CompoundTag tag, HolderLookup.Provider registries) {
-        KatheryneVillageData data = new com.guoche.teyvatdelight.KatheryneVillageData();
+        KatheryneVillageData data = new com.guoche.teyvatdelight.entity.katheryne.KatheryneVillageData();
         ListTag list = tag.getList("Libraries", Tag.TAG_STRING);
         for (int i = 0; i < list.size(); i++) data.spawnedLibraries.add(list.getString(i));
         return data;

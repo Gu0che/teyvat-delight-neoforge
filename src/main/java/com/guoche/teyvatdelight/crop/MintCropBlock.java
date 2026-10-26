@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.crop;
 
-import com.guoche.teyvatdelight.TeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.TeyvatCropBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -13,8 +13,8 @@ public class MintCropBlock extends TeyvatCropBlock {
         super(
                 properties,
                 TeyvatTags.Blocks.XUAN_CI_JADE_FIELDS,
-                TeyvatDelight.MINT,
-                TeyvatDelight.MINT_SEEDS,
+                com.guoche.teyvatdelight.registry.ModItems.MINT,
+                com.guoche.teyvatdelight.registry.ModItems.MINT_SEEDS,
                 5,
                 1,
                 0

@@ -1,8 +1,8 @@
 package com.guoche.teyvatdelight.entity.katheryne;
 
-import com.guoche.teyvatdelight.KatheryneData;
-import com.guoche.teyvatdelight.KatheryneMenu;
-import com.guoche.teyvatdelight.KatheryneSounds;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneData;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneMenu;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundEntityEventPacket;
 import net.minecraft.server.level.ServerLevel;

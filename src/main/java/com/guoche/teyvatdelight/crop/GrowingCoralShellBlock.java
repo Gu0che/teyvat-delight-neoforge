@@ -82,7 +82,7 @@ public class GrowingCoralShellBlock extends BushBlock {
         }
 
         if (CommonHooks.canCropGrow(level, pos, state, random.nextInt(5) == 0)) {
-            BlockState next = TeyvatDelight.PEARL_BEARING_CORAL_SHELL.get().defaultBlockState()
+            BlockState next = com.guoche.teyvatdelight.registry.ModBlocks.PEARL_BEARING_CORAL_SHELL.get().defaultBlockState()
                     .setValue(FACING, state.getValue(FACING));
             level.setBlock(pos, next, 2);
             CommonHooks.fireCropGrowPost(level, pos, state);
@@ -108,7 +108,7 @@ public class GrowingCoralShellBlock extends BushBlock {
                 stack.shrink(1);
             }
             if (level.random.nextInt(8) == 0) {
-                BlockState next = TeyvatDelight.PEARL_BEARING_CORAL_SHELL.get().defaultBlockState()
+                BlockState next = com.guoche.teyvatdelight.registry.ModBlocks.PEARL_BEARING_CORAL_SHELL.get().defaultBlockState()
                         .setValue(FACING, state.getValue(FACING));
                 level.setBlock(pos, next, 2);
                 level.playSound(null, pos, SoundEvents.BONE_MEAL_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
@@ -122,7 +122,7 @@ public class GrowingCoralShellBlock extends BushBlock {
 
     @Override
     public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
-        return new ItemStack(TeyvatDelight.CORAL_SHELL.get());
+        return new ItemStack(com.guoche.teyvatdelight.registry.ModItems.CORAL_SHELL.get());
     }
 
     @Override
@@ -137,7 +137,7 @@ public class GrowingCoralShellBlock extends BushBlock {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
         if (!level.isClientSide && !player.isCreative()) {
             HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
-                    .base(TeyvatDelight.CORAL_SHELL.get(), 1).drop();
+                    .base(com.guoche.teyvatdelight.registry.ModItems.CORAL_SHELL.get(), 1).drop();
         }
     }
 }

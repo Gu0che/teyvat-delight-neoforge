@@ -1,8 +1,8 @@
 package com.guoche.teyvatdelight.entity.katheryne;
 
 import com.google.gson.*;
-import com.guoche.teyvatdelight.KatheryneShopConfig.RawOffer;
-import com.guoche.teyvatdelight.KatheryneShopConfig.RawStack;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneShopConfig.RawOffer;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneShopConfig.RawStack;
 import java.util.*;
 import net.minecraft.server.MinecraftServer;
 

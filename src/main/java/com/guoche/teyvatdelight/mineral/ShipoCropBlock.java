@@ -42,7 +42,7 @@ public class ShipoCropBlock extends BushBlock {
     private final VoxelShape shape;
 
     public ShipoCropBlock(BlockBehaviour.Properties properties) {
-        this(properties, 2, null, TeyvatDelight.SHIPO, 8.0);
+        this(properties, 2, null, com.guoche.teyvatdelight.registry.ModItems.SHIPO, 8.0);
     }
 
     public ShipoCropBlock(
@@ -51,7 +51,7 @@ public class ShipoCropBlock extends BushBlock {
             @Nullable Supplier<? extends Block> nextStage,
             double height
     ) {
-        this(properties, stage, nextStage, TeyvatDelight.SHIPO, height);
+        this(properties, stage, nextStage, com.guoche.teyvatdelight.registry.ModItems.SHIPO, height);
     }
 
     public ShipoCropBlock(

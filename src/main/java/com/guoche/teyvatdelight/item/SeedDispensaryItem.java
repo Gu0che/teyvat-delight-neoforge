@@ -37,14 +37,14 @@ public class SeedDispensaryItem extends Item {
 
     public static boolean isHeldBy(@Nullable Player player) {
         if (player == null) return false;
-        if (player.getMainHandItem().is(TeyvatDelight.SEED_DISPENSARY.get())
-                || player.getOffhandItem().is(TeyvatDelight.SEED_DISPENSARY.get())) {
+        if (player.getMainHandItem().is(com.guoche.teyvatdelight.registry.ModItems.SEED_DISPENSARY.get())
+                || player.getOffhandItem().is(com.guoche.teyvatdelight.registry.ModItems.SEED_DISPENSARY.get())) {
             return true;
         }
         // Curios 联动（软依赖）：只有装了 Curios 才查询饰品栏
         if (ModList.get().isLoaded("curios")) {
             return CuriosApi.getCuriosInventory(player)
-                    .map(h -> h.isEquipped(TeyvatDelight.SEED_DISPENSARY.get()))
+                    .map(h -> h.isEquipped(com.guoche.teyvatdelight.registry.ModItems.SEED_DISPENSARY.get()))
                     .orElse(false);
         }
         return false;

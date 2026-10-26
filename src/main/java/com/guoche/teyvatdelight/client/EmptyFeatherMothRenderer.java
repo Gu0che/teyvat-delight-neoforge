@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.client;
 
-import com.guoche.teyvatdelight.EmptyFeatherMothEntity;
+import com.guoche.teyvatdelight.entity.EmptyFeatherMothEntity;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;

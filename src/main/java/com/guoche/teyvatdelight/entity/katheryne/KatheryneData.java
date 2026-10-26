@@ -1,8 +1,8 @@
 package com.guoche.teyvatdelight.entity.katheryne;
 
-import com.guoche.teyvatdelight.KatheryneData.DailyOffer;
-import com.guoche.teyvatdelight.KatheryneData.Quest;
-import com.guoche.teyvatdelight.KatheryneRules;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneData.DailyOffer;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneData.Quest;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneRules;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,6 +23,10 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.saveddata.SavedData;
 
 public class KatheryneData extends SavedData {
+  public record Quest(long cycle, ResourceLocation dish, boolean completed) {}
+
+  public record DailyOffer(List<ItemStack> items, boolean bought) {}
+
   public final CommissionBook commissions = new CommissionBook(this::setDirty);
   public final ShopBook stores = new ShopBook(this::setDirty);
 
@@ -45,12 +49,12 @@ public class KatheryneData extends SavedData {
         .overworld()
         .getDataStorage()
         .computeIfAbsent(
-            new Factory<>(com.guoche.teyvatdelight.KatheryneData::new, KatheryneData::load),
+            new Factory<>(com.guoche.teyvatdelight.entity.katheryne.KatheryneData::new, KatheryneData::load),
             "teyvatdelight_katheryne");
   }
 
   private static KatheryneData load(CompoundTag tag, HolderLookup.Provider registries) {
-    KatheryneData data = new com.guoche.teyvatdelight.KatheryneData();
+    KatheryneData data = new com.guoche.teyvatdelight.entity.katheryne.KatheryneData();
     data.commissions.load(tag.getCompound("Commissions"));
     data.stores.load(tag.getCompound("Stores"), registries);
     data.stores.loadTradeCounts(tag.getCompound("TradeCounts"));

@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.crop;
 
-import com.guoche.teyvatdelight.TeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.TeyvatCropBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -13,8 +13,8 @@ public class MufengMushroomCropBlock extends TeyvatCropBlock {
         super(
                 properties,
                 TeyvatTags.Blocks.NI_CI_ZHI_FIELDS,
-                TeyvatDelight.MUFENG_MUSHROOM,
-                TeyvatDelight.MUFENG_MUSHROOM_SPORES,
+                com.guoche.teyvatdelight.registry.ModItems.MUFENG_MUSHROOM,
+                com.guoche.teyvatdelight.registry.ModItems.MUFENG_MUSHROOM_SPORES,
                 7,
                 1,
                 0

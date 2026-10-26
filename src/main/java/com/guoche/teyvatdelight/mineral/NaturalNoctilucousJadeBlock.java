@@ -39,7 +39,7 @@ public class NaturalNoctilucousJadeBlock extends BushBlock {
     private final boolean deepslateBase;
 
     public NaturalNoctilucousJadeBlock(BlockBehaviour.Properties properties) {
-        this(properties, TeyvatDelight.YEBOSHI, false);
+        this(properties, com.guoche.teyvatdelight.registry.ModItems.YEBOSHI, false);
     }
 
     public NaturalNoctilucousJadeBlock(

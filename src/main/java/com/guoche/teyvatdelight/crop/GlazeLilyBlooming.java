@@ -20,7 +20,7 @@ public final class GlazeLilyBlooming {
     }
 
     public static boolean isGlazeLily(BlockState state) {
-        return state.is(TeyvatDelight.GLAZE_LILY_CROP.get()) || state.is(TeyvatDelight.WILD_GLAZE_LILY.get());
+        return state.is(com.guoche.teyvatdelight.registry.ModBlocks.GLAZE_LILY_CROP.get()) || state.is(com.guoche.teyvatdelight.registry.ModBlocks.WILD_GLAZE_LILY.get());
     }
 
     public static boolean updateIfNeeded(ServerLevel level, BlockPos pos, BlockState state, boolean nightBlooming) {
@@ -29,8 +29,8 @@ public final class GlazeLilyBlooming {
         }
 
         boolean shouldBloom = nightBlooming;
-        if (state.is(TeyvatDelight.GLAZE_LILY_CROP.get())) {
-            shouldBloom = shouldBloom && state.getValue(CropBlock.AGE) >= TeyvatDelight.GLAZE_LILY_CROP.get().getMaxAge();
+        if (state.is(com.guoche.teyvatdelight.registry.ModBlocks.GLAZE_LILY_CROP.get())) {
+            shouldBloom = shouldBloom && state.getValue(CropBlock.AGE) >= com.guoche.teyvatdelight.registry.ModBlocks.GLAZE_LILY_CROP.get().getMaxAge();
         }
 
         if (state.getValue(BLOOMING) == shouldBloom) {

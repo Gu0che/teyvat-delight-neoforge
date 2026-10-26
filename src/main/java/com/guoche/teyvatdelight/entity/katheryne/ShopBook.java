@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.entity.katheryne;
 
-import com.guoche.teyvatdelight.KatheryneShopConfig.RawStack;
-import com.guoche.teyvatdelight.KatheryneSnapshot;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneShopConfig.RawStack;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneSnapshot;
 import java.util.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -55,7 +55,7 @@ public final class ShopBook {
   public void importDaily(
       UUID player,
       long cycle,
-      Map<String, com.guoche.teyvatdelight.KatheryneData.DailyOffer> offers) {
+      Map<String, com.guoche.teyvatdelight.entity.katheryne.KatheryneData.DailyOffer> offers) {
     var shops = players.computeIfAbsent(player, k -> new HashMap<>());
     if (shops.containsKey("daily_shop")) return;
     Stock stock = new Stock(cycle);

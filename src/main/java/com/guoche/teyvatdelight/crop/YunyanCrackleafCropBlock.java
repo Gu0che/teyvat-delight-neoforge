@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.crop;
 
-import com.guoche.teyvatdelight.TeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.TeyvatCropBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -13,8 +13,8 @@ public class YunyanCrackleafCropBlock extends TeyvatCropBlock {
         super(
                 properties,
                 TeyvatTags.Blocks.NI_CI_ZHI_FIELDS,
-                TeyvatDelight.YUNYAN_LIEYE,
-                TeyvatDelight.YUNYAN_LIEYE_SEEDS,
+                com.guoche.teyvatdelight.registry.ModItems.YUNYAN_LIEYE,
+                com.guoche.teyvatdelight.registry.ModItems.YUNYAN_LIEYE_SEEDS,
                 7,
                 1,
                 1

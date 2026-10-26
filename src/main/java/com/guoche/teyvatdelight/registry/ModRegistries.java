@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.registry;
 
-import com.guoche.teyvatdelight.KatheryneSounds;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneSounds;
 import net.neoforged.bus.api.IEventBus;
 
 /** Attaches each registry exactly once, after all dish modules have been loaded. */

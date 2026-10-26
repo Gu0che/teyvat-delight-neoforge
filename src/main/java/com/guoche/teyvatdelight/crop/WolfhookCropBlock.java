@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.crop;
 
-import com.guoche.teyvatdelight.TeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.TeyvatCropBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -19,7 +19,7 @@ public class WolfhookCropBlock extends TeyvatCropBlock {
 
     public WolfhookCropBlock(BlockBehaviour.Properties properties) {
         super(properties, TeyvatTags.Blocks.XUAN_CI_JADE_FIELDS,
-                TeyvatDelight.WOLFHOOK, TeyvatDelight.WOLFHOOK, 3, 2, 1);
+                com.guoche.teyvatdelight.registry.ModItems.WOLFHOOK, com.guoche.teyvatdelight.registry.ModItems.WOLFHOOK, 3, 2, 1);
     }
 
     @Override

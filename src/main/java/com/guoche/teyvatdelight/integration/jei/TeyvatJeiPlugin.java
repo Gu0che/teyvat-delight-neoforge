@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.integration.jei;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.TeyvatMerchantCatalog;
+import com.guoche.teyvatdelight.entity.katheryne.TeyvatMerchantCatalog;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.guoche.teyvatdelight.api.TeyvatCropApi;
 import com.guoche.teyvatdelight.api.TeyvatMineralApi;

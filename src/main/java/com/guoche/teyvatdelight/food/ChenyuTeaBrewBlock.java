@@ -108,7 +108,7 @@ public class ChenyuTeaBrewBlock extends BushBlock {
 
     private static void drink(Level level, BlockPos pos, Player player) {
         if (level.isClientSide || !player.canEat(false)) return;
-        ItemStack serving = new ItemStack(TeyvatDelight.CHENYU_TEA_BREW.get());
+        ItemStack serving = new ItemStack(com.guoche.teyvatdelight.registry.food.BasicDishes.CHENYU_TEA_BREW.get());
         ItemStack container = serving.finishUsingItem(level, player);
         level.removeBlock(pos, false);
         if (!container.isEmpty()) popResource(level, pos, container);

@@ -17,7 +17,7 @@ public final class TeyvatBonusDrops {
     }
 
     public static void dropMoraFromCrop(Level level, BlockPos pos, Player player, ItemStack tool) {
-        dropWithFortune(level, pos, player, tool, new ItemStack(TeyvatDelight.MORA.get()), MORA_CHANCE);
+        dropWithFortune(level, pos, player, tool, new ItemStack(com.guoche.teyvatdelight.registry.ModItems.MORA.get()), MORA_CHANCE);
     }
 
     /** Roll once while assembling a harvest, before any result modifiers. */

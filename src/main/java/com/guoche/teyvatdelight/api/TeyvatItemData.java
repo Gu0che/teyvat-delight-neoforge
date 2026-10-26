@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.api;
 
 import com.guoche.teyvatdelight.item.PortableNutritionBagItem;
-import com.guoche.teyvatdelight.TeyvatDelight;
+import com.guoche.teyvatdelight.registry.ModDataComponents;
 import com.guoche.teyvatdelight.food.TeyvatDishItem;
 import com.guoche.teyvatdelight.item.WindWingsItem;
 import com.guoche.teyvatdelight.item.SeedDispensaryItem;
@@ -35,12 +35,12 @@ public final class TeyvatItemData {
 
     /** Component value (including item prototype defaults), or 0 when absent; no display fallback. */
     public static int getStars(ItemStack stack) {
-        Integer stars = stack.get(TeyvatDelight.STARS.get());
+        Integer stars = stack.get(com.guoche.teyvatdelight.registry.ModDataComponents.STARS.get());
         return stars == null ? 0 : clampStars(stars);
     }
 
     public static int getStars(ItemStack stack, int fallbackStars) {
-        Integer stars = stack.get(TeyvatDelight.STARS.get());
+        Integer stars = stack.get(com.guoche.teyvatdelight.registry.ModDataComponents.STARS.get());
         return stars == null ? clampStars(fallbackStars) : clampStars(stars);
     }
 
@@ -76,37 +76,37 @@ public final class TeyvatItemData {
 
     /** Mutates only this stack; clamped to 1..5. Use clearStars to restore its item default. */
     public static void setStars(ItemStack stack, int stars) {
-        stack.set(TeyvatDelight.STARS.get(), clampStars(stars));
+        stack.set(com.guoche.teyvatdelight.registry.ModDataComponents.STARS.get(), clampStars(stars));
     }
 
     /** Unknown or absent qualities read as normal; quality currently grants no gameplay bonuses. */
     public static String getFoodQuality(ItemStack stack) {
-        return normalizeQuality(stack.get(TeyvatDelight.FOOD_QUALITY.get()));
+        return normalizeQuality(stack.get(ModDataComponents.FOOD_QUALITY.get()));
     }
 
     public static void setFoodQuality(ItemStack stack, String quality) {
-        stack.set(TeyvatDelight.FOOD_QUALITY.get(), normalizeQuality(quality));
+        stack.set(ModDataComponents.FOOD_QUALITY.get(), normalizeQuality(quality));
     }
 
     /** Whether a star component is present, including one supplied by the item prototype. */
     public static boolean hasStars(ItemStack stack) {
-        return stack.has(TeyvatDelight.STARS.get());
+        return stack.has(com.guoche.teyvatdelight.registry.ModDataComponents.STARS.get());
     }
 
     public static void clearStars(ItemStack stack) {
-        Integer defaults = stack.getItem().components().get(TeyvatDelight.STARS.get());
-        if (defaults == null) stack.remove(TeyvatDelight.STARS.get());
-        else stack.set(TeyvatDelight.STARS.get(), defaults);
+        Integer defaults = stack.getItem().components().get(com.guoche.teyvatdelight.registry.ModDataComponents.STARS.get());
+        if (defaults == null) stack.remove(com.guoche.teyvatdelight.registry.ModDataComponents.STARS.get());
+        else stack.set(com.guoche.teyvatdelight.registry.ModDataComponents.STARS.get(), defaults);
     }
 
     public static boolean hasFoodQuality(ItemStack stack) {
-        return stack.has(TeyvatDelight.FOOD_QUALITY.get());
+        return stack.has(ModDataComponents.FOOD_QUALITY.get());
     }
 
     public static void clearFoodQuality(ItemStack stack) {
-        String defaults = stack.getItem().components().get(TeyvatDelight.FOOD_QUALITY.get());
-        if (defaults == null) stack.remove(TeyvatDelight.FOOD_QUALITY.get());
-        else stack.set(TeyvatDelight.FOOD_QUALITY.get(), defaults);
+        String defaults = stack.getItem().components().get(com.guoche.teyvatdelight.registry.ModDataComponents.FOOD_QUALITY.get());
+        if (defaults == null) stack.remove(com.guoche.teyvatdelight.registry.ModDataComponents.FOOD_QUALITY.get());
+        else stack.set(com.guoche.teyvatdelight.registry.ModDataComponents.FOOD_QUALITY.get(), defaults);
     }
 
     public static String normalizeQuality(String quality) {

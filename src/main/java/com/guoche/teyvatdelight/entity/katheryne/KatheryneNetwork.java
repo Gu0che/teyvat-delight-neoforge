@@ -1,13 +1,12 @@
 package com.guoche.teyvatdelight.entity.katheryne;
 
-import com.guoche.teyvatdelight.KatheryneClientNetwork;
-import com.guoche.teyvatdelight.KatheryneMenu;
-import com.guoche.teyvatdelight.KatheryneNetwork.Action;
-import com.guoche.teyvatdelight.KatheryneNetwork.Sync;
-import com.guoche.teyvatdelight.KatheryneSnapshot;
+import com.guoche.teyvatdelight.client.katheryne.KatheryneClientNetwork;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
@@ -15,6 +14,51 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 
 public final class KatheryneNetwork {
+  public record Sync(KatheryneSnapshot snapshot) implements CustomPacketPayload {
+    public static final Type<Sync> TYPE =
+        new Type<>(ResourceLocation.fromNamespaceAndPath("teyvatdelight", "katheryne_sync"));
+    public static final StreamCodec<RegistryFriendlyByteBuf, Sync> CODEC =
+        StreamCodec.of(
+            (buf, message) -> writeSnapshot(buf, message.snapshot()),
+            buf -> new Sync(readSnapshot(buf)));
+
+    @Override
+    public Type<? extends CustomPacketPayload> type() {
+      return TYPE;
+    }
+  }
+
+  public record Action(int menuId, int kind, int index, long revision, String key)
+      implements CustomPacketPayload {
+    public Action(int menuId, int kind, int index) {
+      this(menuId, kind, index, -1, "");
+    }
+
+    public static final Type<Action> TYPE =
+        new Type<>(ResourceLocation.fromNamespaceAndPath("teyvatdelight", "katheryne_action"));
+    public static final StreamCodec<RegistryFriendlyByteBuf, Action> CODEC =
+        StreamCodec.of(
+            (buf, message) -> {
+              buf.writeVarInt(message.menuId());
+              buf.writeVarInt(message.kind());
+              buf.writeVarInt(message.index());
+              buf.writeLong(message.revision());
+              buf.writeUtf(message.key(), 128);
+            },
+            buf ->
+                new Action(
+                    buf.readVarInt(),
+                    buf.readVarInt(),
+                    buf.readVarInt(),
+                    buf.readLong(),
+                    buf.readUtf(128)));
+
+    @Override
+    public Type<? extends CustomPacketPayload> type() {
+      return TYPE;
+    }
+  }
+
   private KatheryneNetwork() {}
 
   public static void register(IEventBus bus) {

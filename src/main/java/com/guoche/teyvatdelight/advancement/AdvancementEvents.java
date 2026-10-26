@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.advancement;
 
-import com.guoche.teyvatdelight.TeyvatAdvancementLayout;
+import com.guoche.teyvatdelight.advancement.TeyvatAdvancementLayout;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.SimplePreparableReloadListener;
 import net.minecraft.util.profiling.ProfilerFiller;

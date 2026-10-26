@@ -98,9 +98,9 @@ public class PearlBearingCoralShellBlock extends BushBlock {
         if (!level.isClientSide) {
             // 掉 1 珊瑚珍珠
             HarvestDrops.create(level, pos, state, player, stack, Method.KNIFE)
-                    .base(TeyvatDelight.CORAL_PEARL.get(), 1).drop();
+                    .base(com.guoche.teyvatdelight.registry.ModItems.CORAL_PEARL.get(), 1).drop();
             // 退回生长中的阶段（保留朝向）
-            BlockState next = TeyvatDelight.GROWING_CORAL_SHELL.get().defaultBlockState()
+            BlockState next = com.guoche.teyvatdelight.registry.ModBlocks.GROWING_CORAL_SHELL.get().defaultBlockState()
                     .setValue(FACING, state.getValue(FACING));
             level.setBlock(pos, next, 2);
             // 刀消耗耐久
@@ -121,7 +121,7 @@ public class PearlBearingCoralShellBlock extends BushBlock {
 
     @Override
     public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
-        return new ItemStack(TeyvatDelight.CORAL_SHELL.get());
+        return new ItemStack(com.guoche.teyvatdelight.registry.ModItems.CORAL_SHELL.get());
     }
 
     @Override
@@ -136,7 +136,7 @@ public class PearlBearingCoralShellBlock extends BushBlock {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
         if (!level.isClientSide && !player.isCreative()) {
             HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
-                    .base(TeyvatDelight.CORAL_SHELL.get(), 1).base(TeyvatDelight.CORAL_PEARL.get(), 1).drop();
+                    .base(com.guoche.teyvatdelight.registry.ModItems.CORAL_SHELL.get(), 1).base(com.guoche.teyvatdelight.registry.ModItems.CORAL_PEARL.get(), 1).drop();
         }
     }
 

@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.client;
 
 import com.guoche.teyvatdelight.TeyvatDelight;
-import com.guoche.teyvatdelight.WindWingsCurios;
+import com.guoche.teyvatdelight.integration.curios.WindWingsCurios;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.ElytraModel;
@@ -53,7 +53,7 @@ public class WindWingsLayer extends RenderLayer<AbstractClientPlayer, PlayerMode
 
     public static ItemStack visibleWings(AbstractClientPlayer player) {
         ItemStack chest = player.getItemBySlot(EquipmentSlot.CHEST);
-        if (chest.is(TeyvatDelight.WIND_WINGS.get())) {
+        if (chest.is(com.guoche.teyvatdelight.registry.ModItems.WIND_WINGS.get())) {
             return chest;
         }
         if (!chest.is(Items.ELYTRA)

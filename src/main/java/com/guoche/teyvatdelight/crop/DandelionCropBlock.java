@@ -3,8 +3,8 @@ package com.guoche.teyvatdelight.crop;
 import com.guoche.teyvatdelight.harvest.HarvestDrops;
 import com.guoche.teyvatdelight.api.harvest.HarvestContext.Method;
 
-import com.guoche.teyvatdelight.DandelionHarvestRules;
-import com.guoche.teyvatdelight.TeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.DandelionHarvestRules;
+import com.guoche.teyvatdelight.crop.TeyvatCropBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -24,7 +24,7 @@ public class DandelionCropBlock extends TeyvatCropBlock {
 
     public DandelionCropBlock(BlockBehaviour.Properties properties) {
         super(properties, TeyvatTags.Blocks.NI_CI_ZHI_FIELDS,
-                TeyvatDelight.DANDELION_SEEDS, TeyvatDelight.DANDELION_SEEDS, 7, 1, 1);
+                com.guoche.teyvatdelight.registry.ModItems.DANDELION_SEEDS, com.guoche.teyvatdelight.registry.ModItems.DANDELION_SEEDS, 7, 1, 1);
     }
 
     @Override
@@ -38,8 +38,8 @@ public class DandelionCropBlock extends TeyvatCropBlock {
         }
         int bonus = this.getFieldHarvestBonus(level, pos);
         HarvestDrops.create(level, pos, state, player, player.getMainHandItem(), Method.RIGHT_CLICK)
-                .base(TeyvatDelight.DANDELION_SEEDS.get(), this.getHarvestCount(level, pos) - bonus)
-                .field(TeyvatDelight.DANDELION_SEEDS.get(), bonus).cropMora().drop();
+                .base(com.guoche.teyvatdelight.registry.ModItems.DANDELION_SEEDS.get(), this.getHarvestCount(level, pos) - bonus)
+                .field(com.guoche.teyvatdelight.registry.ModItems.DANDELION_SEEDS.get(), bonus).cropMora().drop();
         level.setBlock(pos, this.getStateForAge(0), 2);
         level.playSound(null, pos, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
     }
@@ -56,8 +56,8 @@ public class DandelionCropBlock extends TeyvatCropBlock {
         int bonus = this.isMaxAge(state) ? this.getFieldHarvestBonus(level, pos) : 0;
         int count = this.isMaxAge(state) ? this.getHarvestCount(level, pos) : 1;
         var drops = HarvestDrops.create(level, pos, state, player, tool, Method.BREAK)
-                .base(TeyvatDelight.DANDELION_SEEDS.get(), count - bonus)
-                .field(TeyvatDelight.DANDELION_SEEDS.get(), bonus);
+                .base(com.guoche.teyvatdelight.registry.ModItems.DANDELION_SEEDS.get(), count - bonus)
+                .field(com.guoche.teyvatdelight.registry.ModItems.DANDELION_SEEDS.get(), bonus);
         if (this.isMaxAge(state)) drops.cropMora();
         drops.drop();
     }

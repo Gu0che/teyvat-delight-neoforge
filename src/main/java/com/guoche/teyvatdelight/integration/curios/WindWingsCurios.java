@@ -26,7 +26,7 @@ public final class WindWingsCurios {
     }
 
     public static void register(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> CuriosApi.registerCurio(TeyvatDelight.WIND_WINGS.get(), new ICurioItem() {
+        event.enqueueWork(() -> CuriosApi.registerCurio(com.guoche.teyvatdelight.registry.ModItems.WIND_WINGS.get(), new ICurioItem() {
             @Override
             public boolean canEquip(SlotContext context, ItemStack stack) {
                 return "back".equals(context.identifier());
@@ -71,7 +71,7 @@ public final class WindWingsCurios {
 
     public static ItemStack getBackWings(Player player) {
         return CuriosApi.getCuriosInventory(player)
-                .flatMap(handler -> handler.findFirstCurio(stack -> stack.is(TeyvatDelight.WIND_WINGS.get()), "back"))
+                .flatMap(handler -> handler.findFirstCurio(stack -> stack.is(com.guoche.teyvatdelight.registry.ModItems.WIND_WINGS.get()), "back"))
                 .map(result -> result.stack())
                 .orElse(ItemStack.EMPTY);
     }

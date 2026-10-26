@@ -47,7 +47,7 @@ public class NaturalShipoBlock extends BushBlock {
     private final TagKey<Block> surfaceTag;
 
     public NaturalShipoBlock(BlockBehaviour.Properties properties) {
-        this(properties, TeyvatDelight.SHIPO, TeyvatTags.Blocks.NATURAL_SHIPO_SURFACES);
+        this(properties, com.guoche.teyvatdelight.registry.ModItems.SHIPO, TeyvatTags.Blocks.NATURAL_SHIPO_SURFACES);
     }
 
     public NaturalShipoBlock(

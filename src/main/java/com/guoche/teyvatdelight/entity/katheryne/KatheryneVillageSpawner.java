@@ -1,7 +1,7 @@
 package com.guoche.teyvatdelight.entity.katheryne;
 
-import com.guoche.teyvatdelight.KatheryneEntity;
-import com.guoche.teyvatdelight.KatheryneVillageData;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneEntity;
+import com.guoche.teyvatdelight.entity.katheryne.KatheryneVillageData;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import java.util.Locale;
 import java.util.Map;
@@ -89,7 +89,7 @@ public final class KatheryneVillageSpawner {
                         data.markSpawned(key);
                         continue;
                     }
-                    KatheryneEntity entity = TeyvatDelight.KATHERYNE.get().create(level);
+                    KatheryneEntity entity = com.guoche.teyvatdelight.registry.ModEntityTypes.KATHERYNE.get().create(level);
                     if (entity == null) continue;
                     entity.moveTo(location.getX() + 0.5D, location.getY(), location.getZ() + 0.5D,
                             level.random.nextFloat() * 360.0F, 0.0F);

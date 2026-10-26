@@ -7,7 +7,6 @@ import java.util.List;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 
-import com.guoche.teyvatdelight.WildTeyvatCropBlock.Surface;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 
 import net.minecraft.core.BlockPos;
@@ -34,6 +33,11 @@ import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 public abstract class WildTeyvatCropBlock extends BushBlock {
+    public enum Surface {
+        GRASS_OR_DIRT, ROCKY, GRASS_DIRT_OR_MUD, SAND_NEAR_WATER, MUFENG_BUILDING,
+        GRAINFRUIT, FLUORESCENT_FUNGUS, DENDROBIUM, FROSTLAMP, STONE_OR_TERRACOTTA
+    }
+
     private static final VoxelShape SHAPE = Block.box(2.0, 0.0, 2.0, 14.0, 13.0, 14.0);
 
     private final Supplier<? extends ItemLike> cropItem;

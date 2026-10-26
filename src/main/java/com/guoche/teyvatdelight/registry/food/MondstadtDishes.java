@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.registry.food;
 
-import com.guoche.teyvatdelight.TeyvatDishItem;
+import com.guoche.teyvatdelight.food.TeyvatDishItem;
 import com.guoche.teyvatdelight.registry.ModDataComponents;
 import com.guoche.teyvatdelight.registry.ModItems;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.guoche.teyvatdelight.crop;
 
-import com.guoche.teyvatdelight.TeyvatCropBlock;
+import com.guoche.teyvatdelight.crop.TeyvatCropBlock;
 import com.guoche.teyvatdelight.TeyvatDelight;
 import com.guoche.teyvatdelight.api.TeyvatTags;
 import com.mojang.serialization.MapCodec;
@@ -16,8 +16,8 @@ public class GlazeLilyCropBlock extends TeyvatCropBlock {
         super(
                 properties,
                 TeyvatTags.Blocks.NI_CI_ZHI_FIELDS,
-                TeyvatDelight.GLAZE_LILY,
-                TeyvatDelight.GLAZE_LILY_SEEDS,
+                com.guoche.teyvatdelight.registry.ModItems.GLAZE_LILY,
+                com.guoche.teyvatdelight.registry.ModItems.GLAZE_LILY_SEEDS,
                 7,
                 1,
                 1
